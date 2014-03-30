@@ -1,0 +1,53 @@
+[include]
+	path = ~/.gitconfig_user
+[core]
+	excludesfile = ~/.gitignore_global
+	attributesfile = ~/.gitattributes_global
+	precomposeunicode = false
+	quotepath = false
+[credential]
+	helper = osxkeychain
+[push]
+	default = simple
+[color]
+	ui = auto
+[alias]
+	co = checkout
+	st = status
+	graph = log --oneline --decorate --graph --branches
+	modified = diff --diff-filter=M
+	ignored = status --ignored
+[interactive]
+	singlekey = true
+[rerere]
+	enable = true
+[log]
+	date = local
+[tig]
+	show-date = local
+[tig "bind"]
+	generic = G none
+[diff]
+	tool = Kaleidoscope
+[merge]
+	tool = Kaleidoscope
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
+[difftool "FileMerge"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+[mergetool "FileMerge"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[difftool "sourcetree"]
+	cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true

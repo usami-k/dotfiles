@@ -1,0 +1,10 @@
+*.c diff=cpp
+*.cpp diff=cpp
+*.cs diff=csharp
+*.html diff=html
+*.java diff=java
+*.m diff=objc
+*.pbxproj merge=mergepbx
+*.php diff=php
+*.pl diff=perl
+*.rb diff=ruby
