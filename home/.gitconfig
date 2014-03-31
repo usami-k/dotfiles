@@ -17,6 +17,7 @@
 	graph = log --oneline --decorate --graph --branches
 	modified = diff --diff-filter=M
 	ignored = status --ignored
+	submodule-remove = !sh -c 'git submodule deinit ${0} && git rm ${0}'
 [interactive]
 	singlekey = true
 [rerere]
