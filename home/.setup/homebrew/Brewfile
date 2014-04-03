@@ -2,6 +2,9 @@
 update
 upgrade
 
+# install package
+install libimobiledevice
+
 # install homebrew-cask
 tap phinze/cask
 install brew-cask
