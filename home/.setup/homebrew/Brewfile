@@ -1,25 +1,23 @@
-# Homebrew 更新
+# update homebrew
 update
-
-# Formula 更新
 upgrade
 
-# homebrew-cask インストール
+# install homebrew-cask
 tap phinze/cask
 install brew-cask
 
-# QuickLook : テキスト
+# cask install : QuickLook Text
 cask install qlcolorcode
 cask install qlstephen
 cask install qlmarkdown
 cask install quicklook-json
 cask install qlprettypatch
 
-# QuickLook : アーカイブ
+# cask install : QuickLook Archive
 cask install betterzipql
 cask install suspicious-package
 
-# QuickLook : バイナリ
+# cask install : QuickLook Binary
 cask install provisioning
 cask install ipaql
 cask install quicklook-csv
