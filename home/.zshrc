@@ -5,6 +5,7 @@ if [ -d /opt/local/bin ]; then path=(/opt/local/bin $path) ; fi
 if [ -d /opt/local/sbin ]; then path=(/opt/local/sbin $path) ; fi
 if [ -d /usr/local/bin ]; then path=(/usr/local/bin $path) ; fi
 if [ -d /usr/local/sbin ]; then path=(/usr/local/sbin $path) ; fi
+if [ -d /usr/local/opt/ruby/bin ]; then path=(/usr/local/opt/ruby/bin $path) ; fi
 if [ -d $HOME/.cabal/bin ]; then path=($HOME/.cabal/bin $path) ; fi
 if [ -d $HOME/bin ]; then path=($HOME/bin $path) ; fi
 
