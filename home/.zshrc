@@ -3,7 +3,11 @@
 # PATH 設定
 if [ -d /opt/local/bin ]; then path=(/opt/local/bin $path) ; fi
 if [ -d /opt/local/sbin ]; then path=(/opt/local/sbin $path) ; fi
+if [ -d /usr/local/bin ]; then path=(/usr/local/bin $path) ; fi
+if [ -d /usr/local/sbin ]; then path=(/usr/local/sbin $path) ; fi
+if [ -d $HOME/.cabal/bin ]; then path=($HOME/.cabal/bin $path) ; fi
 if [ -d $HOME/bin ]; then path=($HOME/bin $path) ; fi
+
 # MANPATH 設定
 if [ -d /opt/local/man ]; then manpath=(/opt/local/man $manpath) ; fi
 
@@ -180,6 +184,12 @@ if [ -d /opt/local/etc/profile.d/ ]; then
 	done
 	unset myscriptfile
 fi
+if [ -d /usr/local/etc/ ]; then
+	for myscriptfile in /usr/local/etc/*.zsh ; do
+		source $myscriptfile
+	done
+	unset myscriptfile
+fi
 if [ -d $HOME/.zsh/scripts/ ]; then
 	for myscriptfile in $HOME/.zsh/scripts/*.zsh ; do
 		source $myscriptfile
@@ -188,6 +198,9 @@ if [ -d $HOME/.zsh/scripts/ ]; then
 fi
 
 # 補完設定ファイルを指定する
+if [ -d /usr/local/share/zsh-completions ]; then
+	fpath=(/usr/local/share/zsh-completions $fpath)
+fi
 if [ -d $HOME/.zsh/functions ]; then
 	fpath=($HOME/.zsh/functions $fpath)
 fi
@@ -266,7 +279,7 @@ alias -s app=open
 
 # 補完関数のロード
 autoload compinit
-compinit -d "$HOME/.zshfiles/.zcompdump"
+compinit -u -d "$HOME/.zshfiles/.zcompdump"
 
 # dash の補完定義
 compdef _man dash

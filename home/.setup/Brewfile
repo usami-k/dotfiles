@@ -3,7 +3,33 @@ update
 upgrade
 
 # install package
+install zsh
+install zsh-completions
+install coreutils
+install lv
+install autojump
+install rmtrash
+install ack
+install colordiff
+install rpl
+install w3m
+install nkf
+install lha
+install p7zip
+install git
+install git-flow
+install hub
+install tig
+install repo
+install stgit
+install jq
+install ascii
 install libimobiledevice
+install imagemagick
+install graphicsmagick
+install ncftp
+install minicom
+install haskell-platform
 
 # install homebrew-cask
 tap phinze/cask
