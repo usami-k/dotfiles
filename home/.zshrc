@@ -176,18 +176,18 @@ my_update_prompt () {
 PROMPT=$'$(my_update_prompt)\n%# '
 
 # 設定スクリプトを読み込む
-if [ -d /usr/local/etc/ ]; then
-	for myscriptfile in /usr/local/etc/*.zsh ; do
-		source $myscriptfile
-	done
-	unset myscriptfile
-fi
-if [ -d $HOME/.zsh/scripts/ ]; then
-	for myscriptfile in $HOME/.zsh/scripts/*.zsh ; do
-		source $myscriptfile
-	done
-	unset myscriptfile
-fi
+for myscriptdir in \
+	/usr/local/etc \
+	$HOME/.zsh/scripts \
+; do
+	if [ -d $myscriptdir ]; then
+		for myscriptfile in $myscriptdir/*.zsh ; do
+			source $myscriptfile
+		done
+		unset myscriptfile
+	fi
+done
+unset myscriptdir
 
 # 補完設定ファイルを指定する（既存 fpath の前に追加する）
 fpath[1,0]=/usr/local/share/zsh-completions
