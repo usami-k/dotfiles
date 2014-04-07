@@ -21,6 +21,7 @@ p7zip
 repo
 rmtrash
 rpl
+ruby
 stgit
 tig
 w3m
