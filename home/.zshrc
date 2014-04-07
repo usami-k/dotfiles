@@ -1,11 +1,13 @@
 # zshrc
 
-# PATH 設定
-if [ -d /usr/local/bin ]; then path=(/usr/local/bin $path) ; fi
-if [ -d /usr/local/sbin ]; then path=(/usr/local/sbin $path) ; fi
-if [ -d /usr/local/opt/ruby/bin ]; then path=(/usr/local/opt/ruby/bin $path) ; fi
-if [ -d $HOME/.cabal/bin ]; then path=($HOME/.cabal/bin $path) ; fi
-if [ -d $HOME/bin ]; then path=($HOME/bin $path) ; fi
+# path 設定（既存 path の前に追加する）
+path[1,0]=/usr/local/sbin
+path[1,0]=/usr/local/bin
+path[1,0]=/usr/local/opt/ruby/bin
+path[1,0]=$HOME/.cabal/bin
+path[1,0]=$HOME/bin
+# 存在しないディレクトリを除去する
+path=($^path(N-/))
 
 # ディレクトリ名のみの入力でcdを行う
 setopt auto_cd
@@ -187,13 +189,11 @@ if [ -d $HOME/.zsh/scripts/ ]; then
 	unset myscriptfile
 fi
 
-# 補完設定ファイルを指定する
-if [ -d /usr/local/share/zsh-completions ]; then
-	fpath=(/usr/local/share/zsh-completions $fpath)
-fi
-if [ -d $HOME/.zsh/functions ]; then
-	fpath=($HOME/.zsh/functions $fpath)
-fi
+# 補完設定ファイルを指定する（既存 fpath の前に追加する）
+fpath[1,0]=/usr/local/share/zsh-completions
+fpath[1,0]=$HOME/.zsh/functions
+# 存在しないディレクトリを除去する
+fpath=($^fpath(N-/))
 
 # 検索関数
 function web_search {
