@@ -1,16 +1,11 @@
 # zshrc
 
 # PATH 設定
-if [ -d /opt/local/bin ]; then path=(/opt/local/bin $path) ; fi
-if [ -d /opt/local/sbin ]; then path=(/opt/local/sbin $path) ; fi
 if [ -d /usr/local/bin ]; then path=(/usr/local/bin $path) ; fi
 if [ -d /usr/local/sbin ]; then path=(/usr/local/sbin $path) ; fi
 if [ -d /usr/local/opt/ruby/bin ]; then path=(/usr/local/opt/ruby/bin $path) ; fi
 if [ -d $HOME/.cabal/bin ]; then path=($HOME/.cabal/bin $path) ; fi
 if [ -d $HOME/bin ]; then path=($HOME/bin $path) ; fi
-
-# MANPATH 設定
-if [ -d /opt/local/man ]; then manpath=(/opt/local/man $manpath) ; fi
 
 # ディレクトリ名のみの入力でcdを行う
 setopt auto_cd
@@ -179,12 +174,6 @@ my_update_prompt () {
 PROMPT=$'$(my_update_prompt)\n%# '
 
 # 設定スクリプトを読み込む
-if [ -d /opt/local/etc/profile.d/ ]; then
-	for myscriptfile in /opt/local/etc/profile.d/*.zsh ; do
-		source $myscriptfile
-	done
-	unset myscriptfile
-fi
 if [ -d /usr/local/etc/ ]; then
 	for myscriptfile in /usr/local/etc/*.zsh ; do
 		source $myscriptfile
