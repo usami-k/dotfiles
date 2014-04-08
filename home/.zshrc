@@ -264,6 +264,9 @@ export LESS=FRSX
 # less の履歴を保存しない
 export LESSHISTFILE=-
 
+# homebrew-cask : Application ディレクトリ指定
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
 # app ファイル名指定で実行できるようにする
 alias -s app=open
 
