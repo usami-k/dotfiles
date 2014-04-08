@@ -18,6 +18,7 @@ minicom
 ncftp
 nkf
 p7zip
+plantuml
 repo
 rmtrash
 rpl
