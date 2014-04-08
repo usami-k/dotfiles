@@ -6,6 +6,8 @@ path[1,0]=/usr/local/bin
 path[1,0]=/usr/local/opt/ruby/bin
 path[1,0]=$HOME/.cabal/bin
 path[1,0]=$HOME/bin
+# 重複を除去する
+typeset -U path PATH
 # 存在しないディレクトリを除去する
 path=($^path(N-/))
 
