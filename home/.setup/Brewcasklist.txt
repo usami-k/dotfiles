@@ -1,0 +1,10 @@
+betterzipql
+ipaql
+provisioning
+qlcolorcode
+qlmarkdown
+qlprettypatch
+qlstephen
+quicklook-csv
+quicklook-json
+suspicious-package

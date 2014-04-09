@@ -8,19 +8,6 @@ tap phinze/cask
 # install package
 install `cat Brewlist.txt`
 
-# cask install : QuickLook Text
-cask install qlcolorcode
-cask install qlstephen
-cask install qlmarkdown
-cask install quicklook-json
-cask install qlprettypatch
-
-# cask install : QuickLook Archive
-cask install betterzipql
-cask install suspicious-package
-
-# cask install : QuickLook Binary
-cask install provisioning
-cask install ipaql
-cask install quicklook-csv
+# cask install package
+cask install `cat Brewcasklist.txt`
 
