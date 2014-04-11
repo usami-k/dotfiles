@@ -10,7 +10,6 @@ colorpicker-hex
 coteditor
 genymotion
 ipaql
-kaleidoscope
 mactex
 provisioning
 qlcolorcode
