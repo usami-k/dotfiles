@@ -9,7 +9,9 @@ brew install $(cat brew_leaves.txt)
 
 # cask install package
 brew cask update
-for cask in $(cat brew_casklist.txt) ; do
-	brew cask install $cask
-done
+if [ -f brew_casklist.txt ]; then
+	for cask in $(cat brew_casklist.txt) ; do
+		brew cask install $cask
+	done
+fi
 
