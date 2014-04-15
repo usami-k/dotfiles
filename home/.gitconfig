@@ -3,7 +3,7 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes_global
-	precomposeunicode = false
+	precomposeunicode = true
 	quotepath = false
 [credential]
 	helper = osxkeychain
