@@ -1,7 +1,9 @@
 ack
 ascii
 autojump
+automake
 brew-cask
+class-dump
 colordiff
 coreutils
 git
