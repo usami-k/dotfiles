@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # tap external repository
-brew tap phinze/cask
+brew tap caskroom/cask
 
 # install package
 brew update
