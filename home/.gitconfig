@@ -24,8 +24,6 @@
 	enable = true
 [log]
 	date = local
-[tig]
-	show-date = local
 [tig "bind"]
 	generic = G none
 [diff]
