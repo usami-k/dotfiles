@@ -4,6 +4,7 @@ autojump
 automake
 brew-cask
 class-dump
+cmake
 colordiff
 coreutils
 ghostscript
