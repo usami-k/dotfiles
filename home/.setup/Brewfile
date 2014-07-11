@@ -1,0 +1,12 @@
+# tap external repository
+tap caskroom/cask
+
+# update homebrew
+update
+
+# install package
+install $(cat brew_leaves.txt)
+
+# cask install package
+cask install $(cat brew_casklist.txt)
+
