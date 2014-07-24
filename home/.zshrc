@@ -7,7 +7,7 @@ path[1,0]=/usr/local/opt/ruby/bin
 path[1,0]=$HOME/.cabal/bin
 path[1,0]=$HOME/bin
 # 重複を除去する
-typeset -U path PATH
+typeset -U path
 # 存在しないディレクトリを除去する
 path=($^path(N-/))
 
@@ -177,26 +177,6 @@ my_update_prompt () {
 # プロンプト定義
 PROMPT=$'$(my_update_prompt)\n%# '
 
-# 設定スクリプトを読み込む
-for myscriptdir in \
-	/usr/local/etc \
-	$HOME/.zsh/scripts \
-; do
-	if [ -d $myscriptdir ]; then
-		for myscriptfile in $myscriptdir/*.zsh ; do
-			source $myscriptfile
-		done
-		unset myscriptfile
-	fi
-done
-unset myscriptdir
-
-# 補完設定ファイルを指定する（既存 fpath の前に追加する）
-fpath[1,0]=/usr/local/share/zsh-completions
-fpath[1,0]=$HOME/.zsh/functions
-# 存在しないディレクトリを除去する
-fpath=($^fpath(N-/))
-
 # 検索関数
 function web_search {
 	local url=$1       && shift
@@ -271,6 +251,28 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # app ファイル名指定で実行できるようにする
 alias -s app=open
+
+# 設定スクリプトを読み込む
+for myscriptdir in \
+	/usr/local/etc \
+	$HOME/.zsh/scripts \
+; do
+	if [ -d $myscriptdir ]; then
+		for myscriptfile in $myscriptdir/*.zsh ; do
+			source $myscriptfile
+		done
+		unset myscriptfile
+	fi
+done
+unset myscriptdir
+
+# 補完設定ファイルを指定する（既存 fpath の前に追加する）
+fpath[1,0]=/usr/local/share/zsh-completions
+fpath[1,0]=$HOME/.zsh/functions
+# 重複を除去する
+typeset -U fpath
+# 存在しないディレクトリを除去する
+fpath=($^fpath(N-/))
 
 # 補完関数のロード
 autoload compinit
