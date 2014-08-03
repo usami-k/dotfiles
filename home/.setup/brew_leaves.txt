@@ -23,6 +23,7 @@ minicom
 ncftp
 nkf
 p7zip
+peco
 plantuml
 repo
 rmtrash

@@ -1,4 +1,5 @@
 tap caskroom/cask
+tap peco/peco
 update
 upgrade
 install $(cat brew_leaves.txt)
