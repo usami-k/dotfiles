@@ -230,8 +230,6 @@ eval $(gdircolors)
 alias lv="lv -c"
 # grep : カラー表示する
 alias grep="grep --color=auto"
-# ack : 常にカラー表示する、常にグループ表示する、ファイル名でソートする、ページャ表示する
-alias ack="ack --color --group --sort-files --pager=less"
 # diff : カラー表示する、Unified形式にする
 alias diff="colordiff -u"
 # w3m : HTMLページャとして起動する
