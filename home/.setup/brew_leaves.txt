@@ -24,6 +24,7 @@ nkf
 p7zip
 peco
 plantuml
+pwgen
 repo
 rmtrash
 rpl
