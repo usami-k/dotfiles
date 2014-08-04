@@ -40,8 +40,6 @@ setopt magic_equal_subst
 # ファイル名展開でディレクトリ名の後ろにスラッシュをつける
 setopt mark_dirs
 
-# ヒストリにタイムスタンプを含める
-setopt extended_history
 # 新しいヒストリをすぐにヒストリファイルに追加する
 setopt inc_append_history
 # ヒストリの重複を避ける
