@@ -1,4 +1,5 @@
 ascii
+audiofile
 autojump
 automake
 brew-cask
