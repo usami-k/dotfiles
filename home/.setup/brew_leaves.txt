@@ -34,5 +34,6 @@ stgit
 the_platinum_searcher
 tig
 w3m
+xctool
 zsh
 zsh-completions
