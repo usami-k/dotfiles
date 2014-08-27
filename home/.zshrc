@@ -75,7 +75,7 @@ zstyle ":completion:*" verbose yes
 # 補完候補をキャッシュファイルに保存する
 zstyle ":completion:*" use-cache yes
 # キャッシュファイルの場所指定
-zstyle ":completion:*" cache-path "$HOME/.zshfiles/.zcompcache"
+zstyle ":completion:*" cache-path "$HOME/.zsh_files/zcompcache"
 # 補完候補の重複を避ける
 zstyle ":completion:*" remove-all-dups yes
 # マニュアルのセクション別に補完候補を表示する
@@ -272,7 +272,7 @@ fpath=($^fpath(N-/))
 
 # 補完関数のロード
 autoload compinit
-compinit -u -d "$HOME/.zshfiles/.zcompdump"
+compinit -u -d "$HOME/.zsh_files/zcompdump"
 
 # dash の補完定義
 compdef _man dash
