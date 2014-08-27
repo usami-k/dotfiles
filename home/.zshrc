@@ -63,7 +63,7 @@ setopt prompt_subst
 bindkey -e
 
 # history
-HISTFILE=$HOME/.zshfiles/.zhistory
+HISTFILE=$HOME/.zsh_history/history
 HISTSIZE=100000
 SAVEHIST=100000
 
