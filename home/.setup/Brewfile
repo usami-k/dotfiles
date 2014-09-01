@@ -1,7 +1,0 @@
-tap caskroom/cask
-tap peco/peco
-update
-upgrade
-install $(cat brew_leaves.txt)
-cask install $(cat brew_casklist.txt)
-cleanup
