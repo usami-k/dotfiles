@@ -115,7 +115,7 @@ GEM
       typhoeus (~> 0.6, >= 0.6.8)
     typhoeus (0.6.9)
       ethon (>= 0.7.1)
-    websocket (1.2.0)
+    websocket (1.2.1)
     xcodeproj (0.17.0)
       activesupport (~> 3.0)
       colored (~> 1.2)
