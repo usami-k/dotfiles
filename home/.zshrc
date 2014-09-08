@@ -224,11 +224,13 @@ alias rm="grm -I -v"
 # ls : 隠しファイルも表示する、カラー表示する、番号でソートする
 alias ls="gls -A --color=auto --sort=version"
 eval $(gdircolors)
-# lv : カラー表示する
+# lv : カラー表示に対応する
 alias lv="lv -c"
 # grep : カラー表示する
 alias grep="grep --color=auto"
-# diff : カラー表示する、Unified形式にする
+# jq : 常にカラー表示する
+alias jq="jq -C"
+# diff : 常にカラー表示する、Unified形式にする
 alias diff="colordiff -u"
 # w3m : HTMLページャとして起動する
 alias w3m="w3m -T text/html"
