@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
-gem 'cocoapods'
-gem 'cocoapods-core'
+gem 'cocoapods', '~> 0.33'
 gem 'evernote-editor'
 gem 'homesick'
 gem 'pry'

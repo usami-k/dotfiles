@@ -125,8 +125,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  cocoapods
-  cocoapods-core
+  cocoapods (~> 0.33)
   evernote-editor
   homesick
   pry
