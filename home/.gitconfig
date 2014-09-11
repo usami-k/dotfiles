@@ -18,6 +18,7 @@
 	modified = diff --diff-filter=M
 	ignored = status --ignored
 	submodule-remove = !sh -c 'git submodule deinit ${0} && git rm ${0}'
+	new-workdir = !/usr/local/share/git-core/contrib/workdir/git-new-workdir
 [interactive]
 	singlekey = true
 [rerere]
