@@ -13,7 +13,6 @@ git
 git-flow
 gnu-sed
 graphicsmagick
-haskell-platform
 hub
 imagemagick
 jq
