@@ -15,6 +15,7 @@ gnu-sed
 graphicsmagick
 hub
 imagemagick
+ioszip
 jq
 lha
 libimobiledevice

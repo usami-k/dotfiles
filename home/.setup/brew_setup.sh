@@ -3,6 +3,7 @@
 # Prepare
 brew tap caskroom/cask
 brew tap peco/peco
+brew tap ioszip/ioszip
 
 # Check
 brew doctor
