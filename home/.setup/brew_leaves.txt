@@ -19,6 +19,7 @@ ioszip
 jq
 lha
 libimobiledevice
+liftoff
 lv
 minicom
 ncftp
