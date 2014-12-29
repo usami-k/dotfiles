@@ -24,6 +24,7 @@ lv
 minicom
 ncftp
 nkf
+node
 p7zip
 pandoc
 peco
