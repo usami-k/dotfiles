@@ -5,11 +5,11 @@ brew tap caskroom/cask
 brew tap peco/peco
 brew tap ioszip/ioszip
 brew tap thoughtbot/formulae
-brew doctor
 
 # Update
 brew update
 brew outdated -v
+brew doctor
 
 # Install
 brew install $(cat brew_leaves.txt)
