@@ -30,6 +30,7 @@ pandoc
 peco
 plantuml
 pwgen
+redpen
 repo
 rmtrash
 rpl
