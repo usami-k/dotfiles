@@ -252,7 +252,18 @@ alias -s app=open
 
 # 設定スクリプトを読み込む
 for myscriptdir in \
-	/usr/local/etc \
+	/usr/local/etc/profile.d \
+; do
+	if [ -d $myscriptdir ]; then
+		for myscriptfile in $myscriptdir/*.sh ; do
+			source $myscriptfile
+		done
+		unset myscriptfile
+	fi
+done
+unset myscriptdir
+
+for myscriptdir in \
 	$HOME/.zsh/scripts \
 ; do
 	if [ -d $myscriptdir ]; then
