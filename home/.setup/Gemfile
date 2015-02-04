@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 gem 'cocoapods'
 gem 'homesick'
+gem 'nomad-cli'
 gem 'pry'
 gem 'synx'
 gem 'xcpretty'
