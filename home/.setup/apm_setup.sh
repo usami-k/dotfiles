@@ -1,4 +1,5 @@
 #!/bin/sh
+apm install atom-beautify
 apm install atom-runner
 apm install file-icons
 apm install jsonpp
