@@ -209,12 +209,6 @@ cdg () {
 	cd $(git rev-parse --show-toplevel)
 }
 
-# cot : CotEditor起動コマンド
-cot () {
-	if [ ! -z "$1" ] && [ ! -e "$1" ]; then touch $1 ; fi
-	open -a CotEditor $*
-}
-
 # cp : 進捗を表示する
 alias cp="cp -v"
 # mv : 進捗を表示する
