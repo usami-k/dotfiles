@@ -37,6 +37,7 @@ ruby
 stgit
 the_platinum_searcher
 tig
+uncrustify
 w3m
 xctool
 zsh
