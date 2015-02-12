@@ -155,9 +155,17 @@ my_git_info_stash () {
 	fi
 }
 
+# git：rerereが有効かチェックする
+my_git_info_rerere () {
+	if [ "$(git config rerere.enabled)" != "true" ]; then
+		# rerereが無効であることを示す文字列
+		echo "{rr?}"
+	fi
+}
+
 # vcs_infoの出力に独自の出力を付加する
 +vi-my_vcs_info () {
-	hook_com[misc]="$(my_git_info_push)$(my_git_info_stash)$hook_com[misc_orig]"
+	hook_com[misc]="$(my_git_info_push)$(my_git_info_stash)$(my_git_info_rerere)$hook_com[misc_orig]"
 }
 
 # プロンプト文字列を作成する
