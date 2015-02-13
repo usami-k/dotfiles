@@ -39,6 +39,7 @@ the_platinum_searcher
 tig
 uncrustify
 w3m
+xcproj
 xctool
 zsh
 zsh-completions
