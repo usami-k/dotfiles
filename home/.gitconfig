@@ -17,14 +17,13 @@
 	graph = log --oneline --decorate --graph --branches
 	modified = diff --diff-filter=M
 	ignored = status --ignored
+	show-exclude = !less $(git rev-parse --git-dir)/info/exclude
 	submodule-remove = !sh -c 'git submodule deinit ${0} && git rm ${0}'
 	new-workdir = !/usr/local/share/git-core/contrib/workdir/git-new-workdir
 	summary-commit = !git show --no-patch --pretty='format:Commit : %H [%h]%nDate : %ci%n%s%n' --no-notes "$1"
 	pbcopy-commit = !git summary-commit "$1" | pbcopy
 [interactive]
 	singlekey = true
-[rerere]
-	enable = true
 [log]
 	date = local
 [tig "bind"]
