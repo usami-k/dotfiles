@@ -1,4 +1,2 @@
-source 'https://rubygems.org'
-
-gem 'cocoapods'
-gem 'xcpretty'
+source 'http://rubygems.org'
+gem 'cocoapods', '0.35.0'
