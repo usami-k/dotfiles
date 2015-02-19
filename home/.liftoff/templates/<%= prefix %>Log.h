@@ -3,8 +3,10 @@
 //  Copyright (c) <%= Time.now.strftime('%Y') %> <%= company %>. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "DDLog.h"
 
-@interface <%= prefix %>AppDelegate : UIResponder <UIApplicationDelegate>
-@property (nonatomic) UIWindow *window;
+extern int ddLogLevel;
+
+@interface <%= prefix %>Log : NSObject
++ (void)setup;
 @end

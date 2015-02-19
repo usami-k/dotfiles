@@ -17,8 +17,8 @@ app_target_templates:
       - Models:
       - ViewModels:
       - Controllers:
-        - <%= prefix %>AppDelegate.h
         - <%= prefix %>AppDelegate.m
+        - <%= prefix %>AppDelegate.h
       - Views:
         - Main.storyboard
       - Resources:
@@ -26,6 +26,9 @@ app_target_templates:
       - Supporting Files:
         - Info.plist
         - main.m
+      - Debug:
+        - <%= prefix %>Log.m
+        - <%= prefix %>Log.h
   swift:
     - <%= project_name %>:
       - Models:
@@ -38,6 +41,7 @@ app_target_templates:
         - Images.xcassets
       - Supporting Files:
         - Info.plist
+      - Debug:
 
 test_target_templates:
   objc:
