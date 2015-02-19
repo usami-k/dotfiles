@@ -8,7 +8,7 @@
 #import "DDASLLogger.h"
 
 #if defined(DEBUG) && (DEBUG == 1)
-int ddLogLevel = LOG_LEVEL_ALL;
+int ddLogLevel = LOG_LEVEL_VERBOSE;
 #else
 int ddLogLevel = LOG_LEVEL_OFF;
 #endif
