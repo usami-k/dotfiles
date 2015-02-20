@@ -7,15 +7,16 @@
 #import "DDTTYLogger.h"
 #import "DDASLLogger.h"
 
-#if defined(DEBUG) && (DEBUG == 1)
-int ddLogLevel = LOG_LEVEL_VERBOSE;
-#else
-int ddLogLevel = LOG_LEVEL_OFF;
-#endif
+int ddLogLevel;
 
 @implementation <%= prefix %>Log
 
 + (void)setup {
+#if defined(DEBUG) && (DEBUG == 1)
+    ddLogLevel = LOG_LEVEL_VERBOSE;
+#else
+    ddLogLevel = LOG_LEVEL_OFF;
+#endif
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
     [DDLog addLogger:[DDASLLogger sharedInstance]];
 }
