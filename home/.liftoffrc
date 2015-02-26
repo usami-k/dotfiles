@@ -8,6 +8,9 @@ deployment_target: 7.1
 
 templates:
   - Gemfile.rb: Gemfile
+  - README.md: README.md
+
+xcode_command: open .
 
 project_template: objc
 
