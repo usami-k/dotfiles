@@ -4,18 +4,44 @@
 <dict>
 	<key>PreferenceSpecifiers</key>
 	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>Version</string>
+			<key>Key</key>
+			<string>Version</string>
+			<key>DefaultValue</key>
+			<string>-</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>Revision</string>
+			<key>Key</key>
+			<string>Revision</string>
+			<key>DefaultValue</key>
+			<string>-</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>Identifier</string>
+			<key>Key</key>
+			<string>Identifier</string>
+			<key>DefaultValue</key>
+			<string>-</string>
+		</dict>
 <% if use_cocoapods %>
 		<dict>
 			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-		</dict>
-		<dict>
-			<key>File</key>
-			<string>Acknowledgements</string>
+			<string>PSChildPaneSpecifier</string>
 			<key>Title</key>
 			<string>Acknowledgements</string>
-			<key>Type</key>
-			<string>PSChildPaneSpecifier</string>
+			<key>File</key>
+			<string>Acknowledgements</string>
 		</dict>
 <% end %>
 	</array>

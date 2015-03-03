@@ -10,6 +10,8 @@ deployment_target: 7.1
 run_script_phases:
   - file: todo.sh
     name: Warn for TODO and FIXME comments
+  - file: version.sh
+    name: Set Version Number
 
 templates:
   - Gemfile.rb: Gemfile
