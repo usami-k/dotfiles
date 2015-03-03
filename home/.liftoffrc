@@ -5,6 +5,11 @@ use_cocoapods: true
 enable_settings: true
 strict_prompts: true
 deployment_target: 7.1
+#deployment_target: 8.1
+
+run_script_phases:
+  - file: todo.sh
+    name: Warn for TODO and FIXME comments
 
 templates:
   - Gemfile.rb: Gemfile
@@ -26,6 +31,7 @@ app_target_templates:
         - Main.storyboard
       - Resources:
         - Images.xcassets
+#        - LaunchScreen.xib
       - Supporting Files:
         - Info.plist
         - main.m
@@ -42,6 +48,7 @@ app_target_templates:
         - Main.storyboard
       - Resources:
         - Images.xcassets
+#        - LaunchScreen.xib
       - Supporting Files:
         - Info.plist
       - Debug:
