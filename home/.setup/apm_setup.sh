@@ -3,7 +3,6 @@ apm install atom-beautify
 apm install atom-runner
 apm install file-icons
 apm install jsonpp
-apm install language-csharp
 apm install language-haskell
 apm install language-swift
 apm install linter
