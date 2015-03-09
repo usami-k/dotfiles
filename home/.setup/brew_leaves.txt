@@ -30,6 +30,7 @@ pandoc
 peco
 plantuml
 pwgen
+python3
 redpen
 repo
 rmtrash
