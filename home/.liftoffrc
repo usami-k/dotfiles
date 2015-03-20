@@ -4,8 +4,7 @@ enable_static_analyzer: true
 use_cocoapods: true
 enable_settings: true
 strict_prompts: true
-deployment_target: 7.1
-#deployment_target: 8.1
+deployment_target: 8.1
 
 run_script_phases:
   - file: todo.sh
@@ -19,7 +18,7 @@ templates:
 
 xcode_command: open .
 
-project_template: objc
+project_template: swift
 
 app_target_templates:
   objc:
@@ -33,7 +32,7 @@ app_target_templates:
         - Main.storyboard
       - Resources:
         - Images.xcassets
-#        - LaunchScreen.xib
+        - LaunchScreen.xib
       - Supporting Files:
         - Info.plist
         - main.m
@@ -50,7 +49,7 @@ app_target_templates:
         - Main.storyboard
       - Resources:
         - Images.xcassets
-#        - LaunchScreen.xib
+        - LaunchScreen.xib
       - Supporting Files:
         - Info.plist
       - Debug:
