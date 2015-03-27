@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 gem 'asciidoctor'
-gem 'cocoapods'
+gem 'cocoapods', '~> 0.36.0'
 gem 'homesick'
 gem 'htmlbeautifier'
 gem 'nomad-cli'
