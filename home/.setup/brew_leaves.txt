@@ -1,7 +1,6 @@
 ascii
 audiofile
 autojump
-automake
 brew-cask
 chisel
 class-dump
