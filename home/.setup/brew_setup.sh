@@ -1,9 +1,10 @@
 #!/bin/sh
 
 # Prepare
-brew tap caskroom/cask
 brew tap ioszip/ioszip
 brew tap thoughtbot/formulae
+brew tap caskroom/cask
+brew tap caskroom/fonts
 
 # Update
 brew update

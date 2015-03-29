@@ -1,6 +1,7 @@
 betterzipql
 colorpicker-developer
 colorpicker-hex
+font-m-plus
 ipaql
 provisioning
 qlcolorcode
