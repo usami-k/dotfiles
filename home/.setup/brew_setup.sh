@@ -2,7 +2,6 @@
 
 # Prepare
 brew tap caskroom/cask
-brew tap peco/peco
 brew tap ioszip/ioszip
 brew tap thoughtbot/formulae
 
