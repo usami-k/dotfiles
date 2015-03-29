@@ -217,7 +217,7 @@ alias -s app=open
 
 # 設定スクリプトを読み込む
 for myscriptdir in \
-	/usr/local/etc/profile.d \
+	$(brew --prefix)/etc/profile.d \
 ; do
 	if [ -d $myscriptdir ]; then
 		for myscriptfile in $myscriptdir/*.sh ; do
@@ -241,7 +241,7 @@ done
 unset myscriptdir
 
 # 補完設定ファイルを指定する（既存 fpath の前に追加する）
-fpath[1,0]=/usr/local/share/zsh-completions
+fpath[1,0]=$(brew --prefix)/share/zsh-completions
 fpath[1,0]=$HOME/.zsh/functions
 # 重複を除去する
 typeset -U fpath
