@@ -8,6 +8,9 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     asciidoctor (1.5.2)
+    asciidoctor-diagram (1.2.1)
+      asciidoctor (~> 1.5.0)
+      rjb (~> 1.4.8)
     aws-sdk (1.64.0)
       aws-sdk-v1 (= 1.64.0)
     aws-sdk-v1 (1.64.0)
@@ -112,13 +115,18 @@ GEM
     ntlm-http (0.1.1)
     open4 (1.3.4)
     plist (3.1.0)
+    posix-spawn (0.3.10)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pygments.rb (0.6.3)
+      posix-spawn (~> 0.3.6)
+      yajl-ruby (~> 1.2.0)
     rack (1.6.0)
     rack-protection (1.5.3)
       rack
+    rjb (1.4.9)
     ruby-beautify (0.97.2)
     rubyzip (1.1.7)
     security (0.1.3)
@@ -162,17 +170,20 @@ GEM
       activesupport (>= 3)
       colored (~> 1.2)
     xcpretty (0.1.8)
+    yajl-ruby (1.2.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   asciidoctor
+  asciidoctor-diagram
   cocoapods (~> 0.36.0)
   homesick
   htmlbeautifier
   nomad-cli
   pry
+  pygments.rb
   ruby-beautify
   synx
   xcpretty
