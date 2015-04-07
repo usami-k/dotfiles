@@ -16,6 +16,7 @@ lha
 libimobiledevice
 liftoff
 lv
+mackup
 nkf
 node
 p7zip
