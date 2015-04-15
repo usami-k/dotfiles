@@ -1,6 +1,7 @@
 ascii
 autojump
 brew-cask
+carthage
 chisel
 class-dump
 colordiff
