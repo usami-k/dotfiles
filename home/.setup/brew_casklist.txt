@@ -2,6 +2,7 @@ betterzipql
 colorpicker-developer
 colorpicker-hex
 font-m-plus
+haskell-platform
 ipaql
 provisioning
 qlcolorcode
