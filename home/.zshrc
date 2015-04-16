@@ -2,7 +2,7 @@
 
 # path 設定（既存 path の前に追加する）
 path[1,0]=$HOME/bin
-path[1,0]=$HOME/.cabal/bin
+path[1,0]=$HOME/Library/Haskell/bin
 # 重複を除去する
 typeset -U path
 # 存在しないディレクトリを除去する
