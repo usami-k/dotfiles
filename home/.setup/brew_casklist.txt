@@ -4,6 +4,7 @@ colorpicker-hex
 font-m-plus
 haskell-platform
 ipaql
+pandoc
 provisioning
 qlcolorcode
 qlimagesize

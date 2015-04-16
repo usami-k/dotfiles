@@ -21,7 +21,6 @@ mackup
 nkf
 node
 p7zip
-pandoc
 peco
 plantuml
 pwgen
