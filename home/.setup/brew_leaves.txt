@@ -29,6 +29,7 @@ redpen
 rmtrash
 rpl
 ruby
+swiftlint
 the_platinum_searcher
 tig
 uncrustify
