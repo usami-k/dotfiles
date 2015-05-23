@@ -6,6 +6,7 @@ chisel
 class-dump
 colordiff
 coreutils
+dnvm
 git
 git-flow
 gnu-sed
