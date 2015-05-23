@@ -1,13 +1,5 @@
 # zshrc
 
-# path 設定（既存 path の前に追加する）
-path[1,0]=$HOME/bin
-path[1,0]=$HOME/Library/Haskell/bin
-# 重複を除去する
-typeset -U path
-# 存在しないディレクトリを除去する
-path=($^path(N-/))
-
 # ディレクトリ名のみの入力でcdを行う
 setopt auto_cd
 # cdをpushdにする
@@ -209,9 +201,6 @@ export LESS=FRSX
 # less の履歴を保存しない
 export LESSHISTFILE=-
 
-# homebrew-cask : Application ディレクトリ指定
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
 # app ファイル名指定で実行できるようにする
 alias -s app=open
 
@@ -243,10 +232,15 @@ unset myscriptdir
 # 補完設定ファイルを指定する（既存 fpath の前に追加する）
 fpath[1,0]=$(brew --prefix)/share/zsh-completions
 fpath[1,0]=$HOME/.zsh/functions
-# 重複を除去する
+# fpath の重複を除去する
 typeset -U fpath
 # 存在しないディレクトリを除去する
 fpath=($^fpath(N-/))
+
+# path の重複を除去する
+typeset -U path
+# 存在しないディレクトリを除去する
+path=($^path(N-/))
 
 # 補完関数のロード
 autoload compinit
