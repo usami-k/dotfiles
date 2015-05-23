@@ -1,2 +1,4 @@
-source dnvm.sh
-export MONO_MANAGED_WATCHER=disabled
+if [ -e "$(which dnvm.sh)" ]; then
+    source dnvm.sh
+    export MONO_MANAGED_WATCHER=disabled
+fi
