@@ -172,35 +172,6 @@ my_update_prompt () {
 # プロンプト定義
 PROMPT=$'$(my_update_prompt)\n%# '
 
-# cp : 進捗を表示する
-alias cp="cp -v"
-# mv : 進捗を表示する
-alias mv="mv -v"
-# rm : 削除前に確認する、進捗を表示する
-alias rm="grm -I -v"
-# ls : 隠しファイルも表示する、カラー表示する、番号でソートする
-alias ls="gls -A --color=auto --sort=version"
-eval $(gdircolors)
-# lv : カラー表示に対応する
-alias lv="lv -c"
-# grep : カラー表示する
-alias grep="grep --color=auto"
-# jq : 常にカラー表示する
-alias jq="jq -C"
-# diff : 常にカラー表示する、Unified形式にする
-alias diff="colordiff -u"
-# w3m : HTMLページャとして起動する
-alias w3m="w3m -T text/html"
-# rename : zmv ベースのリネームコマンド
-alias rename="noglob zmv -W"
-# EDITOR : CotEditorを別インスタンスで起動して終了を待つ
-export EDITOR="open -W -n -F -a CotEditor"
-
-# less : 1画面分のときは終了する、カラー表示する、行を折り返さない、画面をクリアしない
-export LESS=FRSX
-# less の履歴を保存しない
-export LESSHISTFILE=-
-
 # app ファイル名指定で実行できるようにする
 alias -s app=open
 
