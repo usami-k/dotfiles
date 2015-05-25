@@ -19,6 +19,7 @@ libimobiledevice
 liftoff
 lv
 mackup
+mergepbx
 nkf
 node
 p7zip
