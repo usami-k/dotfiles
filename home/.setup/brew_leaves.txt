@@ -1,41 +1,57 @@
-ascii
-autojump
-brew-cask
-carthage
-chisel
-class-dump
-colordiff
-coreutils
-dnvm
-git
-git-flow
-gnu-sed
-hub
-imagemagick
-ioszip
-jq
-lha
-libimobiledevice
-liftoff
-lv
-mackup
-mergepbx
-nkf
-node
-p7zip
-peco
-plantuml
-pwgen
-python3
-redpen
-rmtrash
-rpl
-ruby
-swiftlint
-the_platinum_searcher
-tig
-uncrustify
-w3m
-xctool
+# brew
+caskroom/cask/brew-cask
+
+# shell
 zsh
 zsh-completions
+
+# tool
+autojump
+peco
+lv
+nkf
+rpl
+the_platinum_searcher
+coreutils
+colordiff
+gnu-sed
+w3m
+ascii
+pwgen
+imagemagick
+rmtrash
+mackup
+
+# archive
+lha
+p7zip
+
+# document
+plantuml
+redpen
+
+# git
+git
+git-flow
+hub
+tig
+
+# cocoa
+class-dump
+chisel
+mergepbx
+xctool
+carthage
+thoughtbot/formulae/liftoff
+ioszip/ioszip/ioszip
+libimobiledevice
+uncrustify
+swiftlint
+
+# develop
+jq
+ruby
+python3
+node
+aspnet/dnx/dnvm
+

@@ -6,5 +6,5 @@ brew tap thoughtbot/formulae
 brew tap aspnet/dnx
 
 brew update
-brew install $(cat brew_leaves.txt)
-brew cask install $(cat brew_cask_list.txt)
+brew install $(cat brew_leaves.txt | sed "/^#/d")
+brew cask install $(cat brew_cask_list.txt | sed "/^#/d")

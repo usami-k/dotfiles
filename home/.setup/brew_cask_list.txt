@@ -1,16 +1,28 @@
+# Fonts
+font-m-plus
+
+# QuickLook : Text
+qlstephen
+qlmarkdown
+qlcolorcode
+qlprettypatch
+quicklook-json
+quicklook-csv
+
+# QuickLook : Binary
+qlimagesize
 betterzipql
+suspicious-package
+ipaql
+provisioning
+
+# Color Picker
 colorpicker-developer
 colorpicker-hex
-font-m-plus
+
+# Haskell
 haskell-platform
-ipaql
+
+# tool
 pandoc
-provisioning
-qlcolorcode
-qlimagesize
-qlmarkdown
-qlprettypatch
-qlstephen
-quicklook-csv
-quicklook-json
-suspicious-package
+
