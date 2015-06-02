@@ -17,6 +17,9 @@ gem 'pry'
 gem 'ruby-beautify'
 gem 'htmlbeautifier'
 
+# markdown
+gem 'redcarpet'
+
 # asciidoctor
 gem 'asciidoctor'
 gem 'asciidoctor-diagram'
