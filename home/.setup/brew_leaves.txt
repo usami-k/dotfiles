@@ -46,7 +46,6 @@ thoughtbot/formulae/liftoff
 ioszip/ioszip/ioszip
 libimobiledevice
 uncrustify
-swiftlint
 
 # develop
 jq
