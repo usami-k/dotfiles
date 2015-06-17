@@ -23,6 +23,6 @@ colorpicker-hex
 # Haskell
 haskell-platform
 
-# tool
+# document
 pandoc
 

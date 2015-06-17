@@ -4,31 +4,30 @@ caskroom/cask/brew-cask
 # shell
 zsh
 zsh-completions
-
-# tool
 autojump
 peco
+
+# shell tools
 lv
-nkf
-rpl
-the_platinum_searcher
-coreutils
 colordiff
+coreutils
+rmtrash
+the_platinum_searcher
 gnu-sed
-w3m
+rpl
+
+# utility
+nkf
 ascii
 pwgen
 imagemagick
-rmtrash
+
+# backup
 mackup
 
 # archive
 lha
 p7zip
-
-# document
-plantuml
-redpen
 
 # git
 git
@@ -45,7 +44,6 @@ carthage
 thoughtbot/formulae/liftoff
 ioszip/ioszip/ioszip
 libimobiledevice
-uncrustify
 
 # develop
 jq
@@ -53,4 +51,12 @@ ruby
 python3
 node
 aspnet/dnx/dnvm
+
+# atom-beautifier
+uncrustify
+
+# document
+plantuml
+redpen
+w3m
 
