@@ -8,6 +8,7 @@ gem 'cocoapods'
 gem 'synx'
 gem 'xcpretty'
 gem 'xcjobs'
+gem 'fastlane'
 gem 'nomad-cli'
 
 # ruby
