@@ -1,15 +1,15 @@
 #!/bin/sh
 
 # Yeoman
-npm install -g bower
-npm install -g yo
-npm install -g grunt-cli
-npm install -g generator-aspnet
+npm -g install bower
+npm -g install yo
+npm -g install grunt-cli
+npm -g install generator-aspnet
 
 # CoffeeScript
-npm install -g coffee-script
+npm -g install coffee-script
 
 # linter
-npm install -g coffeelint
-npm install -g jshint
+npm -g install coffeelint
+npm -g install jshint
 
