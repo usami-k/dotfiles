@@ -12,4 +12,5 @@ npm -g install coffee-script
 # linter
 npm -g install coffeelint
 npm -g install jshint
+npm -g install jsonlint
 
