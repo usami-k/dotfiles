@@ -109,9 +109,9 @@ zstyle ":vcs_info:*" enable git svn
 # commitしていない変更をチェックする
 zstyle ":vcs_info:git*:*" check-for-changes true
 # gitリポジトリに対して、変更情報とリポジトリ情報を表示する
-zstyle ":vcs_info:git*:*" formats "%u%c%m[%b](%s)"
+zstyle ":vcs_info:git*:*" formats "%u%c%m[%b]"
 # gitリポジトリに対して、コンフリクトなどの情報を表示する
-zstyle ":vcs_info:git*:*" actionformats "%u%c<%a>%m[%b](%s)"
+zstyle ":vcs_info:git*:*" actionformats "%u%c<%a>%m[%b]"
 # addしていない変更があることを示す文字列
 zstyle ":vcs_info:git*:*" unstagedstr "<U>"
 # commitしていないstageがあることを示す文字列
