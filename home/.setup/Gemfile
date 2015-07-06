@@ -5,6 +5,7 @@ gem 'homesick'
 
 # cocoa
 gem 'cocoapods'
+gem 'cocoaseeds'
 gem 'synx'
 gem 'xcpretty'
 gem 'xcjobs'
