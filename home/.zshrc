@@ -152,9 +152,14 @@ my_git_info_rerere () {
 	fi
 }
 
+# git：user 表示
+my_git_user () {
+	echo "{${$(git config user.email)/*@/}}"
+}
+
 # vcs_infoの出力に独自の出力を付加する
 +vi-my_vcs_info () {
-	hook_com[misc]="$(my_git_info_push)$(my_git_info_stash)$(my_git_info_rerere)$hook_com[misc_orig]"
+	hook_com[misc]="$(my_git_info_push)$(my_git_info_stash)$(my_git_info_rerere)$hook_com[misc_orig]$(my_git_user)"
 }
 
 # プロンプト文字列を作成する
