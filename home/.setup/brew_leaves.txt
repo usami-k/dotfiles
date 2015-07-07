@@ -9,7 +9,6 @@ peco
 
 # shell tools
 lv
-colordiff
 coreutils
 rmtrash
 the_platinum_searcher
