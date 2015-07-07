@@ -28,6 +28,8 @@
 	date = local
 [tig "bind"]
 	generic = G none
+[ghq]
+	root = ~/code
 [diff]
 	tool = Kaleidoscope
 [merge]
