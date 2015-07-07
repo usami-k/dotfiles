@@ -48,7 +48,7 @@ libimobiledevice
 # develop
 jq
 ruby
-python3
+python
 node
 aspnet/dnx/dnvm
 
