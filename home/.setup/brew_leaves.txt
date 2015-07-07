@@ -30,6 +30,7 @@ git
 git-flow
 hub
 tig
+ghq
 
 # cocoa
 class-dump
