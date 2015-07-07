@@ -22,9 +22,6 @@ ascii
 pwgen
 imagemagick
 
-# backup
-mackup
-
 # archive
 lha
 p7zip
