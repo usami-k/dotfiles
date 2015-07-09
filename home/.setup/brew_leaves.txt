@@ -49,9 +49,6 @@ python
 node
 aspnet/dnx/dnvm
 
-# atom-beautifier
-uncrustify
-
 # document
 plantuml
 redpen
