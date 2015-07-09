@@ -30,7 +30,7 @@
 	generic = G none
 [ghq]
 	root = ~/code
-	root = ~/go
+	root = ~/go/src
 [diff]
 	tool = Kaleidoscope
 [merge]
