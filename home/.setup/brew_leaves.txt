@@ -20,6 +20,7 @@ nkf
 ascii
 pwgen
 imagemagick
+pstree
 
 # archive
 lha
