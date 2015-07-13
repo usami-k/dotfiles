@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# Disable App Nap
-defaults write NSGlobalDomain NSAppSleepDisabled -bool yes
-
 # Disable .DS_Store on network drive
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 
