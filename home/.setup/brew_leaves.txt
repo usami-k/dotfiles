@@ -4,7 +4,6 @@ caskroom/cask/brew-cask
 # shell
 zsh
 zsh-completions
-autojump
 peco
 
 # shell tools
