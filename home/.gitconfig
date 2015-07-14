@@ -32,6 +32,7 @@
 	root = ~/code
 	root = ~/work
 	root = ~/go/src
+	root = ~/.homesick
 [diff]
 	tool = Kaleidoscope
 [merge]
