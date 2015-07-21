@@ -30,9 +30,9 @@
 	generic = G none
 [ghq]
 	root = ~/code
-	root = ~/work
-	root = ~/go/src
 	root = ~/.homesick
+	root = ~/go/src
+	root = ~/work
 [diff]
 	tool = Kaleidoscope
 [merge]

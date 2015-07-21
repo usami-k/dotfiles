@@ -1,5 +1,5 @@
 function peco-ghq () {
-    local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+    local selected_dir=$(ghq list -p | gtac | peco --query "$LBUFFER")
     if [ -n "$selected_dir" ]; then
         BUFFER="cd ${selected_dir}"
         CURSOR=$#BUFFER
