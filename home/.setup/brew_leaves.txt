@@ -20,6 +20,7 @@ ascii
 pwgen
 imagemagick
 pstree
+mackup
 
 # archive
 lha
