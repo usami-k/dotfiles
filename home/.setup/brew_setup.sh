@@ -4,6 +4,7 @@ brew tap caskroom/fonts
 brew tap ioszip/ioszip
 brew tap thoughtbot/formulae
 brew tap aspnet/dnx
+brew tap tcnksm/ghr
 
 brew update
 brew install $(cat brew_leaves.txt | sed "/^#/d")
