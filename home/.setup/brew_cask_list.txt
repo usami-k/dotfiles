@@ -20,6 +20,9 @@ provisioning
 colorpicker-developer
 colorpicker-hex
 
+# Java (JDK)
+java
+
 # Haskell
 haskell-platform
 
