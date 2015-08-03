@@ -1,5 +1,4 @@
-#!/bin/bash
-
+# http://qiita.com/uasi/items/610ef5745fc35745fd54
 #
 # ghq-foreach - executes git subcmd or shell cmd for each repo managed by ghq
 #
@@ -16,7 +15,7 @@ say() {
     fi
 }
 
-main() {
+function ghq-foreach() {
     if [[ "$1" = "-q" ]]; then
         QUIET=1
         shift
@@ -45,5 +44,3 @@ main() {
         )
     done
 }
-
-main "$@"
