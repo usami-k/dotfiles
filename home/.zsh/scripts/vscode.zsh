@@ -1,4 +1,4 @@
-vscode () {
+function vscode () {
     if [[ $# = 0 ]]
     then
         open -a "Visual Studio Code"

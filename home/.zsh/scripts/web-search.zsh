@@ -19,11 +19,11 @@ function web_search {
 
 # google : Google検索
 function google () {
-	web_search "https://www.google.co.jp/search?&q=" "+" "" $*
+	web_search "https://www.google.co.jp/search?&q=" "+" "" $@
 }
 
 # dash : Dash呼び出し
 function dash () {
-	web_search "dash://" " " "" $*
+	web_search "dash://" " " "" $@
 }
 

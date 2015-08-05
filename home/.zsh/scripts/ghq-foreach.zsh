@@ -6,7 +6,7 @@
 EXEC=
 QUIET=
 
-say() {
+function say() {
     [[ -n "$QUIET" ]] && return
     if [[ -t 1 ]]; then
         printf '\e[1;34m%s\e[m\n' "$1"

@@ -1,5 +1,5 @@
 # cdg : gitトップディレクトリに移動するコマンド
-cdg () {
+function cdg () {
 	cd $(git rev-parse --show-toplevel)
 }
 
