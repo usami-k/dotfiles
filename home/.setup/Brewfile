@@ -1,0 +1,90 @@
+# brew
+brew 'caskroom/cask/brew-cask'
+
+# shell
+brew 'zsh'
+brew 'zsh-completions'
+brew 'peco'
+
+# shell tools
+brew 'lv'
+brew 'coreutils'
+brew 'rmtrash'
+brew 'the_platinum_searcher'
+brew 'gnu-sed'
+brew 'rpl'
+
+# utility
+brew 'nkf'
+brew 'ascii'
+brew 'pwgen'
+brew 'imagemagick'
+brew 'pstree'
+brew 'mackup'
+
+# archive
+brew 'lha'
+brew 'p7zip'
+
+# git
+brew 'git'
+brew 'git-flow'
+brew 'hub'
+brew 'tig'
+brew 'ghq'
+brew 'tcnksm/ghr/ghr'
+
+# cocoa
+brew 'class-dump'
+brew 'chisel'
+brew 'mergepbx'
+brew 'xctool'
+brew 'carthage'
+brew 'thoughtbot/formulae/liftoff'
+brew 'ioszip/ioszip/ioszip'
+brew 'libimobiledevice'
+
+# develop
+brew 'jq'
+brew 'ruby'
+brew 'python'
+brew 'node'
+brew 'aspnet/dnx/dnvm'
+brew 'mercurial'
+
+# document
+brew 'plantuml'
+brew 'redpen'
+brew 'w3m'
+
+# Fonts
+cask 'font-m-plus'
+
+# QuickLook : Text
+cask 'qlstephen'
+cask 'qlmarkdown'
+cask 'qlcolorcode'
+cask 'qlprettypatch'
+cask 'quicklook-json'
+cask 'quicklook-csv'
+
+# QuickLook : Binary
+cask 'qlimagesize'
+cask 'betterzipql'
+cask 'suspicious-package'
+cask 'ipaql'
+cask 'provisioning'
+
+# Color Picker
+cask 'colorpicker-developer'
+cask 'colorpicker-hex'
+
+# Java (JDK)
+cask 'java'
+
+# Haskell
+cask 'haskell-platform'
+
+# document
+cask 'pandoc'
+
