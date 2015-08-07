@@ -9,3 +9,6 @@ npm -g install generator-aspnet
 # CoffeeScript
 npm -g install coffee-script
 
+# TypeScript
+npm -g install typescript
+
