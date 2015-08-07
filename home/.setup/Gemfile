@@ -15,10 +15,6 @@ gem 'nomad-cli'
 # ruby
 gem 'pry'
 
-# atom-beautify
-gem 'ruby-beautify'
-gem 'htmlbeautifier'
-
 # markdown
 gem 'redcarpet'
 
