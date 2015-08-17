@@ -1,5 +1,9 @@
-# brew
+# brew bundle
 tap 'homebrew/bundle'
+
+# brew cask
+tap 'caskroom/cask'
+tap 'caskroom/fonts'
 brew 'caskroom/cask/brew-cask'
 
 # shell
