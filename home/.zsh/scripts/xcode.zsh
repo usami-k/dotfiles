@@ -2,7 +2,7 @@ function xcode () {
     open -a Xcode $@
 }
 
-function xcode7 () {
-    open -a Xcode7 $@
+function xcode6 () {
+    open -a Xcode6 $@
 }
 
