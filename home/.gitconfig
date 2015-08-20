@@ -29,7 +29,7 @@
 [tig "bind"]
 	generic = G none
 [ghq]
-	root = ~/code
+	root = ~/repo
 	root = ~/go/src
 	root = ~/.homesick
 [diff]
