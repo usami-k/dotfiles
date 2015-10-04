@@ -1,1 +1,2 @@
 command script import /opt/homebrew/opt/chisel/libexec/fblldb.py
+command script import "~/Library/Application Support/Realm/rlm_lldb.py" --allow-reload
