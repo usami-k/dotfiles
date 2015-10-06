@@ -65,6 +65,9 @@ brew 'plantuml'
 brew 'redpen'
 brew 'w3m'
 
+# App
+brew 'jsoizo/cot/cot'
+
 # Fonts
 cask 'font-m-plus'
 
