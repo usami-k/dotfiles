@@ -8,13 +8,9 @@ gem 'cocoapods'
 gem 'cocoaseeds'
 gem 'synx'
 gem 'xcpretty'
-gem 'xcjobs'
-gem 'fastlane'
-gem 'nomad-cli'
 
 # ruby
 gem 'pry'
-gem 'gem-src'
 
 # markdown
 gem 'redcarpet'
