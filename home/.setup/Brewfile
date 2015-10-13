@@ -25,7 +25,6 @@ brew 'ascii'
 brew 'pwgen'
 brew 'imagemagick'
 brew 'pstree'
-brew 'mackup'
 
 # archive
 brew 'lha'
