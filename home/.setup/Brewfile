@@ -65,7 +65,7 @@ brew 'redpen'
 brew 'w3m'
 
 # App
-brew 'jsoizo/cot/cot'
+brew 'coteditor/coteditor/cot'
 
 # Fonts
 cask 'font-m-plus'
