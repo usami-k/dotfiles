@@ -3,17 +3,12 @@ source 'https://rubygems.org'
 # dotfiles
 gem 'homesick'
 
-# cocoa
-gem 'cocoapods'
-gem 'cocoaseeds'
+# Xcode
 gem 'synx'
 gem 'xcpretty'
 
-# ruby
+# Ruby
 gem 'pry'
-
-# markdown
-gem 'redcarpet'
 
 # asciidoctor
 gem 'asciidoctor'
