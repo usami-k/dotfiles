@@ -38,7 +38,7 @@ libimobiledevice
 # develop
 jq
 ruby
-python
+python3
 node
 aspnet/dnx/dnvm
 mercurial

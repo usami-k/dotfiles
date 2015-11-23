@@ -19,6 +19,6 @@ npm -g upgrade
 ## pip
 
 ```
-pip install -U $(pip list --outdated | cut -d' ' -f 1)
+pip3 install -U $(pip3 list --outdated | cut -d' ' -f 1)
 ```
 

@@ -1,11 +1,11 @@
 #!/bin/sh
 
 # backup tool
-pip install --upgrade mackup
+pip3 install --upgrade mackup
 
 # diagram tool
-pip install --upgrade blockdiag
-pip install --upgrade seqdiag
-pip install --upgrade actdiag
-pip install --upgrade nwdiag
-pip install --upgrade reportlab
+pip3 install --upgrade blockdiag
+pip3 install --upgrade seqdiag
+pip3 install --upgrade actdiag
+pip3 install --upgrade nwdiag
+pip3 install --upgrade reportlab
