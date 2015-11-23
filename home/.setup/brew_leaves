@@ -7,19 +7,13 @@ zsh-completions
 peco
 
 # shell tools
-lv
 coreutils
 rmtrash
+lv
+nkf
 the_platinum_searcher
 gnu-sed
 rpl
-
-# utility
-nkf
-ascii
-pwgen
-imagemagick
-pstree
 
 # archive
 lha
@@ -31,16 +25,14 @@ git-flow
 hub
 tig
 ghq
-tcnksm/ghr/ghr
 
 # cocoa
 class-dump
 chisel
 mergepbx
+xcproj
 xctool
 carthage
-thoughtbot/formulae/liftoff
-ioszip/ioszip/ioszip
 libimobiledevice
 
 # develop
@@ -54,5 +46,7 @@ mercurial
 # document
 plantuml
 redpen
-w3m
+
+# graphics
+imagemagick
 
