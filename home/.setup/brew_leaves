@@ -19,6 +19,9 @@ rpl
 lha
 p7zip
 
+# backup
+mackup
+
 # git
 git
 git-flow

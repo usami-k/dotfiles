@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# backup tool
-pip3 install --upgrade mackup
-
 # diagram tool
 pip3 install --upgrade blockdiag
 pip3 install --upgrade seqdiag
