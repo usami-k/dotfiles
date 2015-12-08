@@ -9,8 +9,3 @@ gem 'synx'
 # Ruby
 gem 'pry'
 
-# asciidoctor
-gem 'asciidoctor'
-gem 'asciidoctor-diagram'
-gem 'pygments.rb'
-
