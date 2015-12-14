@@ -1,4 +1,5 @@
-# Created by https://www.gitignore.io
+
+# Created by https://www.gitignore.io/api/osx,svn,appcode
 
 ### OSX ###
 .DS_Store
@@ -11,9 +12,13 @@ Icon
 # Thumbnails
 ._*
 
-# Files that might appear on external disk
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
 .Spotlight-V100
+.TemporaryItems
 .Trashes
+.VolumeIcon.icns
 
 # Directories potentially created on remote AFP share
 .AppleDB
@@ -28,7 +33,7 @@ Temporary Items
 
 
 ### AppCode ###
-# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
 
 *.iml
 
@@ -40,6 +45,7 @@ Temporary Items
 # .idea/workspace.xml
 # .idea/tasks.xml
 # .idea/dictionaries
+# .idea/shelf
 
 # Sensitive or high-churn files:
 # .idea/dataSources.ids
@@ -62,7 +68,7 @@ Temporary Items
 ## Plugin-specific files:
 
 # IntelliJ
-out/
+/out/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -74,4 +80,5 @@ atlassian-ide-plugin.xml
 com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
+fabric.properties
 
