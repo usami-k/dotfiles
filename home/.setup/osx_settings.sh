@@ -5,3 +5,7 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 
 # Enable text selection on QuickLook
 defaults write com.apple.finder QLEnableTextSelection -bool yes
+
+# Disable Photos.app HotPlug
+defaults write com.apple.ImageCapture disableHotPlug -bool YES
+
