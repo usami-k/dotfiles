@@ -10,12 +10,6 @@ brew upgrade --all && brew cleanup
 bundle update && bundle clean --force
 ```
 
-## npm
-
-```
-npm -g upgrade
-```
-
 ## pip
 
 ```
