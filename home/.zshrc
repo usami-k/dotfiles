@@ -222,6 +222,9 @@ path=($^path(N-/))
 autoload compinit
 compinit -u -d "$HOME/.zsh_files/zcompdump"
 
+# gibo の補完定義
+source $(brew --prefix)/share/zsh/site-functions/_gibo
+
 # dash の補完定義
 compdef _man dash
 
