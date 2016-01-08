@@ -38,6 +38,7 @@ xcproj
 xctool
 carthage
 libimobiledevice
+swiftlint
 
 # develop
 jq
