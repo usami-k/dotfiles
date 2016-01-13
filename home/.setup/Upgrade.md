@@ -4,6 +4,12 @@
 brew upgrade --all && brew cleanup
 ```
 
+## homebrew cask
+
+```
+brew cask install $(brew cask list)
+```
+
 ## gem (bundler)
 
 ```
