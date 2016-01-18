@@ -17,5 +17,5 @@
 ## pip
 
 * Check : `pip3 list --outdated`
-* Upgrade : `pip3 install -U $(pip3 list --outdated | cut -d' ' -f 1)`
+* Upgrade : `pip3 install --upgrade $(pip3 list --outdated | cut -d' ' -f 1)`
 
