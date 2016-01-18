@@ -30,17 +30,16 @@ tig
 ghq
 gibo
 
-# cocoa
-class-dump
+# xcode
 chisel
 mergepbx
 xcproj
 xctool
 carthage
-libimobiledevice
 swiftlint
 
 # develop
+class-dump
 jq
 ruby
 python3
