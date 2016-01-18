@@ -44,12 +44,8 @@ swiftlint
 jq
 ruby
 python3
-node
-aspnet/dnx/dnvm
-mercurial
 
 # document
-plantuml
 redpen
 
 # graphics
