@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'homesick'
 
 # Xcode
+gem 'cocoapods'
 gem 'synx'
 
 # Ruby
