@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 # Disable .DS_Store on network drive
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool YES
