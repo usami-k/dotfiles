@@ -3,12 +3,16 @@
 <plist version="1.0">
     <dict>
         <key>Label</key>
-        <string>brewupdate</string>
+        <string>io.github.usami-k.brewupdate</string>
         <key>ProgramArguments</key>
         <array>
             <string>/opt/homebrew/bin/brew</string>
             <string>update</string>
         </array>
+        <key>StandardOutPath</key>
+        <string>/Users/usami/Library/Logs/io.github.usami-k.brewupdate.log</string>
+        <key>StandardErrorPath</key>
+        <string>/Users/usami/Library/Logs/io.github.usami-k.brewupdate.log</string>
         <key>RunAtLoad</key>
         <true/>
         <key>StartInterval</key>
