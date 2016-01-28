@@ -37,6 +37,7 @@ xcproj
 xctool
 carthage
 swiftlint
+tailor
 
 # develop
 class-dump
