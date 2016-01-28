@@ -34,7 +34,7 @@ my_git_info_push () {
 
 # git：stashに退避したものがあるかチェックする
 my_git_info_stash () {
-	if [ -f "$(git rev-parse --git-dir)/refs/stash" ]; then
+	if [ "$(git stash list)" != "" ]; then
 		# stashがあることを示す文字列
 		echo "{s}"
 	fi
