@@ -48,8 +48,16 @@ my_git_info_rerere () {
 	fi
 }
 
+# git：notesがあるかチェックする
+my_git_info_notes () {
+	if [ "$(git notes list)" != "" ]; then
+		# notesがあることを示す文字列
+		echo "(notes)"
+	fi
+}
+
 # vcs_infoの出力に独自の出力を付加する
 +vi-my_vcs_info () {
-	hook_com[misc]="$(my_git_info_push)$(my_git_info_stash)$(my_git_info_rerere)$hook_com[misc_orig]"
+	hook_com[misc]="$(my_git_info_push)$(my_git_info_stash)$(my_git_info_rerere)$hook_com[misc_orig]$(my_git_info_notes)"
 }
 
