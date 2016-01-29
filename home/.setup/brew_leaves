@@ -1,6 +1,3 @@
-# brew cask
-caskroom/cask/brew-cask
-
 # shell
 zsh
 zsh-completions
