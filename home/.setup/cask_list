@@ -23,9 +23,6 @@ colorpicker-hex
 # Java (JDK)
 java
 
-# Haskell
-haskell-platform
-
 # document
 pandoc
 
