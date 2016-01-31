@@ -6,7 +6,7 @@
         <string>io.github.usami-k.brewupdate</string>
         <key>ProgramArguments</key>
         <array>
-            <string>/opt/homebrew/bin/brew</string>
+            <string>/usr/local/bin/brew</string>
             <string>update</string>
         </array>
         <key>StandardOutPath</key>
