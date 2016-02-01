@@ -1,12 +1,7 @@
 # delayed : 補完設定は各種設定よりも後に行う
 
-# 補完設定ファイルを指定する（既存 fpath の前に追加する）
-fpath[1,0]=$(brew --prefix)/share/zsh-completions
-fpath[1,0]=$HOME/.zsh/functions
 # fpath の重複を除去する
 typeset -U fpath
-# 存在しないディレクトリを除去する
-fpath=($^fpath(N-/))
 
 # 補完関数のロード
 autoload compinit
