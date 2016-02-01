@@ -40,6 +40,7 @@ tailor
 jq
 ruby
 python3
+haskell-stack
 
 # document
 redpen
