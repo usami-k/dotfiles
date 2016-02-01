@@ -47,3 +47,8 @@ redpen
 # graphics
 imagemagick
 
+# for QLColorCode
+highlight
+# for SuspiciousPackage
+unar
+
