@@ -1,15 +1,13 @@
 # Fonts
 font-m-plus
 
-# QuickLook : Text
+# QuickLook
 qlstephen
 qlmarkdown
 qlcolorcode
 qlprettypatch
 quicklook-json
 quicklook-csv
-
-# QuickLook : Binary
 qlimagesize
 betterzipql
 suspicious-package
