@@ -1,5 +1,14 @@
 # zshrc
 
+# zplug : https://github.com/b4b4r07/zplug
+source ~/.zplug/zplug
+
+if ! zplug check ; then
+    zplug install
+fi
+
+zplug load
+
 # Emacsキーバインドを使用する
 bindkey -e
 
