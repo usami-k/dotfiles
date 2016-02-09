@@ -1,8 +1,5 @@
 # delayed : 補完設定は各種設定よりも後に行う
 
-# fpath の重複を除去する
-typeset -U fpath
-
 # gibo の補完定義
 source $(brew --prefix)/share/zsh/site-functions/_gibo
 
