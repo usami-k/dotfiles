@@ -1,12 +1,20 @@
 # zshrc
 
-# zplug : https://github.com/b4b4r07/zplug
+# Check if zplug is installed
+if [ ! -d ~/.zplug ] ; then
+	git clone https://github.com/b4b4r07/zplug ~/.zplug
+fi
+
+# Essential
 source ~/.zplug/zplug
 
+
+# Install plugins that have not been installed yet
 if ! zplug check ; then
     zplug install
 fi
 
+# Load plugins
 zplug load
 
 # Emacsキーバインドを使用する
