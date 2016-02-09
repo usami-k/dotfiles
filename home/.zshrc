@@ -15,6 +15,7 @@ source ~/.zplug/zplug
 # Plugins
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-syntax-highlighting", nice:10
+zplug "b4b4r07/enhancd", of:enhancd.sh
 zplug "peco/peco", from:gh-r, as:command
 zplug "plugins/pod", from:oh-my-zsh
 
