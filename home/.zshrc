@@ -15,11 +15,11 @@ source ~/.zplug/zplug
 # Plugins
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-syntax-highlighting", nice:10
-zplug "b4b4r07/enhancd", of:enhancd.sh
+zplug "b4b4r07/enhancd", of:"enhancd.sh"
 zplug "mollifier/cd-gitroot"
 zplug "peco/peco", from:gh-r, as:command
 zplug "plugins/pod", from:oh-my-zsh
-zplug "$(brew --prefix)/share/zsh/site-functions", from:local, of:_gibo, nice:10
+zplug "$(brew --prefix)/share/zsh/site-functions", from:local, of:"_gibo", nice:10
 zplug "$HOME/.zsh/scripts", from:local, nice:5
 zplug "$HOME/.zsh/scripts_delayed", from:local, nice:6
 
