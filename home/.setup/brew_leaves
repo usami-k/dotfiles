@@ -1,7 +1,6 @@
 # shell
 zsh
 zsh-completions
-peco
 
 # shell tools
 coreutils

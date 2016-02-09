@@ -9,6 +9,8 @@ fi
 # Essential
 source ~/.zplug/zplug
 
+# Plugins
+zplug "peco/peco", from:gh-r, as:command
 
 # Install plugins that have not been installed yet
 if ! zplug check ; then
