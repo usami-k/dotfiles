@@ -13,8 +13,9 @@ fi
 source ~/.zplug/zplug
 
 # Plugins
-zplug "peco/peco", from:gh-r, as:command
 zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-syntax-highlighting", nice:10
+zplug "peco/peco", from:gh-r, as:command
 zplug "plugins/pod", from:oh-my-zsh
 
 # Install plugins that have not been installed yet
