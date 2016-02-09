@@ -2,7 +2,8 @@
 
 # Check if zplug is installed
 if [ ! -d ~/.zplug ] ; then
-	git clone https://github.com/b4b4r07/zplug ~/.zplug
+	curl -fLo ~/.zplug/zplug --create-dirs https://git.io/zplug
+	source ~/.zplug/zplug && zplug update --self
 fi
 
 # Essential
@@ -11,7 +12,7 @@ source ~/.zplug/zplug
 
 # Install plugins that have not been installed yet
 if ! zplug check ; then
-    zplug install
+	zplug install
 fi
 
 # Load plugins
