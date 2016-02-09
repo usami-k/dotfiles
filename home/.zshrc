@@ -1,5 +1,8 @@
 # zshrc
 
+# Use Emacs keybind
+bindkey -e
+
 # Check if zplug is installed
 if [ ! -d ~/.zplug ] ; then
 	curl -fLo ~/.zplug/zplug --create-dirs https://git.io/zplug
@@ -21,9 +24,6 @@ fi
 
 # Load plugins
 zplug load
-
-# Emacsキーバインドを使用する
-bindkey -e
 
 # 設定スクリプトを読み込む
 myscriptdir=$HOME/.zsh/scripts
