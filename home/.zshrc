@@ -19,30 +19,12 @@ zplug "b4b4r07/enhancd", of:enhancd.sh
 zplug "mollifier/cd-gitroot"
 zplug "peco/peco", from:gh-r, as:command
 zplug "plugins/pod", from:oh-my-zsh
+zplug "$HOME/.zsh/scripts", from:local, nice:5
+zplug "$HOME/.zsh/scripts_delayed", from:local, nice:15
 
 # Install plugins that have not been installed yet
 zplug check || zplug install
 
 # Load plugins
 zplug load
-
-# 設定スクリプトを読み込む
-myscriptdir=$HOME/.zsh/scripts
-if [ -d $myscriptdir ]; then
-	for myscriptfile in $myscriptdir/*.zsh ; do
-		source $myscriptfile
-	done
-	unset myscriptfile
-fi
-unset myscriptdir
-
-# delayed 設定スクリプトを読み込む
-myscriptdir=$HOME/.zsh/scripts_delayed
-if [ -d $myscriptdir ]; then
-	for myscriptfile in $myscriptdir/*.zsh ; do
-		source $myscriptfile
-	done
-	unset myscriptfile
-fi
-unset myscriptdir
 
