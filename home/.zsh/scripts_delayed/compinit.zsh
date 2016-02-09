@@ -3,10 +3,6 @@
 # fpath の重複を除去する
 typeset -U fpath
 
-# 補完関数のロード
-autoload compinit
-compinit -u -d "$HOME/.zsh_files/zcompdump"
-
 # gibo の補完定義
 source $(brew --prefix)/share/zsh/site-functions/_gibo
 

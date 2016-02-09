@@ -9,8 +9,6 @@ setopt glob_complete
 zstyle ":completion:*" verbose yes
 # 補完候補をキャッシュファイルに保存する
 zstyle ":completion:*" use-cache yes
-# キャッシュファイルの場所指定
-zstyle ":completion:*" cache-path "$HOME/.zsh_files/zcompcache"
 # 補完候補の重複を避ける
 zstyle ":completion:*" remove-all-dups yes
 # マニュアルのセクション別に補完候補を表示する
