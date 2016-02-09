@@ -4,10 +4,10 @@
 bindkey -e
 
 # Check if zplug is installed
-if [ ! -d ~/.zplug ] ; then
+[ -d ~/.zplug ] || {
 	curl -fLo ~/.zplug/zplug --create-dirs https://git.io/zplug
 	source ~/.zplug/zplug && zplug update --self
-fi
+}
 
 # Essential
 source ~/.zplug/zplug
@@ -19,9 +19,7 @@ zplug "peco/peco", from:gh-r, as:command
 zplug "plugins/pod", from:oh-my-zsh
 
 # Install plugins that have not been installed yet
-if ! zplug check ; then
-	zplug install
-fi
+zplug check || zplug install
 
 # Load plugins
 zplug load
