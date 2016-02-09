@@ -14,13 +14,15 @@ source ~/.zplug/zplug
 
 # Plugins
 zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-syntax-highlighting", nice:10
+zplug "peco/peco", from:gh-r, as:command
 zplug "b4b4r07/enhancd", of:"enhancd.sh"
 zplug "mollifier/cd-gitroot"
-zplug "peco/peco", from:gh-r, as:command
 zplug "plugins/pod", from:oh-my-zsh
-zplug "$(brew --prefix)/share/zsh/site-functions", from:local, of:"_gibo", nice:10
 zplug "$HOME/.zsh", from:local, nice:5
+
+# Plugins after compinit
+zplug "zsh-users/zsh-syntax-highlighting", nice:10
+zplug "$(brew --prefix)/share/zsh/site-functions", from:local, of:"_gibo", nice:10
 
 # Install plugins that have not been installed yet
 zplug check || zplug install
