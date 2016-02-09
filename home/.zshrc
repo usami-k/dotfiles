@@ -18,6 +18,7 @@ zplug "peco/peco", from:gh-r, as:command
 zplug "b4b4r07/enhancd", of:"enhancd.sh"
 zplug "mollifier/cd-gitroot"
 zplug "plugins/pod", from:oh-my-zsh
+zplug "uasi/28415c76416986e81030", from:gist, of:"ghq-foreach.sh", file:"ghq-foreach", do:"chmod +x ghq-foreach.sh", as:command
 zplug "$HOME/.zsh", from:local, nice:5
 
 # Plugins after compinit
