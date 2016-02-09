@@ -11,6 +11,7 @@ source ~/.zplug/zplug
 
 # Plugins
 zplug "peco/peco", from:gh-r, as:command
+zplug "zsh-users/zsh-completions"
 zplug "plugins/pod", from:oh-my-zsh
 
 # Install plugins that have not been installed yet
