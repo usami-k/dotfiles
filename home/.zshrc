@@ -20,8 +20,7 @@ zplug "mollifier/cd-gitroot"
 zplug "peco/peco", from:gh-r, as:command
 zplug "plugins/pod", from:oh-my-zsh
 zplug "$(brew --prefix)/share/zsh/site-functions", from:local, of:"_gibo", nice:10
-zplug "$HOME/.zsh/scripts", from:local, nice:5
-zplug "$HOME/.zsh/scripts_delayed", from:local, nice:6
+zplug "$HOME/.zsh", from:local, nice:5
 
 # Install plugins that have not been installed yet
 zplug check || zplug install
