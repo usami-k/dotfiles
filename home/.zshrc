@@ -18,12 +18,14 @@ zplug "peco/peco", from:gh-r, as:command
 zplug "b4b4r07/enhancd", of:"enhancd.sh"
 zplug "mollifier/cd-gitroot"
 zplug "plugins/pod", from:oh-my-zsh
-zplug "uasi/28415c76416986e81030", from:gist, of:"ghq-foreach.sh", file:"ghq-foreach", do:"chmod +x ghq-foreach.sh", as:command
-zplug "$HOME/.zsh", from:local, nice:5
+zplug "uasi/28415c76416986e81030", from:gist, of:"ghq-foreach.sh", do:"chmod +x ghq-foreach.sh", file:"ghq-foreach", as:command
 
 # Plugins after compinit
 zplug "zsh-users/zsh-syntax-highlighting", nice:10
 zplug "$(brew --prefix)/share/zsh/site-functions", from:local, of:"_gibo", nice:10
+
+# Personal settings
+zplug "$HOME/.zsh", from:local, nice:5
 
 # Install plugins that have not been installed yet
 zplug check || zplug install
