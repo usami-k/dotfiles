@@ -29,8 +29,6 @@
 	generic = G none
 [ghq]
 	root = ~/repo
-	root = ~/go/src
-	root = ~/.homesick
 [diff]
 	tool = Kaleidoscope
 [merge]
