@@ -3,7 +3,7 @@ command alias reveal_load_dev expr (void*)dlopen([(NSString*)[(NSBundle*)[NSBund
 command alias reveal_start expr (void)[(NSNotificationCenter*)[NSNotificationCenter defaultCenter] postNotificationName:@"IBARevealRequestStart" object:nil];
 command alias reveal_stop expr (void)[(NSNotificationCenter*)[NSNotificationCenter defaultCenter] postNotificationName:@"IBARevealRequestStop" object:nil];
 
-command script import /opt/homebrew/opt/chisel/libexec/fblldb.py
+command script import "/usr/local/opt/chisel/libexec/fblldb.py"
 
 command script import "~/Library/Application Support/Realm/rlm_lldb.py" --allow-reload
 
