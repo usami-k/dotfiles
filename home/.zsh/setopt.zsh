@@ -44,7 +44,7 @@ zstyle ":completion:*" verbose yes
 zstyle ":completion:*" use-cache yes
 # 補完候補の重複を避ける
 zstyle ":completion:*" remove-all-dups yes
-# マニュアルのセクション別に補完候補を表示する
+# 補完候補をセクション別に表示する
 zstyle ":completion:*" separate-sections yes
 # 補完候補に色をつける
 zstyle ":completion:*" list-colors ""
