@@ -32,7 +32,11 @@ alias lv="lv -c"
 alias grep="grep --color=auto"
 
 # diff : 常にカラー表示する、Unified形式にする
-alias diff="git diff --no-index"
+if which colordiff >/dev/null ; then
+    alias diff="colordiff --unified"
+else
+    alias diff="diff --unified"
+fi
 
 # jq : 常にカラー表示する
 alias jq="jq -C"
