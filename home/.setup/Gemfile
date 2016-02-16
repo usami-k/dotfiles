@@ -6,6 +6,7 @@ gem 'homesick'
 # Xcode
 gem 'cocoapods'
 gem 'synx'
+gem 'fastlane'
 
 # Ruby
 gem 'pry'
