@@ -12,8 +12,6 @@
 [color]
 	ui = auto
 [alias]
-	co = checkout
-	st = status
 	log-graph = log --oneline --decorate --graph --branches
 	show-summary = show --no-patch --pretty='format:Commit : %H [%h]%nDate : %ci%n%s%n' --no-notes
 	ignored = status --ignored
