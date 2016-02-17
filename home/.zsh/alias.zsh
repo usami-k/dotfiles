@@ -13,10 +13,6 @@ alias mv="mv -v"
 # rm : 削除前に確認する、進捗を表示する
 which grm >/dev/null && alias rm="grm -I -v"
 
-# rename : zmv ベースのリネームコマンド
-autoload zmv
-alias rename="noglob zmv -W"
-
 # lv : カラー表示に対応する
 alias lv="lv -c"
 
@@ -30,6 +26,10 @@ which colordiff >/dev/null && alias diff="colordiff --unified"
 # jq : 常にカラー表示する
 alias jq="jq -C"
 
-# xcode
+# rename : zmv ベースのリネームコマンド
+autoload zmv
+alias rename="noglob zmv -W"
+
+# xcode : Xcode 起動コマンド
 alias xcode="open -a Xcode"
 
