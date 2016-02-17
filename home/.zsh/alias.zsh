@@ -1,12 +1,8 @@
 # alias.zsh
 
 # ls : 隠しファイルも表示する、カラー表示する、番号でソートする
-if which gls >/dev/null ; then
-    alias ls="gls -A --color=auto --sort=version"
-    eval $(gdircolors)
-else
-    echo "gls not found"
-fi
+which gls >/dev/null && alias ls="gls -A --color=auto --sort=version"
+which gdircolors >/dev/null && eval $(gdircolors)
 
 # cp : 進捗を表示する
 alias cp="cp -v"
@@ -15,11 +11,7 @@ alias cp="cp -v"
 alias mv="mv -v"
 
 # rm : 削除前に確認する、進捗を表示する
-if which grm >/dev/null ; then
-    alias rm="grm -I -v"
-else
-    echo "grm not found"
-fi
+which grm >/dev/null && alias rm="grm -I -v"
 
 # rename : zmv ベースのリネームコマンド
 autoload zmv
@@ -32,11 +24,8 @@ alias lv="lv -c"
 alias grep="grep --color=auto"
 
 # diff : 常にカラー表示する、Unified形式にする
-if which colordiff >/dev/null ; then
-    alias diff="colordiff --unified"
-else
-    alias diff="diff --unified"
-fi
+alias diff="diff --unified"
+which colordiff >/dev/null && alias diff="colordiff --unified"
 
 # jq : 常にカラー表示する
 alias jq="jq -C"
