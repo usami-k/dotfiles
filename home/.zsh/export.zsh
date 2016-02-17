@@ -1,5 +1,5 @@
-# EDITOR : CotEditorを別インスタンスで起動して終了を待つ
-export EDITOR="open -W -n -F -a CotEditor"
+# EDITOR : CotEditor
+export EDITOR="cot --wait"
 
 # less : 1画面分のときは終了する、カラー表示する、行を折り返さない、画面をクリアしない
 export LESS=FRSX
