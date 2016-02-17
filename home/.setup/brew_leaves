@@ -47,6 +47,9 @@ redpen
 # graphics
 imagemagick
 
+# external
+coteditor/coteditor/cot
+
 # for QLColorCode
 highlight
 # for SuspiciousPackage
