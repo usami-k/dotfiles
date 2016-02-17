@@ -76,7 +76,6 @@ _1st_arguments=(
   'update:fetch latest version of Homebrew and all formulae'
   'upgrade:upgrade outdated formulae'
   'uses:show formulae which depend on a formula'
-  `brew commands --quiet --include-aliases`
 )
 
 local expl
