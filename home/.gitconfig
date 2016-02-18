@@ -7,8 +7,6 @@
 	quotepath = false
 [credential]
 	helper = osxkeychain
-[push]
-	default = simple
 [color]
 	ui = auto
 [alias]
