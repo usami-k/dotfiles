@@ -14,7 +14,6 @@ source ~/.zplug/zplug
 
 # Plugins
 zplug "zsh-users/zsh-completions"
-zplug "peco/peco", from:gh-r, as:command
 zplug "b4b4r07/enhancd", of:"enhancd.sh"
 zplug "mollifier/cd-gitroot"
 zplug "rhysd/zsh-bundle-exec"
