@@ -1,16 +1,20 @@
 # shell
 zsh
-peco
 
-# shell tools
+# shell support
+peco
+colordiff
+
+# file operation
 coreutils
 rmtrash
+
+# text utility
 lv
 nkf
-the_platinum_searcher
-colordiff
 gnu-sed
 rpl
+the_platinum_searcher
 
 # archive
 lha
@@ -24,7 +28,6 @@ git
 git-flow
 hub
 tig
-ghq
 gibo
 
 # xcode
@@ -37,6 +40,7 @@ swiftlint
 tailor
 
 # develop
+ghq
 jq
 ruby
 python3
@@ -53,6 +57,7 @@ coteditor/coteditor/cot
 
 # for QLColorCode
 highlight
+
 # for SuspiciousPackage
 unar
 
