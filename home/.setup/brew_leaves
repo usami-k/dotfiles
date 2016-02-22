@@ -54,6 +54,9 @@ imagemagick
 # external
 coteditor/coteditor/cot
 
+# Mac App Store
+argon/mas/mas
+
 # for QLColorCode
 highlight
 
