@@ -33,5 +33,5 @@ zplug "$HOME/.zsh", from:local, nice:5
 zplug check || zplug install
 
 # Load plugins
-ZPLUG_USE_CACHE=false zplug load
+zplug load
 
