@@ -12,8 +12,8 @@
 [color]
 	ui = auto
 [alias]
-	log-graph = log --oneline --decorate --graph --branches
-	show-summary = show --no-patch --pretty='format:Commit : %H [%h]%nDate : %ci%n%s%n' --no-notes
+	oneline = log --oneline --decorate --graph --branches
+	summary = show --no-patch --pretty='format:Commit : %H [%h]%nDate : %ci%n%s%n' --no-notes
 	ignored = status --ignored
 	set-rerere = config rerere.enabled true
 	submodule-remove = !sh -c 'git submodule deinit ${0} && git rm ${0}'
