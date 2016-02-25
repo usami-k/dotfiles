@@ -24,7 +24,7 @@ zplug "zsh-users/zsh-syntax-highlighting", nice:10
 zplug "$(brew --prefix)/share/zsh/site-functions", from:local, of:"_gibo", nice:10
 
 # Personal settings
-zplug "$HOME/.zsh", from:local
+zplug "$HOME/.zsh", from:local, nice:5
 
 # Install plugins that have not been installed yet
 zplug check || zplug install
