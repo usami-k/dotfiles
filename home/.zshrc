@@ -11,7 +11,7 @@ source ~/.zplug/zplug
 
 # Plugins
 zplug "zsh-users/zsh-completions"
-zplug "b4b4r07/enhancd", of:"enhancd.sh"
+zplug "b4b4r07/enhancd", of:"enhancd.sh", nice:-10
 zplug "mollifier/cd-gitroot"
 zplug "rhysd/zsh-bundle-exec"
 zplug "plugins/pod", from:oh-my-zsh
@@ -24,7 +24,7 @@ zplug "zsh-users/zsh-syntax-highlighting", nice:10
 zplug "$(brew --prefix)/share/zsh/site-functions", from:local, of:"_gibo", nice:10
 
 # Personal settings
-zplug "$HOME/.zsh", from:local, nice:5
+zplug "$HOME/.zsh", from:local
 
 # Install plugins that have not been installed yet
 zplug check || zplug install
