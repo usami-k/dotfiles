@@ -1,8 +1,5 @@
 # zshrc
 
-# Use Emacs keybind
-bindkey -e
-
 # Check if zplug is installed
 [ -d ~/.zplug ] || {
 	curl -fLo ~/.zplug/zplug --create-dirs https://git.io/zplug
