@@ -37,6 +37,7 @@ xctool
 carthage
 swiftlint
 tailor
+kylef/formulae/swiftenv
 
 # develop
 ghq
