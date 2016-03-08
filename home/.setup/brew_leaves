@@ -46,6 +46,10 @@ ruby
 python3
 haskell-stack
 
+# environment
+docker
+docker-machine
+
 # document
 redpen
 
