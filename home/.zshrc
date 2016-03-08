@@ -13,7 +13,6 @@ source ~/.zplug/zplug
 zplug "zsh-users/zsh-completions"
 zplug "b4b4r07/enhancd", of:"enhancd.sh", nice:-10
 zplug "mollifier/cd-gitroot"
-zplug "rhysd/zsh-bundle-exec"
 zplug "plugins/pod", from:oh-my-zsh
 zplug "uasi/28415c76416986e81030", from:gist, of:"ghq-foreach.sh", do:"chmod +x ghq-foreach.sh", file:"ghq-foreach", as:command
 zplug "usami-k/zsh-select-history"
