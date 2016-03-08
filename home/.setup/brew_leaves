@@ -27,28 +27,38 @@ mackup
 git
 git-flow
 hub
+
+# git helper
 gibo
+ghq
+
+# environment
+docker
+docker-machine
 
 # xcode
 chisel
 mergepbx
 xcproj
 xctool
+
+# swift
 carthage
 swiftlint
 tailor
 kylef/formulae/swiftenv
 
-# develop
-ghq
-jq
+# ruby
 ruby
+
+# python
 python3
+
+# haskell
 haskell-stack
 
-# environment
-docker
-docker-machine
+# json
+jq
 
 # document
 redpen
