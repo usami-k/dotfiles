@@ -8,6 +8,9 @@ gem 'cocoapods'
 gem 'synx'
 gem 'fastlane'
 
+# Swift
+gem 'jazzy'
+
 # Ruby
 gem 'pry'
 
