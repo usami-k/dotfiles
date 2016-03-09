@@ -1,48 +1,49 @@
-# shell
+# Shell
 zsh
 
-# shell support
+# Shell Support
 peco
 colordiff
 
-# file operation
+# File Operation
 coreutils
 rmtrash
 
-# text utility
+# Text Utility
 lv
 nkf
 gnu-sed
 rpl
 the_platinum_searcher
+redpen
 
-# archive
+# Archive Utility
 lha
 p7zip
 
-# backup
+# Backup
 mackup
 
-# git
+# Git
 git
 git-flow
 hub
 
-# git helper
+# Git Utility
 gibo
 ghq
 
-# environment
+# Environment
 docker
 docker-machine
 
-# xcode
+# Xcode
 chisel
 mergepbx
 xcproj
 xctool
 
-# swift
+# Swift
 carthage
 sourcekitten
 swiftgen
@@ -51,28 +52,23 @@ swiftlint
 tailor
 kylef/formulae/swiftenv
 
-# ruby
+# Ruby
 ruby
 
-# python
+# Python
 python3
 
-# haskell
+# Haskell
 haskell-stack
 
-# json
+# JSON
 jq
 
-# document
-redpen
-
-# graphics
+# Graphics
 imagemagick
 
-# external
+# Application Support
 coteditor/coteditor/cot
-
-# Mac App Store
 argon/mas/mas
 
 # for QLColorCode
