@@ -10,4 +10,4 @@ echo '## gem (bundler)'
 bundle update && bundle clean --force
 
 echo '## pip'
-pip3 install --upgrade $(pip3 list --outdated | cut -d' ' -f1)
+pip install --upgrade $(pip list --outdated | cut -d' ' -f1)

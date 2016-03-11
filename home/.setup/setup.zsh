@@ -12,4 +12,4 @@ echo '## gem (bundler)'
 bundle install
 
 echo '## pip'
-pip3 install $(cat pip_list | sed "/^#/d")
+pip install $(cat pip_list | sed "/^#/d")

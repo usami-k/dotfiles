@@ -7,4 +7,4 @@ echo '## gem (bundler)'
 bundle outdated --strict
 
 echo '## pip'
-pip3 list --outdated
+pip list --outdated
