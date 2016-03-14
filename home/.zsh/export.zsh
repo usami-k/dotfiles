@@ -5,3 +5,7 @@ export EDITOR="cot --wait"
 export LESS=FRSX
 # less の履歴を保存しない
 export LESSHISTFILE=-
+
+# SwiftEnv
+which swiftenv >/dev/null && eval "$(swiftenv init -)"
+
