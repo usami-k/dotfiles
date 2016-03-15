@@ -10,4 +10,6 @@ export LESSHISTFILE=-
 which swiftenv >/dev/null && eval "$(swiftenv init -)"
 # rbenv
 which rbenv >/dev/null && eval "$(rbenv init -)"
+# pyenv
+which pyenv >/dev/null && eval "$(pyenv init -)"
 

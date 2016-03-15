@@ -58,6 +58,7 @@ rbenv
 
 # Python
 python3
+pyenv
 
 # Haskell
 haskell-stack
