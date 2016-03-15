@@ -6,6 +6,8 @@ export LESS=FRSX
 # less の履歴を保存しない
 export LESSHISTFILE=-
 
-# SwiftEnv
+# swiftenv
 which swiftenv >/dev/null && eval "$(swiftenv init -)"
+# rbenv
+which rbenv >/dev/null && eval "$(rbenv init -)"
 
