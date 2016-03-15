@@ -57,7 +57,6 @@ kylef/formulae/swiftenv
 rbenv
 
 # Python
-python3
 pyenv
 
 # Haskell
