@@ -33,3 +33,10 @@ alias rename="noglob zmv -W"
 # xcode : Xcode 起動コマンド
 alias xcode="open -a Xcode"
 
+# haskell-stack : コマンドショートカット
+which stack >/dev/null && {
+    alias ghc="stack ghc --"
+    alias ghci="stack ghc -- --interactive"
+    alias runghc="stack runghc --"
+}
+
