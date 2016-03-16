@@ -9,6 +9,7 @@ brew tap caskroom/fonts
 brew cask install $(cat cask_list | sed "/^#/d")
 
 echo '## gem (bundler)'
+gem install bundler
 bundle install
 
 echo '## pip'
