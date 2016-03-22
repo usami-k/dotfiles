@@ -38,6 +38,10 @@ ghq
 docker
 docker-machine
 
+# Build Tools
+cmake
+ninja
+
 # Xcode
 chisel
 mergepbx
