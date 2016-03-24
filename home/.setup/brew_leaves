@@ -15,15 +15,10 @@ nkf
 gnu-sed
 rpl
 the_platinum_searcher
+
+# Document
 redpen
 pandoc
-
-# Archive Utility
-lha
-p7zip
-
-# Backup
-mackup
 
 # Git
 git
@@ -49,13 +44,13 @@ xcproj
 xctool
 
 # Swift
-carthage
+kylef/formulae/swiftenv
 sourcekitten
 swiftgen
 rswift
 swiftlint
 tailor
-kylef/formulae/swiftenv
+carthage
 
 # Ruby
 rbenv
@@ -71,6 +66,13 @@ jq
 
 # Graphics
 imagemagick
+
+# Archive Utility
+lha
+p7zip
+
+# Backup
+mackup
 
 # Application Support
 coteditor/coteditor/cot
