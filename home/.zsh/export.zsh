@@ -7,9 +7,9 @@ export LESS=FRSX
 export LESSHISTFILE=-
 
 # swiftenv
-which swiftenv >/dev/null && eval "$(swiftenv init -)"
+which swiftenv >/dev/null && eval "$(swiftenv init --no-rehash -)"
 # rbenv
-which rbenv >/dev/null && eval "$(rbenv init -)"
+which rbenv >/dev/null && eval "$(rbenv init --no-rehash -)"
 # pyenv
-which pyenv >/dev/null && eval "$(pyenv init -)"
+which pyenv >/dev/null && eval "$(pyenv init --no-rehash -)"
 
