@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTDPLIST1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Label</key>
+        <string>io.github.usami-k.podrepoupdate</string>
+        <key>ProgramArguments</key>
+        <array>
+            <string>/Users/usami/.rbenv/shims/pod</string>
+            <string>repo</string>
+            <string>update</string>
+        </array>
+        <key>StandardOutPath</key>
+        <string>/Users/usami/Library/Logs/io.github.usami-k.podrepoupdate.log</string>
+        <key>StandardErrorPath</key>
+        <string>/Users/usami/Library/Logs/io.github.usami-k.podrepoupdate.log</string>
+        <key>RunAtLoad</key>
+        <true/>
+        <key>StartInterval</key>
+        <integer>3600</integer>
+    </dict>
+</plist>
