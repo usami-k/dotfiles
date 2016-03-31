@@ -45,9 +45,7 @@ xctool
 
 # Swift
 kylef/formulae/swiftenv
-sourcekitten
 swiftgen
-rswift
 swiftlint
 carthage
 
