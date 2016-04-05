@@ -10,6 +10,11 @@
             <string>repo</string>
             <string>update</string>
         </array>
+        <key>EnvironmentVariables</key>
+        <dict>
+            <key>LANG</key>
+            <string>en_US.UTF-8</string>
+        </dict>
         <key>StandardOutPath</key>
         <string>/Users/usami/Library/Logs/io.github.usami-k.podrepoupdate.log</string>
         <key>StandardErrorPath</key>
