@@ -28,8 +28,6 @@ setopt glob_dots
 setopt numeric_glob_sort
 # イコールの後でもファイル名展開を行う
 setopt magic_equal_subst
-# ファイル名展開でディレクトリ名の後ろにスラッシュをつける
-setopt mark_dirs
 
 # カーソル位置で補完を行う（これをしないとカーソルが単語の後ろにあるとして補完される）
 setopt complete_in_word
