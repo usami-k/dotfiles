@@ -19,12 +19,15 @@ alias lv="lv -c"
 # grep : カラー表示する
 alias grep="grep --color=auto"
 
-# diff : 常にカラー表示する、Unified形式にする
+# diff : 常にカラー表示する、Unified 形式にする
 alias diff="diff --unified"
 which colordiff >/dev/null && alias diff="colordiff --unified"
 
 # jq : 常にカラー表示する
 alias jq="jq -C"
+
+# brew : 各種 *env ツールの PATH を除いて実行する
+alias brew="PATH=${PATH/\/*\/*\/*env\/shims:/} brew"
 
 # rename : zmv ベースのリネームコマンド
 autoload zmv
