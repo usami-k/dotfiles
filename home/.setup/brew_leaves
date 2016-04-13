@@ -35,6 +35,7 @@ docker
 docker-machine
 
 # Build Tools
+gradle
 cmake
 ninja
 
