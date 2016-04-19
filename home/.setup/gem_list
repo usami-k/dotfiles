@@ -1,0 +1,14 @@
+# dotfiles
+homesick
+
+# Xcode
+cocoapods
+synx
+fastlane
+
+# Swift
+jazzy
+
+# Ruby
+pry
+
