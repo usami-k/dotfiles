@@ -1,4 +1,5 @@
 #!/bin/zsh
+pushd $(dirname $0)
 
 echo '## homebrew'
 brew install $(cat brew_leaves | sed "/^#/d")
@@ -13,3 +14,5 @@ gem install $(cat gem_list | sed "/^#/d")
 
 echo '## pip'
 pip install $(cat pip_list | sed "/^#/d")
+
+popd
