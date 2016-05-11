@@ -10,9 +10,11 @@ brew tap caskroom/fonts
 brew cask install $(cat cask_list | sed "/^#/d")
 
 echo '## gem'
+rbenv rehash
 gem install $(cat gem_list | sed "/^#/d")
 
 echo '## pip'
+pyenv rehash
 pip install $(cat pip_list | sed "/^#/d")
 
 popd
