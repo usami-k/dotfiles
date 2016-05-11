@@ -11,4 +11,5 @@ jazzy
 
 # Ruby
 pry
+bundler
 
