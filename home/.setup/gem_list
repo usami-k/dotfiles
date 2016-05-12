@@ -2,9 +2,9 @@
 homesick
 
 # Xcode
+fastlane
 cocoapods
 synx
-fastlane
 
 # Swift
 jazzy
