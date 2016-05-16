@@ -1,6 +1,6 @@
-### https://raw.github.com/github/gitignore/c844436111744d996ed453843d85125bab22af32/Global/OSX.gitignore
+### https://raw.github.com/github/gitignore/9779d87d3d81ffacd90ae2470e7b3ffe566ffc71/Global/OSX.gitignore
 
-.DS_Store
+*.DS_Store
 .AppleDouble
 .LSOverride
 
@@ -17,6 +17,7 @@ Icon
 .TemporaryItems
 .Trashes
 .VolumeIcon.icns
+.com.apple.timemachine.donotpresent
 
 # Directories potentially created on remote AFP share
 .AppleDB
@@ -24,10 +25,5 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
-
-
-### https://raw.github.com/github/gitignore/c844436111744d996ed453843d85125bab22af32/Global/SVN.gitignore
-
-.svn/
 
 
