@@ -2,12 +2,12 @@
 
 # Check if zplug is installed
 [ -d ~/.zplug ] || {
-	curl -fLo ~/.zplug/zplug --create-dirs https://git.io/zplug
-	source ~/.zplug/zplug && zplug update --self
+    git clone https://github.com/zplug/zplug ~/.zplug
+    source ~/.zplug/init.zsh && zplug update --self
 }
 
 # Essential
-source ~/.zplug/zplug
+source ~/.zplug/init.zsh
 
 # Plugins
 zplug "zsh-users/zsh-completions"
