@@ -13,3 +13,6 @@ which rbenv >/dev/null && eval "$(rbenv init --no-rehash -)"
 # pyenv
 which pyenv >/dev/null && eval "$(pyenv init --no-rehash -)"
 
+# pip completion
+eval "$(pip completion --zsh)"
+
