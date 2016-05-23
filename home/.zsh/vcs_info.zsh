@@ -1,5 +1,5 @@
 # vcs_info
-autoload vcs_info
+autoload -Uz vcs_info
 
 # gitのみ有効にする
 zstyle ":vcs_info:*" enable git

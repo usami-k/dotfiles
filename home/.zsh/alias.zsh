@@ -30,7 +30,7 @@ alias jq="jq -C"
 alias brew="PATH=${PATH/\/*\/*\/*env\/shims:/} brew"
 
 # rename : zmv ベースのリネームコマンド
-autoload zmv
+autoload -Uz zmv
 alias rename="noglob zmv -W"
 
 # xcode : Xcode 起動コマンド
