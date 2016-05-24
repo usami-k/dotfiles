@@ -6,7 +6,6 @@ tmux
 vim
 
 # Shell Support
-fzf
 peco
 colordiff
 
