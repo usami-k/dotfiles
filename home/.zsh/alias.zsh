@@ -46,3 +46,6 @@ which stack >/dev/null && {
 # jsc : 内蔵 JavaScript コマンド
 alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Resources/jsc"
 
+# cdg : ghq 管理下に cd するコマンド
+alias cdg='cd $(ghq root)/$(ghq list | peco)'
+
