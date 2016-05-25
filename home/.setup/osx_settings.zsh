@@ -10,5 +10,5 @@ defaults write NSGlobalDomain NSServicesMinimumItemCountForContextSubmenu -int 3
 defaults write com.apple.finder QLEnableTextSelection -bool YES
 
 # Disable Photos.app HotPlug
-defaults write com.apple.ImageCapture disableHotPlug -bool YES
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool YES
 
