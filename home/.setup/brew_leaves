@@ -81,6 +81,9 @@ mackup
 coteditor/coteditor/cot
 argon/mas/mas
 
+# for vim
+python
+
 # for QLColorCode
 highlight
 
