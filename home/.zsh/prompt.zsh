@@ -14,7 +14,7 @@ my_update_prompt () {
 }
 
 # プロンプト定義
-PROMPT=$'$(my_update_prompt)\n'
+PROMPT=$'$(my_update_prompt)\n%# '
 
 # プロンプト直前の出力が改行終端してなくてもクリアしない
 setopt no_prompt_cr
