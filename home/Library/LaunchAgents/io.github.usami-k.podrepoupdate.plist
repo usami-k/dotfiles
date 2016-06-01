@@ -6,9 +6,9 @@
         <string>io.github.usami-k.podrepoupdate</string>
         <key>ProgramArguments</key>
         <array>
-            <string>/Users/usami/.rbenv/shims/pod</string>
-            <string>repo</string>
-            <string>update</string>
+            <string>/bin/sh</string>
+            <string>-c</string>
+            <string>echo ; date ; /Users/usami/.rbenv/shims/pod repo update</string>
         </array>
         <key>EnvironmentVariables</key>
         <dict>

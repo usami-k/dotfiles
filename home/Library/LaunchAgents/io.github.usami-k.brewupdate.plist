@@ -6,8 +6,9 @@
         <string>io.github.usami-k.brewupdate</string>
         <key>ProgramArguments</key>
         <array>
-            <string>/usr/local/bin/brew</string>
-            <string>update</string>
+            <string>/bin/sh</string>
+            <string>-c</string>
+            <string>echo ; date ; /usr/local/bin/brew update</string>
         </array>
         <key>StandardOutPath</key>
         <string>/Users/usami/Library/Logs/io.github.usami-k.brewupdate.log</string>
