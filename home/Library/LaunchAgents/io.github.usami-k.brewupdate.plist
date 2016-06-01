@@ -10,10 +10,16 @@
             <string>-c</string>
             <string>echo ; date ; /usr/local/bin/brew update</string>
         </array>
+        <dict>
+            <key>LANG</key>
+            <string>en_US.UTF-8</string>
+            <key>HOME</key>
+            <string>/Users/usami</string>
+        </dict>
         <key>StandardOutPath</key>
-        <string>/Users/usami/Library/Logs/io.github.usami-k.brewupdate.log</string>
+        <string>$HOME/Library/Logs/io.github.usami-k.brewupdate.log</string>
         <key>StandardErrorPath</key>
-        <string>/Users/usami/Library/Logs/io.github.usami-k.brewupdate.log</string>
+        <string>$HOME/Library/Logs/io.github.usami-k.brewupdate.log</string>
         <key>RunAtLoad</key>
         <true/>
         <key>StartInterval</key>

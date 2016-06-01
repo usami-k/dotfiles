@@ -8,17 +8,19 @@
         <array>
             <string>/bin/sh</string>
             <string>-c</string>
-            <string>echo ; date ; /Users/usami/.rbenv/shims/pod repo update</string>
+            <string>echo ; date ; $HOME/.rbenv/shims/pod repo update</string>
         </array>
         <key>EnvironmentVariables</key>
         <dict>
             <key>LANG</key>
             <string>en_US.UTF-8</string>
+            <key>HOME</key>
+            <string>/Users/usami</string>
         </dict>
         <key>StandardOutPath</key>
-        <string>/Users/usami/Library/Logs/io.github.usami-k.podrepoupdate.log</string>
+        <string>$HOME/Library/Logs/io.github.usami-k.podrepoupdate.log</string>
         <key>StandardErrorPath</key>
-        <string>/Users/usami/Library/Logs/io.github.usami-k.podrepoupdate.log</string>
+        <string>$HOME/Library/Logs/io.github.usami-k.podrepoupdate.log</string>
         <key>RunAtLoad</key>
         <true/>
         <key>StartInterval</key>
