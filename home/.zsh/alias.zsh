@@ -1,5 +1,8 @@
 # alias.zsh
 
+# ディレクトリ名のみの入力でcdを行う
+setopt auto_cd
+
 # ls : 隠しファイルも表示する、カラー表示する、番号でソートする
 which gls >/dev/null && alias ls="gls -A --color=auto --sort=version"
 which gdircolors >/dev/null && eval $(gdircolors)

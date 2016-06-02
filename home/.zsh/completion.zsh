@@ -1,34 +1,3 @@
-# history
-HISTFILE=$HOME/Library/zsh_history/history
-HISTSIZE=100000
-SAVEHIST=100000
-
-# 新しいヒストリをすぐにヒストリファイルに追加する
-setopt inc_append_history
-# ヒストリの重複を避ける
-setopt hist_ignore_all_dups
-# ヒストリで余分なスペースを削除する
-setopt hist_reduce_blanks
-# スペースで始まる入力はヒストリに追加しない
-setopt hist_ignore_space
-
-# Ctrl-Dでログアウトしない
-setopt ignore_eof
-
-# ディレクトリ名のみの入力でcdを行う
-setopt auto_cd
-
-# glob時に{}内で指定した文字を展開する
-setopt brace_ccl
-# globで#、~、^を有効にする
-setopt extended_glob
-# glob時にドット始まりのファイルも対象にする
-setopt glob_dots
-# glob時にファイル名を数値順にソートする
-setopt numeric_glob_sort
-# イコールの後でもファイル名展開を行う
-setopt magic_equal_subst
-
 # カーソル位置で補完を行う（これをしないとカーソルが単語の後ろにあるとして補完される）
 setopt complete_in_word
 # 補完時にエイリアスを解釈する
