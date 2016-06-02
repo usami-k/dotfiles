@@ -6,13 +6,3 @@ export LESS=FRSX
 # less の履歴を保存しない
 export LESSHISTFILE=-
 
-# swiftenv
-which swiftenv >/dev/null && eval "$(swiftenv init --no-rehash -)"
-# rbenv
-which rbenv >/dev/null && eval "$(rbenv init --no-rehash -)"
-# pyenv
-which pyenv >/dev/null && eval "$(pyenv init --no-rehash -)"
-
-# pip completion
-eval "$(pip completion --zsh)"
-

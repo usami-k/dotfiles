@@ -1,5 +1,3 @@
-# alias.zsh
-
 # ディレクトリ名のみの入力でcdを行う
 setopt auto_cd
 
@@ -28,9 +26,6 @@ which colordiff >/dev/null && alias diff="colordiff --unified"
 
 # jq : 常にカラー表示する
 alias jq="jq -C"
-
-# brew : 各種 *env ツールの PATH を除いて実行する
-alias brew="PATH=${PATH/\/*\/*\/*env\/shims:/} brew"
 
 # rename : zmv ベースのリネームコマンド
 autoload -Uz zmv

@@ -26,3 +26,6 @@ zstyle ':completion:*' matcher-list '' '+m:{a-z}={A-Z}' '+m:{A-Z}={a-z}'
 # 今いるディレクトリを補完候補から外す
 zstyle ':completion:*' ignore-parents parent pwd ..
 
+# pip completion
+eval "$(pip completion --zsh)"
+
