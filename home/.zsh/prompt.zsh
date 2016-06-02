@@ -16,9 +16,8 @@ my_update_prompt () {
 # プロンプト定義
 PROMPT=$'$(my_update_prompt)\n%# '
 
-# プロンプト直前の出力が改行終端してなくてもクリアしない
-setopt no_prompt_cr
 # 直前の返り値を表示する
 setopt print_exit_value
+
 # 実行時間が長かった場合、かかった時間を表示する
 REPORTTIME=3
