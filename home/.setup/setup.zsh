@@ -3,6 +3,7 @@ pushd $(dirname $0)
 
 echo '## homebrew'
 brew install $(cat brew_leaves | sed "/^#/d")
+swiftenv rehash
 
 echo '## homebrew cask'
 brew tap caskroom/cask
