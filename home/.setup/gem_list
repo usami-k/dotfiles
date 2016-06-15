@@ -2,9 +2,6 @@
 bundler
 pry
 
-# dotfiles
-homesick
-
 # Xcode
 fastlane
 cocoapods
