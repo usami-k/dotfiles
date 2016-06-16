@@ -1,4 +1,5 @@
 # history
+[ -d $HOME/Library/zsh_history ] || { mkdir $HOME/Library/zsh_history }
 HISTFILE=$HOME/Library/zsh_history/history
 HISTSIZE=100000
 SAVEHIST=100000
