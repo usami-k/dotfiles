@@ -6,7 +6,6 @@ tmux
 vim
 
 # Shell Support
-peco
 colordiff
 
 # File Operation
