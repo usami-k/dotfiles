@@ -35,7 +35,7 @@ my_git_info_push () {
 
 # git：stashに退避したものがあるかチェックする
 my_git_info_stash () {
-	if [ "$(git stash list)" != "" ]; then
+	if [ "$(git stash list 2>/dev/null)" != "" ]; then
 		# stashがあることを示す文字列
 		echo "{s}"
 	fi
@@ -43,7 +43,7 @@ my_git_info_stash () {
 
 # git：rerereが有効かチェックする
 my_git_info_rerere () {
-	if [ "$(git config rerere.enabled)" != "true" ]; then
+	if [ "$(git config rerere.enabled 2>/dev/null)" != "true" ]; then
 		# rerereが無効であることを示す文字列
 		echo "{rr?}"
 	fi
@@ -51,7 +51,7 @@ my_git_info_rerere () {
 
 # git：notesがあるかチェックする
 my_git_info_notes () {
-	if [ "$(git notes list)" != "" ]; then
+	if [ "$(git notes list 2>/dev/null)" != "" ]; then
 		# notesがあることを示す文字列
 		echo "(notes)"
 	fi
