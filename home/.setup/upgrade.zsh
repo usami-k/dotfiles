@@ -1,6 +1,7 @@
 #!/bin/zsh
 
 echo '## homebrew'
+brew update
 brew upgrade --all && brew cleanup
 swiftenv rehash
 

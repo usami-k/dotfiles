@@ -2,6 +2,7 @@
 pushd $(dirname $0)
 
 echo '## homebrew'
+brew update
 brew install $(cat brew_leaves | sed "/^#/d")
 swiftenv rehash
 
