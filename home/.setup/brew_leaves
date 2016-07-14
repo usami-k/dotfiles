@@ -1,10 +1,6 @@
 # Shell
 zsh
 
-# Terminal
-tmux
-vim
-
 # Shell Support
 colordiff
 
@@ -79,9 +75,6 @@ mackup
 # Application Support
 coteditor/coteditor/cot
 argon/mas/mas
-
-# for vim
-python
 
 # for QLColorCode
 highlight
