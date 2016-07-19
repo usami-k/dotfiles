@@ -25,16 +25,19 @@
 	generic = G none
 [ghq]
 	root = ~/repo
+[pull]
+	ff = only
+[merge]
+	ff = false
+	tool = Kaleidoscope
 [diff]
 	tool = Kaleidoscope
-[merge]
-	tool = Kaleidoscope
-[difftool]
-	prompt = false
 [mergetool]
 	prompt = false
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
