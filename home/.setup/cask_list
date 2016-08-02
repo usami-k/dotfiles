@@ -9,6 +9,7 @@ font-noto-sans-cjk-jp
 # QuickLook
 qlstephen
 qlcolorcode
+qlmarkdown
 qlprettypatch
 quicklook-json
 quicklook-csv
