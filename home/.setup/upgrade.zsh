@@ -10,7 +10,7 @@ brew cask install $(brew cask list) && brew cask cleanup
 
 echo '## gem'
 rbenv rehash
-gem update && gem cleanup
+yes | gem update && gem cleanup
 
 echo '## pip'
 pyenv rehash
