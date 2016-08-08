@@ -9,9 +9,9 @@ echo '## homebrew cask'
 brew cask install $(brew cask list) && brew cask cleanup
 
 echo '## gem'
-rbenv rehash
 yes | gem update && gem cleanup
+rbenv rehash
 
 echo '## pip'
-pyenv rehash
 pip install --upgrade $(pip list --outdated | cut -d' ' -f1)
+pyenv rehash
