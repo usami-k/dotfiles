@@ -13,6 +13,14 @@ setopt hist_reduce_blanks
 # スペースで始まる入力はヒストリに追加しない
 setopt hist_ignore_space
 
+# Edit the current command line in $EDITOR
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '\C-x\C-e' edit-command-line
+
+# Ctrl-Dでログアウトしない
+setopt ignore_eof
+
 # glob時に{}内で指定した文字を展開する
 setopt brace_ccl
 # globで#、~、^を有効にする
