@@ -12,4 +12,3 @@ setopt hist_ignore_all_dups
 setopt hist_reduce_blanks
 # スペースで始まる入力はヒストリに追加しない
 setopt hist_ignore_space
-
