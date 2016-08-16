@@ -24,23 +24,6 @@ alias grep="grep --color=auto"
 alias diff="diff --unified"
 which colordiff >/dev/null && alias diff="colordiff --unified"
 
-# jq : 常にカラー表示する
-alias jq="jq -C"
-
 # rename : zmv ベースのリネームコマンド
 autoload -Uz zmv
 alias rename="noglob zmv -W"
-
-# xcode : Xcode 起動コマンド
-alias xcode="open -a Xcode"
-
-# haskell-stack : コマンドショートカット
-which stack >/dev/null && {
-    alias ghc="stack ghc --"
-    alias ghci="stack ghc -- --interactive"
-    alias runghc="stack runghc --"
-}
-
-# jsc : 内蔵 JavaScript コマンド
-alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Resources/jsc"
-
