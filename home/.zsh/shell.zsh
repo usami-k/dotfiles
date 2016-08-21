@@ -76,7 +76,7 @@ my_update_prompt () {
 }
 
 # プロンプト定義
-PROMPT=$'$(my_update_prompt)\n%# '
+PROMPT=$'%u%S$(my_update_prompt)%s\n%# '
 
 # 直前の返り値を表示する
 setopt print_exit_value
