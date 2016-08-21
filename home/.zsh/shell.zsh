@@ -72,7 +72,7 @@ my_update_prompt () {
 		fillsize=$(( $fillsize + $COLUMNS ))
 	done
 	local fill=${(l.$fillsize..-.)}
-	echo "%B[$PWD]$fill$vcs_info_msg_0_(%D{%m/%d %H:%M})%b"
+	echo "[$PWD]$fill$vcs_info_msg_0_(%D{%m/%d %H:%M})"
 }
 
 # プロンプト定義
