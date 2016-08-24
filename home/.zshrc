@@ -12,6 +12,7 @@ source ~/.zplug/init.zsh
 # Plugins
 zplug "zsh-users/zsh-completions"
 zplug "b4b4r07/enhancd", use:"init.sh"
+zplug "rhysd/zsh-bundle-exec", use:"zsh-bundle-exec.zsh"
 zplug "plugins/pod", from:oh-my-zsh
 zplug "peco/peco", from:gh-r, as:command
 zplug "uasi/28415c76416986e81030", from:gist, use:"ghq-foreach.sh", hook-build:"chmod +x ghq-foreach.sh", rename-to:"ghq-foreach", as:command
