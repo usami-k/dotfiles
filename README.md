@@ -1,5 +1,5 @@
 dotfiles
 ========
 
-dotfiles with [homesick](https://github.com/technicalpickles/homesick).
+dotfiles with [homeshick](https://github.com/andsens/homeshick).
 
