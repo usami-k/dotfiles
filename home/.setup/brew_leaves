@@ -23,6 +23,7 @@ pandoc
 # Git
 git
 git-flow
+git-lfs
 hub
 
 # Git Utility
