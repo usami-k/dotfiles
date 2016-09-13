@@ -1,5 +1,3 @@
 # swiftenv
-which swiftenv >/dev/null && eval "$(swiftenv init --no-rehash -)"
+which swiftenv >/dev/null && eval "$(swiftenv init -)"
 
-# xcode : Xcode 起動コマンド
-alias xcode="open -a Xcode"
