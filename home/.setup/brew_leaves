@@ -46,7 +46,6 @@ xcproj
 xctool
 
 # Swift
-kylef/formulae/swiftenv
 swiftgen
 swiftlint
 carthage
