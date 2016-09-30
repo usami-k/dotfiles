@@ -59,6 +59,9 @@ pyenv
 # Haskell
 haskell-stack
 
+# JavaScript
+nodebrew
+
 # JSON
 jq
 
