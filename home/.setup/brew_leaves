@@ -30,15 +30,6 @@ hub
 gibo
 ghq
 
-# Environment
-docker
-docker-machine
-
-# Build Tools
-gradle
-cmake
-ninja
-
 # Xcode
 chisel
 mergepbx
@@ -74,6 +65,15 @@ p7zip
 
 # Backup
 mackup
+
+# Build Tools
+gradle
+cmake
+ninja
+
+# Environment
+docker
+docker-machine
 
 # Application Support
 coteditor/coteditor/cot
