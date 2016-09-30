@@ -14,3 +14,6 @@ yes | gem update && gem cleanup
 echo '## pip'
 pyenv rehash
 pip install --upgrade $(pip list --outdated | cut -d' ' -f1)
+
+echo '## npm'
+npm -g upgrade

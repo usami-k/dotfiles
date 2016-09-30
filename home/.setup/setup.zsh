@@ -16,3 +16,6 @@ gem install $(cat $(dirname $0)/gem_list | sed "/^#/d")
 echo '## pip'
 pyenv rehash
 pip install $(cat $(dirname $0)/pip_list | sed "/^#/d")
+
+echo '## npm'
+npm -g install $(cat $(dirname $0)/npm_list | sed "/^#/d")
