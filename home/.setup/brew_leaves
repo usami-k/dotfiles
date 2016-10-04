@@ -24,7 +24,6 @@ pandoc
 git
 git-flow
 git-lfs
-hub
 
 # Git Utility
 gibo
@@ -74,6 +73,9 @@ ninja
 # Environment
 docker
 docker-machine
+
+# Homebrew
+vitorgalvao/tiny-scripts/cask-repair
 
 # Application Support
 coteditor/coteditor/cot
