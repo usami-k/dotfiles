@@ -5,7 +5,7 @@ brew update
 brew upgrade --all && brew cleanup
 
 echo '## homebrew cask'
-brew cask install $(brew cask list) && brew cask cleanup
+brew cu && brew cask cleanup
 
 echo '## gem'
 rbenv rehash
