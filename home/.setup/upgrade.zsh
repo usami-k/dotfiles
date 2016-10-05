@@ -2,7 +2,7 @@
 
 echo '## homebrew'
 brew update
-brew upgrade --all && brew cleanup
+brew upgrade && brew cleanup
 
 echo '## homebrew cask'
 brew cu && brew cask cleanup
