@@ -1,6 +1,3 @@
-# pyenv
-which pyenv >/dev/null && eval "$(pyenv init --no-rehash -)"
-
 # eval "$(pyenv exec pip completion --zsh)"
 # pip zsh completion start
 function _pip_completion {
