@@ -7,6 +7,8 @@
 	quotepath = false
 [credential]
 	helper = osxkeychain
+[init]
+	templatedir = ~/.git_templates
 [push]
 	default = simple
 [color]
