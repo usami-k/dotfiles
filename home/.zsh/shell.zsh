@@ -60,6 +60,12 @@ zstyle ':completion:*' matcher-list '' '+m:{a-z}={A-Z}' '+m:{A-Z}={a-z}'
 # 今いるディレクトリを補完候補から外す
 zstyle ':completion:*' ignore-parents parent pwd ..
 
+# 直前の返り値を表示する
+setopt print_exit_value
+
+# 実行時間が長かった場合、かかった時間を表示する
+REPORTTIME=3
+
 # プロンプト定義の中で置換を使用する
 setopt prompt_subst
 
@@ -77,9 +83,3 @@ my_update_prompt () {
 
 # プロンプト定義
 PROMPT=$'%u%S$(my_update_prompt)%s\n%# '
-
-# 直前の返り値を表示する
-setopt print_exit_value
-
-# 実行時間が長かった場合、かかった時間を表示する
-REPORTTIME=3
