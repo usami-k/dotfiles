@@ -21,6 +21,9 @@ alias grep="grep --color=auto"
 alias diff="diff --unified"
 which colordiff >/dev/null && alias diff="colordiff --unified"
 
+# .. : 上位ディレクトリへ cd する
+alias ..="cd .."
+
 # rename : zmv ベースのリネームコマンド
 autoload -Uz zmv
 alias rename="noglob zmv -W"
