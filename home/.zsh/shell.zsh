@@ -64,7 +64,7 @@ zstyle ':completion:*' ignore-parents parent pwd ..
 setopt print_exit_value
 
 # 実行時間が長かった場合、かかった時間を表示する
-REPORTTIME=3
+REPORTTIME=10
 
 # プロンプト定義
 autoload -Uz add-zsh-hook
