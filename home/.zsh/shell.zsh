@@ -77,5 +77,5 @@ my_prompt () {
 		fillsize=$(( $fillsize + $COLUMNS ))
 	done
 	local fill=${(l.$fillsize..-.)}
-	PROMPT=%u%S[%d]$fill$vcs_info_msg_0_(%D{%m/%d %H:%M})%s$'\n'%#' '
+	PROMPT=%B[%d]$fill$vcs_info_msg_0_(%D{%m/%d %H:%M})%b$'\n'%#' '
 }
