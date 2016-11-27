@@ -61,4 +61,3 @@ my_git_info_notes () {
 +vi-my_vcs_info () {
 	hook_com[misc]="$(my_git_info_push)$(my_git_info_stash)$(my_git_info_rerere)$hook_com[misc_orig]$(my_git_info_notes)"
 }
-

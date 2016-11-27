@@ -3,4 +3,3 @@
 }
 
 which anyenv >/dev/null && eval "$(anyenv init --no-rehash -)"
-
