@@ -11,12 +11,6 @@ alias mv="mv -v"
 # rm : 削除前に確認する、進捗を表示する
 which grm >/dev/null && alias rm="grm -I -v"
 
-# lv : カラー表示に対応する
-alias lv="lv -c"
-
-# grep : カラー表示する
-alias grep="grep --color=auto"
-
 # diff : 常にカラー表示する、Unified 形式にする
 alias diff="diff --unified"
 which colordiff >/dev/null && alias diff="colordiff --unified"
@@ -30,6 +24,9 @@ alias rename="noglob zmv -W"
 
 # EDITOR : CotEditor
 export EDITOR="cot --wait"
+
+# grep : カラー表示する
+export GREP_OPTIONS="--color=auto"
 
 # less : 1画面分のときは終了する、カラー表示する、行を折り返さない、画面をクリアしない
 export LESS=FRSX
