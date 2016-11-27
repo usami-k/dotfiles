@@ -4,3 +4,5 @@ alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Resources/jsc"
 # jq : 常にカラー表示する
 alias jq="jq -C"
 
+# npm : Disable completion
+compdef -d npm
