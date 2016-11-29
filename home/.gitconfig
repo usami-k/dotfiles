@@ -16,7 +16,6 @@
 	summary = show --pretty='format:Commit : %H [%h]%nDate : %ci%n%s%n' --no-patch --no-notes
 	ignored = status --ignored
 	set-rerere = config rerere.enabled true
-	new-workdir = !$(brew --prefix)/share/git-core/contrib/workdir/git-new-workdir
 [interactive]
 	singlekey = true
 [log]
