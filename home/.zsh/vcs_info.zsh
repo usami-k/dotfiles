@@ -22,39 +22,39 @@ zstyle ":vcs_info:git+set-message:*" hooks my_vcs_info
 
 # git：まだpushしていないcommitがあるかチェックする
 my_git_info_push () {
-	if [ "$(git remote 2>/dev/null)" != "" ]; then
+	[[ "$(git remote 2>/dev/null)" != "" ]] && {
 		local head="$(git rev-parse HEAD)"
 		local remote
 		for remote in $(git rev-parse --remotes) ; do
-			if [ "$head" = "$remote" ]; then return 0 ; fi
+			[[ "$head" = "$remote" ]] && return 0
 		done
 		# pushしていないcommitがあることを示す文字列
 		echo "<P>"
-	fi
+	}
 }
 
 # git：stashに退避したものがあるかチェックする
 my_git_info_stash () {
-	if [ "$(git stash list 2>/dev/null)" != "" ]; then
+	[[ "$(git stash list 2>/dev/null)" != "" ]] && {
 		# stashがあることを示す文字列
 		echo "{s}"
-	fi
+	}
 }
 
 # git：rerereが有効かチェックする
 my_git_info_rerere () {
-	if [ "$(git config rerere.enabled 2>/dev/null)" != "true" ]; then
+	[[ "$(git config rerere.enabled 2>/dev/null)" != "true" ]] && {
 		# rerereが無効であることを示す文字列
 		echo "{rr?}"
-	fi
+	}
 }
 
 # git：notesがあるかチェックする
 my_git_info_notes () {
-	if [ "$(git notes list 2>/dev/null)" != "" ]; then
+	[[ "$(git notes list 2>/dev/null)" != "" ]] && {
 		# notesがあることを示す文字列
 		echo "(notes)"
-	fi
+	}
 }
 
 # vcs_infoの出力に独自の出力を付加する

@@ -1,5 +1,4 @@
 export GOPATH=$HOME/go
-
-[ -d $GOPATH ] && {
+[[ -d $GOPATH ]] && {
     path=($GOPATH/bin $path)
 }

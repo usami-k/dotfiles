@@ -1,5 +1,5 @@
 # history
-[ -d $HOME/Library/zsh_history ] || { mkdir $HOME/Library/zsh_history }
+[[ -d $HOME/Library/zsh_history ]] || { mkdir $HOME/Library/zsh_history }
 HISTFILE=$HOME/Library/zsh_history/history
 HISTSIZE=100000
 SAVEHIST=100000
@@ -73,7 +73,7 @@ my_prompt () {
 	vcs_info
 	local promptstr="[$PWD]$vcs_info_msg_0_(mm/dd HH:MM)"
 	local fillsize=$(( $COLUMNS - ${#promptstr} - 1 ))
-	while [ $fillsize -le -1 ]; do
+	while [[ $fillsize -le -1 ]] ; do
 		fillsize=$(( $fillsize + $COLUMNS ))
 	done
 	local fill=${(l.$fillsize..-.)}
