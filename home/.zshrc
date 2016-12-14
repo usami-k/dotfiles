@@ -10,13 +10,13 @@
 source ~/.zplug/init.zsh
 
 # Plugins
-zplug "zsh-users/zsh-completions"
-zplug "b4b4r07/enhancd", use:"init.sh"
-zplug "plugins/pod", from:oh-my-zsh
 zplug "peco/peco", from:gh-r, as:command
-zplug "uasi/28415c76416986e81030", from:gist, use:"ghq-foreach.sh", hook-build:"chmod +x ghq-foreach.sh", rename-to:"ghq-foreach", as:command
+zplug "b4b4r07/enhancd", use:"init.sh"
 zplug "usami-k/zsh-select-history"
 zplug "usami-k/zsh-android-sdk"
+zplug "uasi/28415c76416986e81030", from:gist, use:"ghq-foreach.sh", hook-build:"chmod +x ghq-foreach.sh", rename-to:"ghq-foreach", as:command
+zplug "zsh-users/zsh-completions"
+zplug "plugins/pod", from:oh-my-zsh
 
 # Plugins after compinit
 zplug "zsh-users/zsh-syntax-highlighting", nice:10
