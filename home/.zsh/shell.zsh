@@ -79,3 +79,17 @@ my_prompt () {
 	local fill=${(l.$fillsize..-.)}
 	PROMPT=%B[%d]$fill$vcs_info_msg_0_(%D{%m/%d %H:%M})%b$'\n'%#' '
 }
+add-zsh-hook chpwd my_rprompt
+my_rprompt () {
+	local rprompt=''
+	local rbenv_version=$(rbenv version-name)
+	[[ $rbenv_version != 'system' ]] && {
+		local rbenv_gemset=$(rbenv gemset active 2>&1)
+		rprompt+="(rbenv:$rbenv_version/$rbenv_gemset)"
+	}
+	local pyenv_version=$(pyenv version-name)
+	[[ $pyenv_version != 'system' ]] && {
+		rprompt+="(pyenv:$pyenv_version)"
+	}
+	RPROMPT=$rprompt
+}
