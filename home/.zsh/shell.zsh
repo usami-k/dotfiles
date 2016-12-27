@@ -68,29 +68,23 @@ REPORTTIME=10
 
 # プロンプト定義
 autoload -Uz add-zsh-hook
-add-zsh-hook precmd my_prompt
+add-zsh-hook chpwd my_prompt
 my_prompt () {
-	vcs_info
-	local promptstr="[$PWD]$vcs_info_msg_0_(mm/dd HH:MM)"
-	local fillsize=$(( $COLUMNS - ${#promptstr} - 1 ))
-	while [[ $fillsize -le -1 ]] ; do
-		fillsize=$(( $fillsize + $COLUMNS ))
-	done
-	local fill=${(l.$fillsize..-.)}
-	PROMPT=%B[%d]$fill$vcs_info_msg_0_(%D{%m/%d %H:%M})%b$'\n'%#' '
-}
-add-zsh-hook chpwd my_rprompt
-my_rprompt () {
-	local rprompt=''
+	local subprompt=''
 	local rbenv_version=$(rbenv version-name)
 	[[ $rbenv_version != 'system' ]] && {
 		local rbenv_gemset=$(rbenv gemset active 2>&1)
-		rprompt+="(rbenv:$rbenv_version/$rbenv_gemset)"
+		subprompt+="(rbenv:$rbenv_version/$rbenv_gemset)"
 	}
 	local pyenv_version=$(pyenv version-name)
 	[[ $pyenv_version != 'system' ]] && {
-		rprompt+="(pyenv:$pyenv_version)"
+		subprompt+="(pyenv:$pyenv_version)"
 	}
-	RPROMPT=$rprompt
+	PROMPT=%S[%d]%s$subprompt$'\n'%#' '
 }
-my_rprompt
+my_prompt
+add-zsh-hook precmd my_rprompt
+my_rprompt () {
+	vcs_info
+	RPROMPT=%B$vcs_info_msg_0_%b
+}
