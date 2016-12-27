@@ -3,8 +3,8 @@ autoload -Uz vcs_info
 
 zstyle ":vcs_info:*" enable git
 zstyle ":vcs_info:git:*" check-for-changes true
-zstyle ":vcs_info:git:*" formats "%u%c%m[%b]"
-zstyle ":vcs_info:git:*" actionformats "%u%c<%a>%m[%b]"
+zstyle ":vcs_info:git:*" formats "[%b]%u%c%m"
+zstyle ":vcs_info:git:*" actionformats "[%b]%u%c<%a>%m"
 zstyle ":vcs_info:git:*" unstagedstr "<U>"
 zstyle ":vcs_info:git:*" stagedstr "<S>"
 zstyle ":vcs_info:git:*" patch-format "{%p}"
@@ -41,5 +41,5 @@ my_git_info_notes () {
 }
 
 +vi-my_vcs_info () {
-	hook_com[misc]="$(my_git_info_notes)$(my_git_info_rerere)$(my_git_info_stash)$(my_git_info_push)$hook_com[misc_orig]"
+	hook_com[misc]="$hook_com[misc_orig]$(my_git_info_push)$(my_git_info_stash)$(my_git_info_notes)$(my_git_info_rerere)"
 }

@@ -67,24 +67,24 @@ setopt print_exit_value
 REPORTTIME=10
 
 # プロンプト定義
-autoload -Uz add-zsh-hook
-add-zsh-hook chpwd my_prompt
-my_prompt () {
-	local subprompt=''
-	local rbenv_version=$(rbenv version-name)
-	[[ $rbenv_version != 'system' ]] && {
-		local rbenv_gemset=$(rbenv gemset active 2>&1)
-		subprompt+="(rbenv:$rbenv_version/$rbenv_gemset)"
+rbenv_version () {
+	local version=$(rbenv version-name)
+	[[ $version != 'system' ]] && {
+		local gemset=$(rbenv gemset active 2>&1)
+		echo "(rbenv:$version/$gemset)"
 	}
-	local pyenv_version=$(pyenv version-name)
-	[[ $pyenv_version != 'system' ]] && {
-		subprompt+="(pyenv:$pyenv_version)"
-	}
-	PROMPT=%S[%d]%s$subprompt$'\n'%#' '
 }
-my_prompt
-add-zsh-hook precmd my_rprompt
-my_rprompt () {
+pyenv_version() {
+	local version=$(pyenv version-name)
+	[[ $version != 'system' ]] && {
+		echo "(pyenv:$version)"
+	}
+}
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd my_prompt
+my_prompt () {
 	vcs_info
-	RPROMPT=%B$vcs_info_msg_0_%b
+	local rbenv_version=$(rbenv_version)
+	local pyenv_version=$(pyenv_version)
+	PROMPT=%B[%d]%b' '$vcs_info_msg_0_' '$rbenv_version$pyenv_version$'\n'%#' '
 }
