@@ -93,3 +93,4 @@ my_rprompt () {
 	}
 	RPROMPT=$rprompt
 }
+my_rprompt
