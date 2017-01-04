@@ -86,5 +86,5 @@ my_prompt () {
 	vcs_info
 	local rbenv_version=$(rbenv_version)
 	local pyenv_version=$(pyenv_version)
-	PROMPT=$'%{\e[2m%}'%U(%~)$vcs_info_msg_0_$rbenv_version$pyenv_version%u$'\n'%#$' '$'%{\e[22m%}'
+	PROMPT=$'%{\e[2m%}'(%~)$vcs_info_msg_0_$rbenv_version$pyenv_version$'\n'%#' '$'%{\e[22m%}'
 }
