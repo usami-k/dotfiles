@@ -1,3 +1,6 @@
+# auto cd
+setopt auto_cd
+
 # ls : show all, colorize, sort by version number
 which gls >/dev/null && alias ls="gls -A --color=auto --sort=version"
 which gdircolors >/dev/null && eval $(gdircolors)
@@ -14,9 +17,6 @@ which grm >/dev/null && alias rm="grm -I -v"
 # diff : unified format, colorize
 alias diff="diff --unified"
 which colordiff >/dev/null && alias diff="colordiff --unified"
-
-# .. : cd to parent
-alias ..="cd .."
 
 # rename : based on zmv
 autoload -Uz zmv
