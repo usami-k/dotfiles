@@ -12,7 +12,7 @@ zstyle ":vcs_info:git:*" nopatch-format ""
 zstyle ":vcs_info:git+set-message:*" hooks my_vcs_info
 
 my_git_info_push () {
-	[[ "$(git remote 2>/dev/null)" != "" ]] && {
+	[[ -n "$(git remote 2>/dev/null)" ]] && {
 		local head="$(git rev-parse HEAD)"
 		local remote
 		for remote in $(git rev-parse --remotes) ; do
@@ -23,7 +23,7 @@ my_git_info_push () {
 }
 
 my_git_info_stash () {
-	[[ "$(git stash list 2>/dev/null)" != "" ]] && {
+	[[ -n "$(git stash list 2>/dev/null)" ]] && {
 		echo "{s}"
 	}
 }
@@ -35,7 +35,7 @@ my_git_info_rerere () {
 }
 
 my_git_info_notes () {
-	[[ "$(git notes list 2>/dev/null)" != "" ]] && {
+	[[ -n "$(git notes list 2>/dev/null)" ]] && {
 		echo "(notes)"
 	}
 }
