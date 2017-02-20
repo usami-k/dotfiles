@@ -70,7 +70,7 @@ REPORTTIME=10
 rbenv_version () {
 	local version=$(rbenv version-name)
 	[[ $version != 'system' ]] && {
-		local gemset=$(rbenv gemset active 2>&1)
+		local gemset=$(rbenv gemset active 2>&1 | sed 's| global||')
 		echo "(rbenv:$version/$gemset)"
 	}
 }
@@ -86,6 +86,6 @@ my_prompt () {
 	vcs_info
 	local rbenv_version=$(rbenv_version)
 	local pyenv_version=$(pyenv_version)
-	PROMPT=$'%{\e[2m%}'(%2~)$vcs_info_msg_0_$'\n'%#' '$'%{\e[22m%}'
-	echo -ne "\e]2;$PWD $rbenv_version $pyenv_version\a"
+	PROMPT=$'%{\e[2m%}'(%2~)$rbenv_version$pyenv_version$vcs_info_msg_0_$'\n'%#' '$'%{\e[22m%}'
+	echo -ne "\e]2;$PWD\a"
 }
