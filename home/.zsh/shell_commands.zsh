@@ -28,6 +28,5 @@ export EDITOR="cot --wait"
 # grep : colorize
 export GREP_OPTIONS="--color=auto"
 
-# less : quit if one screen, colorize, chop long lines, no clearing screen, no history
-export LESS=FRSX
-export LESSHISTFILE=-
+# less : colorize, chop long lines, no clearing screen
+export LESS=RSX
