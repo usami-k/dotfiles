@@ -1,6 +1,8 @@
 # homeshick
-source $HOME/.homesick/repos/homeshick/homeshick.fish
-source $HOME/.homesick/repos/homeshick/completions/homeshick.fish
+if status is-login
+    source $HOME/.homesick/repos/homeshick/homeshick.fish
+    source $HOME/.homesick/repos/homeshick/completions/homeshick.fish
+end
 
 # brew
 alias brew "env PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin brew"
@@ -47,7 +49,9 @@ alias jsc "/System/Library/Frameworks/JavaScriptCore.framework/Resources/jsc"
 
 # go
 set -x GOPATH $HOME/go
-set -x PATH $GOPATH/bin $PATH
+if status is-login
+    set -x PATH $GOPATH/bin $PATH
+end
 
 # EDITOR : CotEditor
 if command -sq cot
