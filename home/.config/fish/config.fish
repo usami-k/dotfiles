@@ -53,6 +53,11 @@ if status is-login
     set -x PATH $GOPATH/bin $PATH
 end
 
+# android
+if status is-login
+    set -x PATH $PATH $HOME/Library/Android/sdk/platform-tools $HOME/Library/Android/sdk/tools
+end
+
 # EDITOR : CotEditor
 if command -sq cot
     set -x EDITOR "cot --wait"
