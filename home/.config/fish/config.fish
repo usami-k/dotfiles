@@ -4,9 +4,6 @@ if status is-login
     source $HOME/.homesick/repos/homeshick/completions/homeshick.fish
 end
 
-# brew
-alias brew "env PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin brew"
-
 # ls : show all, colorize, sort by version number
 if command -sq gls
     alias ls "gls -A --color=auto --sort=version"
