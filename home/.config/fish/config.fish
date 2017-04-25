@@ -1,3 +1,6 @@
+# fzf
+set -U FZF_LEGACY_KEYBINDINGS 0
+
 # homeshick
 if status is-login
     source $HOME/.homesick/repos/homeshick/homeshick.fish
