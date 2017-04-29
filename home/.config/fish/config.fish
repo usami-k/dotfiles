@@ -50,12 +50,12 @@ end
 # go
 set -x GOPATH $HOME/go
 if status is-login
-    set -x PATH $GOPATH/bin $PATH
+    set -x fish_user_paths $fish_user_paths $GOPATH/bin
 end
 
 # android
 if status is-login
-    set -x PATH $PATH $HOME/Library/Android/sdk/platform-tools $HOME/Library/Android/sdk/tools
+    set -x fish_user_paths $fish_user_paths $HOME/Library/Android/sdk/platform-tools $HOME/Library/Android/sdk/tools
 end
 
 # EDITOR : CotEditor
