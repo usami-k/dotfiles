@@ -1,17 +1,10 @@
-# fish theme : deference
+# fish theme : graystatus
 
-function __prompt_git_branch
-    command git symbolic-ref --short HEAD ^/dev/null
-end
-
-function prompt_git
-    set -l branch (__prompt_git_branch)
-    if [ -z $branch ]
-        return
-    end
-
-    echo '['$branch']'
-end
+set __fish_git_prompt_showdirtystate 'yes'
+set __fish_git_prompt_showstashstate 'yes'
+set __fish_git_prompt_showuntrackedfiles 'yes'
+set __fish_git_prompt_showupstream 'informative'
+set __fish_git_prompt_describe_style 'default'
 
 function prompt_rbenv
     if not type -q 'rbenv'
@@ -27,12 +20,12 @@ function prompt_rbenv
         end
     end
 
-    echo '('$rbenv_version')'
+    echo ' <'$rbenv_version'>'
 end
 
 function fish_prompt
     set_color brblack
-    echo (prompt_pwd) (prompt_git) (prompt_rbenv)
+    echo (prompt_pwd)(__fish_git_prompt)(prompt_rbenv)
     echo -n '$ '
     set_color normal
 end
