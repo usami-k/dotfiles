@@ -15,7 +15,7 @@ function prompt_rbenv
 
     if type -q 'rbenv-gemset'
         set -l rbenv_gemset (rbenv gemset active ^/dev/null | sed 's| global||')
-        if [ -n $rbenv_gemset ]
+        if test -n "$rbenv_gemset"
             set rbenv_version $rbenv_version'/'$rbenv_gemset
         end
     end
