@@ -20,6 +20,10 @@ function prompt_rbenv
         end
     end
 
+    if test "$rbenv_version" = 'system'
+        return
+    end
+
     echo '<'$rbenv_version'>'
 end
 
