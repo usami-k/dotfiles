@@ -38,9 +38,6 @@ alias jq 'jq -C'
 # javascript
 alias jsc '/System/Library/Frameworks/JavaScriptCore.framework/Resources/jsc'
 
-# fzf
-set -x FZF_LEGACY_KEYBINDINGS 0
-
 # homeshick
 if status is-login
     source $HOME/.homesick/repos/homeshick/homeshick.fish
