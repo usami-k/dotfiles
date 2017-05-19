@@ -9,7 +9,7 @@ if command -sq gls
     alias ls 'gls -A --color=auto --sort=version'
 end
 if command -sq gdircolors
-    set -x LS_COLORS (string match -r '^.(.*).$' (gdircolors -c | string split ' ')[3])[2]
+    set --export LS_COLORS (string match -r '^.(.*).$' (gdircolors -c | string split ' ')[3])[2]
 end
 
 # cp : show files
@@ -33,10 +33,10 @@ else
 end
 
 # grep : colorize
-set -x GREP_OPTIONS '--color=auto'
+set --export GREP_OPTIONS '--color=auto'
 
 # less : colorize, chop long lines, no clearing screen
-set -x LESS 'RSX'
+set --export LESS 'RSX'
 
 # jq : colorize
 alias jq 'jq -C'
@@ -51,17 +51,17 @@ if status is-login
 end
 
 # go
-set -x GOPATH $HOME/go
+set --export GOPATH $HOME/go
 if status is-login
-    set -x fish_user_paths $fish_user_paths $GOPATH/bin
+    set --export fish_user_paths $fish_user_paths $GOPATH/bin
 end
 
 # android
 if status is-login
-    set -x fish_user_paths $fish_user_paths $HOME/Library/Android/sdk/platform-tools $HOME/Library/Android/sdk/tools
+    set --export fish_user_paths $fish_user_paths $HOME/Library/Android/sdk/platform-tools $HOME/Library/Android/sdk/tools
 end
 
 # EDITOR : CotEditor
 if command -sq cot
-    set -x EDITOR 'cot --wait'
+    set --export EDITOR 'cot --wait'
 end
