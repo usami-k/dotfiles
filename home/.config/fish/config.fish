@@ -57,8 +57,9 @@ if status is-login
 end
 
 # android
+set --export ANDROID_HOME $HOME/Library/Android/sdk
 if status is-login
-    set --export fish_user_paths $fish_user_paths $HOME/Library/Android/sdk/platform-tools $HOME/Library/Android/sdk/tools
+    set --export fish_user_paths $fish_user_paths $ANDROID_HOME/{platform-tools,tools}
 end
 
 # EDITOR : CotEditor
