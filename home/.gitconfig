@@ -19,6 +19,8 @@
 	singlekey = true
 [log]
 	date = local
+[tig]
+	vertical-split = false
 [tig "bind"]
 	generic = G none
 [ghq]
