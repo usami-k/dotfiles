@@ -6,10 +6,7 @@ set --export FZF_LEGACY_KEYBINDINGS 0
 
 # ls : show all, colorize, sort by version number
 if command -sq gls
-    alias ls 'gls -A --color=auto --sort=version'
-end
-if command -sq gdircolors
-    set --export LS_COLORS (string match -r '^.(.*).$' (gdircolors -c | string split ' ')[3])[2]
+    alias ls 'gls -A --sort=version'
 end
 
 # cp : show files
