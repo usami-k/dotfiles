@@ -35,9 +35,6 @@ else
     alias diff 'diff --unified'
 end
 
-# grep : colorize
-set --export GREP_OPTIONS '--color=auto'
-
 # less : colorize, chop long lines, no clearing screen
 set --export LESS 'RSX'
 
