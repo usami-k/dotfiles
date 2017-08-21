@@ -1,5 +1,8 @@
-[include]
-	path = ~/.gitconfig_user
+[user]
+	name = USAMI Kosuke
+	email = usami.kosuke@gmail.com
+[init]
+	templatedir = ~/.git_templates
 [core]
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes_global
