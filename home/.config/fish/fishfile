@@ -8,4 +8,5 @@ usami-k/gls
 usami-k/graystatus
 fisherman/humanize_duration
 fisherman/last_job_id
+fisherman/pyenv
 fisherman/rbenv
