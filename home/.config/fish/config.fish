@@ -64,11 +64,10 @@ end
 
 # brew : avoid to use pyenv
 function brew
-    set --local PATH_orig $PATH
-    set --local pyenv_index (contains --index (pyenv root)/shims $PATH)
-    set --erase PATH[$pyenv_index]
-    command brew $argv
-    set PATH $PATH_orig
+    set --local brew_paths $PATH
+    set --local pyenv_index (contains --index (pyenv root)/shims $brew_paths)
+    set --erase brew_paths[$pyenv_index]
+    env PATH=(string join ':' $brew_paths) brew $argv
 end
 
 # EDITOR : CotEditor
