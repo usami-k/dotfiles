@@ -1,5 +1,6 @@
 fisherman/await
 fisherman/done
+fisherman/fishkit
 fisherman/fzf
 fisherman/get
 fisherman/getopts
@@ -8,5 +9,6 @@ usami-k/gls
 usami-k/graystatus
 fisherman/humanize_duration
 fisherman/last_job_id
+fisherman/menu
 fisherman/pyenv
 fisherman/rbenv
