@@ -28,6 +28,7 @@
 	generic = G none
 [ghq]
 	root = ~/repo
+	root = ~/go/src
 [pull]
 	ff = only
 [merge]
