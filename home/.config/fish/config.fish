@@ -56,6 +56,11 @@ if status is-login
     source $HOME/.homesick/repos/homeshick/completions/homeshick.fish
 end
 
+# local bin
+if status is-login
+    set --export fish_user_paths $fish_user_paths $HOME/.local/bin
+end
+
 # go
 set --export GOPATH $HOME/go
 if status is-login
