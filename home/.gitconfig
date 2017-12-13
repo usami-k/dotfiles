@@ -6,22 +6,35 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes_global
-	precomposeunicode = true
 	quotepath = false
 [credential]
 	helper = osxkeychain
-[push]
-	default = simple
-[color]
-	ui = auto
 [alias]
 	summary = show --pretty='format:Commit : %H [%h]%nDate : %ci%n%s%n' --no-patch --no-notes
 	ignored = status --ignored
 	set-rerere = config rerere.enabled true
 [interactive]
 	singlekey = true
-[log]
-	date = local
+[pull]
+	ff = only
+[diff]
+	tool = Kaleidoscope
+[difftool]
+	prompt = false
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[merge]
+	ff = false
+	tool = Kaleidoscope
+[mergetool]
+	prompt = false
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
 [tig]
 	vertical-split = false
 [tig "bind"]
@@ -29,23 +42,3 @@
 [ghq]
 	root = ~/repo
 	root = ~/go/src
-[pull]
-	ff = only
-[merge]
-	ff = false
-	tool = Kaleidoscope
-[diff]
-	tool = Kaleidoscope
-[mergetool]
-	prompt = false
-[difftool]
-	prompt = false
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	required = true
