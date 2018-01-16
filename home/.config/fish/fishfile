@@ -1,10 +1,8 @@
 fisherman/await
 fisherman/done
 fisherman/fishkit
-fisherman/fnm
 fisherman/fzf
 fisherman/get
-fisherman/get_file_age
 fisherman/getopts
 decors/fish-ghq
 usami-k/gls
@@ -12,5 +10,6 @@ usami-k/graystatus
 fisherman/humanize_duration
 fisherman/last_job_id
 fisherman/menu
+fisherman/nodenv
 fisherman/pyenv
 fisherman/rbenv
