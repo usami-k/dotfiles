@@ -73,14 +73,6 @@ if status is-login
     set --export fish_user_paths $fish_user_paths $ANDROID_HOME/{platform-tools,tools}
 end
 
-# brew : avoid to use pyenv
-function brew
-    set --local brew_paths $PATH
-    set --local pyenv_index (contains --index (pyenv root)/shims $brew_paths)
-    set --erase brew_paths[$pyenv_index]
-    env PATH=(string join ':' $brew_paths) brew $argv
-end
-
 # EDITOR : CotEditor
 if command -sq cot
     set --export EDITOR 'cot --wait'
