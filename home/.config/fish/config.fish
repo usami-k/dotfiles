@@ -7,9 +7,6 @@ set __fish_git_prompt_char_untrackedfiles '?'
 # fzf : exact match, custom layout
 set --export FZF_DEFAULT_OPTS '--exact --inline-info --reverse --height=10'
 
-# fisherman fzf : no use legacy keybindings
-set --export FZF_LEGACY_KEYBINDINGS 0
-
 # ls : show all, colorize, sort by version number
 if command -sq gls
     alias ls 'gls -A --sort=version'
