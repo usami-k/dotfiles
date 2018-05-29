@@ -42,3 +42,4 @@
 [ghq]
 	root = ~/repo
 	root = ~/go/src
+	root = ~/.homesick/repos
