@@ -46,9 +46,6 @@ set --export LESS 'RSX'
 # jq : colorize
 alias jq 'jq -C'
 
-# javascript
-alias jsc '/System/Library/Frameworks/JavaScriptCore.framework/Resources/jsc'
-
 # bc : mathlib
 alias bc 'bc -l'
 
