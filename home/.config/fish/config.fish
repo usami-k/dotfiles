@@ -61,9 +61,8 @@ if status is-login
 end
 
 # go
-set --export GOPATH $HOME/go
 if status is-login
-    set --export fish_user_paths $fish_user_paths $GOPATH/bin
+    set --export fish_user_paths $fish_user_paths (go env GOPATH)/bin
 end
 
 # android
