@@ -14,12 +14,6 @@ else
     alias ls 'ls -A'
 end
 
-# Erase unused functions
-if command -sq greadlink
-    rm -f (greadlink -f (brew --prefix)/share/fish/functions/ll.fish)
-    rm -f (greadlink -f (brew --prefix)/share/fish/functions/la.fish)
-end
-
 # cp : show files
 alias cp 'cp -v'
 
