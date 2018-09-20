@@ -10,9 +10,8 @@
 [credential]
 	helper = osxkeychain
 [alias]
-	summary = show --pretty='format:Commit : %H [%h]%nDate : %ci%n%s%n' --no-patch --no-notes
+	summary = show --pretty='format:Commit %h (%ci)' --no-patch --no-notes
 	ignored = status --ignored
-	set-rerere = config rerere.enabled true
 [interactive]
 	singlekey = true
 [pull]
