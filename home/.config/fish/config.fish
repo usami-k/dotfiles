@@ -46,21 +46,9 @@ alias jq 'jq -C'
 # bc : mathlib
 alias bc 'bc -l'
 
-# homeshick
-if status is-login
-    source $HOME/.homesick/repos/homeshick/homeshick.fish
-    source $HOME/.homesick/repos/homeshick/completions/homeshick.fish
-end
-
-# go
-if status is-login
-    set --export fish_user_paths $fish_user_paths (go env GOPATH)/bin
-end
-
-# android
-set --export ANDROID_HOME $HOME/Library/Android/sdk
-if status is-login
-    set --export fish_user_paths $fish_user_paths $ANDROID_HOME/{platform-tools,tools}
+# EDITOR : CotEditor
+if command -sq cot
+    set --export EDITOR 'cot --wait'
 end
 
 # java : use Android Studio
@@ -69,7 +57,19 @@ if status is-login
     set --export fish_user_paths $fish_user_paths $JAVA_HOME/bin
 end
 
-# EDITOR : CotEditor
-if command -sq cot
-    set --export EDITOR 'cot --wait'
+# android
+set --export ANDROID_HOME $HOME/Library/Android/sdk
+if status is-login
+    set --export fish_user_paths $fish_user_paths $ANDROID_HOME/{platform-tools,tools}
+end
+
+# go
+if status is-login
+    set --export fish_user_paths $fish_user_paths (go env GOPATH)/bin
+end
+
+# homeshick
+if status is-login
+    source $HOME/.homesick/repos/homeshick/homeshick.fish
+    source $HOME/.homesick/repos/homeshick/completions/homeshick.fish
 end
