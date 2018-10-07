@@ -64,9 +64,3 @@ end
 if status is-login
     set --export fish_user_paths $fish_user_paths (go env GOPATH)/bin
 end
-
-# homeshick
-if status is-login
-    source $HOME/.homesick/repos/homeshick/homeshick.fish
-    source $HOME/.homesick/repos/homeshick/completions/homeshick.fish
-end
