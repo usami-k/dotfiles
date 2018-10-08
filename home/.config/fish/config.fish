@@ -47,20 +47,3 @@ alias bc 'bc -l'
 if command -sq cot
     set --export EDITOR 'cot --wait'
 end
-
-# java : use Android Studio
-set --export JAVA_HOME '/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home'
-if status is-login
-    set --export fish_user_paths $fish_user_paths $JAVA_HOME/bin
-end
-
-# android
-set --export ANDROID_HOME $HOME/Library/Android/sdk
-if status is-login
-    set --export fish_user_paths $fish_user_paths $ANDROID_HOME/{platform-tools,tools}
-end
-
-# go
-if status is-login
-    set --export fish_user_paths $fish_user_paths (go env GOPATH)/bin
-end
