@@ -10,7 +10,7 @@
 [credential]
 	helper = osxkeychain
 [alias]
-	summary = show --pretty='format:Commit %h (%ci)' --no-patch --no-notes
+	summary = show --pretty='format:Commit: %h (%ci)' --no-patch --no-notes
 	ignored = status --ignored
 [interactive]
 	singlekey = true
