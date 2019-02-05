@@ -31,4 +31,5 @@
         "ruby": true,
     },
     "FSharp.fsacRuntime": "netcore",
+    "prolog.executablePath": "/usr/local/bin/swipl",
 }
