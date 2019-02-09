@@ -15,21 +15,12 @@
     "explorer.sortOrder": "mixed",
     "git.autofetch": true,
     "markdown.preview.breaks": true,
-    "yaml.format.enable": true,
     "code-runner.executorMap": {
         "csharp": "cd $dir && scriptcs $fileName",
         "haskell": "stack runghc",
     },
     "go.testOnSave": true,
-    "python.pythonPath": "python3",
     "python.linting.flake8Enabled": true,
-    "ruby.useLanguageServer": true,
-    "ruby.useBundler": true,
-    "ruby.intellisense": "rubyLocate",
-    "ruby.codeCompletion": "rcodetools",
-    "ruby.lint": {
-        "ruby": true,
-    },
     "FSharp.fsacRuntime": "netcore",
     "prolog.executablePath": "/usr/local/bin/swipl",
 }
