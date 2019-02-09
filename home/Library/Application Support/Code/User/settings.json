@@ -22,5 +22,6 @@
     "go.testOnSave": true,
     "python.linting.flake8Enabled": true,
     "FSharp.fsacRuntime": "netcore",
+    "FSharp.showProjectExplorerIn": "explorer",
     "prolog.executablePath": "/usr/local/bin/swipl",
 }
