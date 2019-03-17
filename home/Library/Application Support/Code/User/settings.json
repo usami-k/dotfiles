@@ -15,11 +15,8 @@
     "explorer.sortOrder": "mixed",
     "git.autofetch": true,
     "markdown.preview.breaks": true,
-    "code-runner.executorMap": {
-        "csharp": "cd $dir && scriptcs $fileName",
-        "haskell": "stack runghc",
-    },
     "go.testOnSave": true,
+    "python.pythonPath": "/usr/local/bin/python3",
     "python.linting.flake8Enabled": true,
     "FSharp.fsacRuntime": "netcore",
     "FSharp.showProjectExplorerIn": "explorer",
