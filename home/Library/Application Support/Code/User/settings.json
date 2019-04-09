@@ -18,7 +18,19 @@
     "go.testOnSave": true,
     "python.pythonPath": "/usr/local/bin/python3",
     "python.linting.flake8Enabled": true,
-    "FSharp.fsacRuntime": "netcore",
-    "FSharp.showProjectExplorerIn": "explorer",
-    "prolog.executablePath": "/usr/local/bin/swipl",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdflua",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        }
+    ]
 }
