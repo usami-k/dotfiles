@@ -22,6 +22,8 @@
 	prompt = false
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool "diff-pdf"]
+	cmd = diff-pdf --view \"$LOCAL\" \"$REMOTE\"
 [merge]
 	ff = false
 	tool = Kaleidoscope
