@@ -40,5 +40,15 @@
                 "latexmk"
             ]
         }
+    ],
+    "latex-workshop.chktex.enabled": true,
+    "latex-workshop.chktex.args.active": [
+        "-wall",
+        "-n2",
+        "-n19",
+        "-n22",
+        "-n30",
+        "-e16",
+        "-q"
     ]
 }
