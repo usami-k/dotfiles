@@ -8,6 +8,7 @@
     "editor.renderWhitespace": "boundary",
     "editor.renderLineHighlight": "all",
     "editor.formatOnSave": true,
+    "editor.wordBasedSuggestions": false,
     "terminal.integrated.fontSize": 12,
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.cursorStyle": "line",
