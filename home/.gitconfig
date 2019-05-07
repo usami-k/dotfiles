@@ -43,7 +43,7 @@
 [tig "bind"]
 	generic = G none
 [ghq]
-	root = ~/repo
-	root = ~/swift-source
+	root = ~/Documents/repos
 	root = ~/.homesick/repos
+	root = ~/swift-source
 	root = ~/go/src
