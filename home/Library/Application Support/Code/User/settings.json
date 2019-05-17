@@ -1,7 +1,6 @@
 {
     "window.restoreWindows": "none",
     "workbench.startupEditor": "none",
-    "workbench.colorTheme": "Default Light+",
     "editor.fontFamily": "'Source Han Code JP'",
     "editor.fontSize": 12,
     "editor.cursorStyle": "line",
