@@ -1,3 +1,10 @@
+# fix PATH value
+set --local path_tmp
+for p in $PATH
+    set path_tmp $path_tmp (string replace '~' $HOME $p)
+end
+set --export PATH $path_tmp
+
 # fish git prompt
 set __fish_git_prompt_char_dirtystate '*'
 set __fish_git_prompt_char_stagedstate '+'
