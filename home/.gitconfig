@@ -44,6 +44,3 @@
 	generic = G none
 [ghq]
 	root = ~/repos
-	root = ~/.homesick/repos
-	root = ~/swift-source
-	root = ~/go/src
