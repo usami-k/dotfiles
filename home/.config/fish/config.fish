@@ -50,6 +50,9 @@ alias jq 'jq -C'
 # bc : mathlib
 alias bc 'bc -l'
 
+# pipenv : always assign a virtual environment
+set --export PIPENV_IGNORE_VIRTUALENVS 1
+
 # EDITOR : CotEditor
 if command -sq cot
     set --export EDITOR 'cot --wait'
