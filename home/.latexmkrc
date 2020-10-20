@@ -1,1 +1,2 @@
 $clean_ext = "synctex.gz nav snm thm soc loc glg acn vrb";
+$lualatex = "lualatex -interaction=nonstopmode -shell-escape"
