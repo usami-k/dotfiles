@@ -57,6 +57,9 @@ alias jq 'jq -C'
 # bc : mathlib
 alias bc 'bc -l'
 
+# brew : use default paths
+alias brew 'env PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin brew'
+
 # pipenv : always assign a virtual environment
 set --export PIPENV_IGNORE_VIRTUALENVS 1
 
