@@ -5,6 +5,13 @@ for p in $PATH
 end
 set --export PATH $path_tmp
 
+# homebrew
+set --export PATH $PATH /usr/local/sbin
+# ruby
+set --export PATH $PATH $HOME/.gem/ruby/2.6.0/bin
+# local bin
+set --export PATH $PATH $HOME/.local/bin
+
 # fish git prompt
 set __fish_git_prompt_char_dirtystate '*'
 set __fish_git_prompt_char_stagedstate '+'
