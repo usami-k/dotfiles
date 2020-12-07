@@ -1,9 +1,0 @@
-{
-  "private": true,
-  "dependencies": {
-    "textlint": "",
-    "textlint-plugin-review": "",
-    "textlint-rule-preset-ja-spacing": "",
-    "textlint-rule-preset-ja-technical-writing": ""
-  }
-}
