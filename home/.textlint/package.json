@@ -1,4 +1,5 @@
 {
+  "private": true,
   "dependencies": {
     "textlint": "",
     "textlint-plugin-review": "",
