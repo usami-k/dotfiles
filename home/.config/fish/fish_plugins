@@ -5,10 +5,9 @@ usami-k/gls
 usami-k/fish-cd-ghq
 usami-k/fish-homeshick
 usami-k/fish-go
+usami-k/fish-rustup
+usami-k/fish-android-sdk
+usami-k/fish-direnv
 daenney/pyenv
 daenney/rbenv
 franciscolourenco/done
-oh-my-fish/plugin-android-sdk
-oh-my-fish/plugin-direnv
-oh-my-fish/plugin-rustup
-oh-my-fish/plugin-xdg
