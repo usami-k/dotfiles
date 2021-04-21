@@ -16,6 +16,7 @@
 	singlekey = true
 [pull]
 	ff = only
+	rebase = true
 [diff]
 	tool = Kaleidoscope
 [difftool]
