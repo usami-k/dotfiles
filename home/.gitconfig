@@ -37,10 +37,6 @@
 	required = true
 [hub]
 	protocol = https
-[tig]
-	vertical-split = false
-[tig "bind"]
-	generic = G none
 [ghq]
 	root = ~/go/src
 	root = ~/repos

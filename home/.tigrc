@@ -1,0 +1,2 @@
+set vertical-split = false
+bind generic x !@sh -c "/bin/echo -n %(commit) | pbcopy"
