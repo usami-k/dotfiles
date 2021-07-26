@@ -8,8 +8,6 @@ set --export PATH $path_tmp
 # homebrew
 eval (brew shellenv)
 
-# ruby
-set --export PATH $PATH $HOME/.gem/ruby/2.6.0/bin
 # local bin
 set --export PATH $PATH $HOME/.local/bin
 
