@@ -3,6 +3,7 @@
 	email = usami.kosuke@gmail.com
 [init]
 	templatedir = ~/.git_templates
+	defaultBranch = main
 [core]
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes_global
