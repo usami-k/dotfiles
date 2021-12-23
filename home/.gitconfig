@@ -38,3 +38,5 @@
 	process = git-lfs filter-process
 [hub]
 	protocol = https
+[ghq]
+	root = ~/repos
