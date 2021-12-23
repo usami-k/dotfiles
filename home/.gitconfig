@@ -3,7 +3,6 @@
 	email = usami.kosuke@gmail.com
 [init]
 	templatedir = ~/.git_templates
-	defaultBranch = main
 [core]
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes_global
@@ -36,7 +35,6 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	required = true
+	process = git-lfs filter-process
 [hub]
 	protocol = https
-[ghq]
-	root = ~/repos
