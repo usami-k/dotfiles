@@ -18,3 +18,7 @@ defaults write NSGlobalDomain NSServicesMinimumItemCountForContextSubmenu -int 3
 
 # Photos : Disable automatic launching on connecting device
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool YES
+
+# LaunchPad : Reset app positions
+defaults write com.apple.dock ResetLaunchPad -bool YES
+killall Dock
