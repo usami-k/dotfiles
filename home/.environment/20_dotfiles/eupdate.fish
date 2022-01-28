@@ -1,6 +1,7 @@
 #!/usr/bin/env fish
 
-~/.homesick/repos/homeshick/bin/homeshick --force pull
-~/.homesick/repos/homeshick/bin/homeshick --force link
+~/.homesick/repos/homeshick/bin/homeshick --batch check
+~/.homesick/repos/homeshick/bin/homeshick --batch pull
+~/.homesick/repos/homeshick/bin/homeshick --batch link
 
 fisher update >/dev/null
