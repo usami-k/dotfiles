@@ -1,3 +1,20 @@
+# homebrew
+fish_add_path /opt/homebrew/bin
+eval (brew shellenv)
+
+# volta
+set -gx VOLTA_HOME "$HOME/.volta"
+fish_add_path $VOLTA_HOME/bin
+
+# local bin
+fish_add_path $HOME/.local/bin
+
+# fish git prompt
+set __fish_git_prompt_char_dirtystate '*'
+set __fish_git_prompt_char_stagedstate '+'
+set __fish_git_prompt_char_stashstate '$'
+set __fish_git_prompt_char_untrackedfiles '?'
+
 # fzf : exact match, custom layout
 set --export FZF_DEFAULT_OPTS '--exact --inline-info --reverse --height=10'
 
@@ -29,7 +46,7 @@ else
 end
 
 # less : colorize, chop long lines, no clearing screen
-set --export LESS 'RSX'
+set --export LESS RSX
 
 # jq : colorize
 alias jq 'jq -C'
