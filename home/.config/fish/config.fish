@@ -1,13 +1,17 @@
 # homebrew
-fish_add_path /opt/homebrew/bin
 eval (brew shellenv)
 
 # volta
 set -gx VOLTA_HOME "$HOME/.volta"
-fish_add_path $VOLTA_HOME/bin
+set -gx PATH "$VOLTA_HOME/bin" $PATH
 
-# local bin
-fish_add_path $HOME/.local/bin
+# fish user paths
+fish_add_path -m /opt/homebrew/bin
+fish_add_path -m $HOME/.rbenv/shims
+fish_add_path -m $HOME/.pyenv/shims
+fish_add_path -m $HOME/.cargo/bin
+fish_add_path -m $HOME/.volta/bin
+fish_add_path -m $HOME/.local/bin
 
 # fish git prompt
 set __fish_git_prompt_char_dirtystate '*'
