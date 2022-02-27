@@ -51,8 +51,3 @@ alias bc 'bc -l'
 
 # pipenv : always assign a virtual environment
 set --export PIPENV_IGNORE_VIRTUALENVS 1
-
-# EDITOR
-if command --query code
-    set --export EDITOR 'code --wait'
-end
