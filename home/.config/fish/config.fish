@@ -7,6 +7,9 @@ set __fish_git_prompt_char_stagedstate '+'
 set __fish_git_prompt_char_stashstate '$'
 set __fish_git_prompt_char_untrackedfiles '?'
 
+# shortcut
+alias g __cd_ghq
+
 # fzf : exact match, custom layout
 set --export FZF_DEFAULT_OPTS '--exact --inline-info --reverse --height=10'
 
