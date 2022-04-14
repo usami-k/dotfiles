@@ -37,7 +37,5 @@
 	smudge = git-lfs smudge -- %f
 	required = true
 	process = git-lfs filter-process
-[hub]
-	protocol = https
 [ghq]
 	root = ~/repos
