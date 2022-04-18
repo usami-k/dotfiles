@@ -1,6 +1,9 @@
 # fish user paths
 fish_add_path -m $HOME/.local/bin
 
+# hide prompt
+set GRAYSTATUS_SHOW_PROMPT 0
+
 # fish git prompt
 set __fish_git_prompt_char_dirtystate '*'
 set __fish_git_prompt_char_stagedstate '+'
