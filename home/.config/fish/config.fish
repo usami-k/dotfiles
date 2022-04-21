@@ -1,7 +1,8 @@
 # fish user paths
 fish_add_path -m $HOME/.local/bin
 
-# hide prompt
+# graystatus
+set GRAYSTATUS_SHOW_STATUS 0
 set GRAYSTATUS_SHOW_PROMPT 0
 
 # fish git prompt
