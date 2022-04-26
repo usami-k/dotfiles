@@ -11,27 +11,14 @@
 [credential]
 	helper = osxkeychain
 [alias]
-	summary = show --pretty='format:Commit: %h (%ci)' --no-patch --no-notes
 	ignored = status --ignored
 [interactive]
 	singlekey = true
 [pull]
 	ff = only
 	rebase = true
-[diff]
-	tool = Kaleidoscope
-[difftool]
-	prompt = false
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [merge]
 	ff = false
-	tool = Kaleidoscope
-[mergetool]
-	prompt = false
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
