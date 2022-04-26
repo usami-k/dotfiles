@@ -17,8 +17,11 @@
 [pull]
 	ff = only
 	rebase = true
+[diff]
+	tool = meld
 [merge]
 	ff = false
+	tool = meld
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
