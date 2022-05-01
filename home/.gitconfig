@@ -8,12 +8,12 @@
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes_global
 	quotepath = false
+[interactive]
+	singlekey = true
 [credential]
 	helper = osxkeychain
 [alias]
 	ignored = status --ignored
-[interactive]
-	singlekey = true
 [pull]
 	ff = only
 	rebase = true
@@ -31,9 +31,9 @@
 [mergetool]
 	prompt = false
 [filter "lfs"]
+	process = git-lfs filter-process
+	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
-	required = true
-	process = git-lfs filter-process
 [ghq]
 	root = ~/repos
