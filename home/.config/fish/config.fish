@@ -2,17 +2,14 @@
 fish_add_path -m $HOME/.local/bin
 
 # graystatus
-set GRAYSTATUS_SHOW_STATUS 0
-set GRAYSTATUS_SHOW_PROMPT 0
+#set GRAYSTATUS_SHOW_STATUS 0
+#set GRAYSTATUS_SHOW_PROMPT 0
 
 # fish git prompt
 set __fish_git_prompt_char_dirtystate '*'
 set __fish_git_prompt_char_stagedstate '+'
 set __fish_git_prompt_char_stashstate '$'
 set __fish_git_prompt_char_untrackedfiles '?'
-
-# shortcut
-alias g __cd_ghq
 
 # fzf : exact match, custom layout
 set --export FZF_DEFAULT_OPTS '--exact --inline-info --reverse --height=10'
