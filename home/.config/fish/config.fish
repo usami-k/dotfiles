@@ -3,6 +3,7 @@ fish_add_path -m $HOME/.local/bin
 
 # graystatus
 set GRAYSTATUS_COLOR_PROMPT brgreen
+set GRAYSTATUS_SHOW_RIGHT_PROMPT 0
 
 # fish git prompt
 set __fish_git_prompt_char_dirtystate '*'
