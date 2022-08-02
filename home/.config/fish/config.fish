@@ -50,9 +50,6 @@ alias jq 'jq -C'
 # rg : search hidden files, follow symbolic link
 alias rg 'rg --hidden --follow'
 
-# bc : mathlib
-alias bc 'bc -l'
-
 # EDITOR : CotEditor
 if command -sq cot
     set --export EDITOR 'cot --wait'
