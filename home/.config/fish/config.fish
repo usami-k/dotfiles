@@ -47,9 +47,6 @@ set --export LESS RSX
 # jq : colorize
 alias jq 'jq -C'
 
-# rg : search hidden files, follow symbolic link
-alias rg 'rg --hidden --follow'
-
 # EDITOR : CotEditor
 if command -sq cot
     set --export EDITOR 'cot --wait'
