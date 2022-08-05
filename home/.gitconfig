@@ -1,6 +1,7 @@
 [user]
 	name = USAMI Kosuke
 	email = usami.kosuke@gmail.com
+	signingkey = D18D1233EA19951E
 [init]
 	templatedir = ~/.git_templates
 	defaultBranch = main
@@ -12,6 +13,8 @@
 	singlekey = true
 [credential]
 	helper = osxkeychain
+[commit]
+	gpgsign = true
 [alias]
 	ignored = status --ignored
 	ignore = "!gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi"
