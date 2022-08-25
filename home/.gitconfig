@@ -15,6 +15,8 @@
 	helper = osxkeychain
 [commit]
 	gpgsign = true
+[gpg]
+	program = /opt/homebrew/bin/gpg
 [alias]
 	ignored = status --ignored
 	ignore = "!gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi"
