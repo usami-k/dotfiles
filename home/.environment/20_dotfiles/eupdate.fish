@@ -3,4 +3,4 @@
 ~/.homesick/repos/homeshick/bin/homeshick --batch pull
 ~/.homesick/repos/homeshick/bin/homeshick --batch link
 
-fisher update >/dev/null
+fisher update
