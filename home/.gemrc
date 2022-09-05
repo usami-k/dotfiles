@@ -1,2 +1,2 @@
-install: --no-document --user-install --env-shebang
+install: --no-document --env-shebang
 update: --no-document
