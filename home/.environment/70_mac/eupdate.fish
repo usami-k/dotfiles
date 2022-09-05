@@ -1,8 +1,5 @@
 #!/usr/bin/env fish
 
-# gibo : Update repository
-command --query gibo ; and gibo update
-
 # xenv : Rehash
 command --query rbenv ; and rbenv rehash
 command --query pyenv ; and pyenv rehash
