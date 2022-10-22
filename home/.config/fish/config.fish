@@ -52,14 +52,25 @@ if command -sq cot
     set --export EDITOR 'cot --wait'
 end
 
+# direnv
+if command -sq direnv
+    direnv hook fish | source
+end
+
 # rbenv
-rbenv init - | source
+if command -sq rbenv
+    rbenv init - | source
+end
 
 # pyenv
-pyenv init - | source
+if command -sq pyenv
+    pyenv init - | source
+end
 
 # asdf
-source /opt/homebrew/opt/asdf/libexec/asdf.fish
+if test -f /opt/homebrew/opt/asdf/libexec/asdf.fish
+    source /opt/homebrew/opt/asdf/libexec/asdf.fish
+end
 
 # volta
 set -gx VOLTA_HOME "$HOME/.volta"
