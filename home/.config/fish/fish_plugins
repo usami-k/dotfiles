@@ -1,4 +1,6 @@
 jorgebucaran/fisher
+franciscolourenco/done
+rstacruz/fish-asdf
 usami-k/graystatus
 usami-k/search-history
 usami-k/gls
@@ -8,8 +10,5 @@ usami-k/fish-go
 usami-k/fish-rustup
 usami-k/fish-android-sdk
 usami-k/fish-direnv
-daenney/pyenv
-daenney/rbenv
-franciscolourenco/done
 usami-k/fish-homebrew
 usami-k/fish-volta
