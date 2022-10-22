@@ -52,5 +52,13 @@ if command -sq cot
     set --export EDITOR 'cot --wait'
 end
 
+# rbenv
+rbenv init - | source
+
+# pyenv
+pyenv init - | source
+
 # asdf
 source /opt/homebrew/opt/asdf/libexec/asdf.fish
+
+########
