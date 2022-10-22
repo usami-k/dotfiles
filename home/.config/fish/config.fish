@@ -51,3 +51,6 @@ alias jq 'jq -C'
 if command -sq cot
     set --export EDITOR 'cot --wait'
 end
+
+# asdf
+source /opt/homebrew/opt/asdf/libexec/asdf.fish
