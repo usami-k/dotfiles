@@ -61,4 +61,8 @@ pyenv init - | source
 # asdf
 source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
+# volta
+set -gx VOLTA_HOME "$HOME/.volta"
+set -gx PATH "$VOLTA_HOME/bin" $PATH
+
 ########
