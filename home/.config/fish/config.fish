@@ -88,9 +88,7 @@ if command -sq go
 end
 
 # rust
-if test -d $HOME/.cargo/bin
-    fish_add_path -m $HOME/.cargo/bin
-end
+fish_add_path -m $HOME/.cargo/bin
 
 # android
 if test -d $HOME/Library/Android/sdk
@@ -99,8 +97,6 @@ if test -d $HOME/Library/Android/sdk
 end
 
 # local
-if test -d $HOME/.local/bin
-    fish_add_path -m $HOME/.local/bin
-end
+fish_add_path -m $HOME/.local/bin
 
 ########
