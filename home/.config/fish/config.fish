@@ -1,5 +1,7 @@
-# fish user paths
-fish_add_path -m $HOME/.local/bin
+# homebrew
+if test -x /opt/homebrew/bin/brew
+    eval (/opt/homebrew/bin/brew shellenv)
+end
 
 # graystatus
 set GRAYSTATUS_COLOR_PROMPT brgreen
@@ -54,6 +56,12 @@ if command -sq cot
     set --export EDITOR 'cot --wait'
 end
 
+# homeshick
+if test -d $HOME/.homesick/repos/homeshick
+    source $HOME/.homesick/repos/homeshick/homeshick.fish
+    source $HOME/.homesick/repos/homeshick/completions/homeshick.fish
+end
+
 # direnv
 if command -sq direnv
     direnv hook fish | source
@@ -72,6 +80,27 @@ end
 # rbenv
 if command -sq rbenv
     rbenv init - | source
+end
+
+# go
+if command -sq go
+    fish_add_path -m (go env GOPATH)/bin
+end
+
+# rust
+if test -d $HOME/.cargo/bin
+    fish_add_path -m $HOME/.cargo/bin
+end
+
+# android
+if test -d $HOME/Library/Android/sdk
+    set --export ANDROID_HOME $HOME/Library/Android/sdk
+    fish_add_path -m $ANDROID_HOME/tools $ANDROID_HOME/platform-tools
+end
+
+# local
+if test -d $HOME/.local/bin
+    fish_add_path -m $HOME/.local/bin
 end
 
 ########
