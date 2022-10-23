@@ -45,7 +45,9 @@ end
 set --export LESS RSX
 
 # jq : colorize
-alias jq 'jq -C'
+if command -sq jq
+    alias jq 'jq -C'
+end
 
 # EDITOR : CotEditor
 if command -sq cot
@@ -57,9 +59,9 @@ if command -sq direnv
     direnv hook fish | source
 end
 
-# rbenv
-if command -sq rbenv
-    rbenv init - | source
+# asdf
+if test -f /opt/homebrew/opt/asdf/libexec/asdf.fish
+    source /opt/homebrew/opt/asdf/libexec/asdf.fish
 end
 
 # pyenv
@@ -67,13 +69,9 @@ if command -sq pyenv
     pyenv init - | source
 end
 
-# asdf
-if test -f /opt/homebrew/opt/asdf/libexec/asdf.fish
-    source /opt/homebrew/opt/asdf/libexec/asdf.fish
+# rbenv
+if command -sq rbenv
+    rbenv init - | source
 end
-
-# volta
-set -gx VOLTA_HOME "$HOME/.volta"
-set -gx PATH "$VOLTA_HOME/bin" $PATH
 
 ########
