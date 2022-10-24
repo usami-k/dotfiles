@@ -67,11 +67,6 @@ if command -sq direnv
     direnv hook fish | source
 end
 
-# asdf
-if test -f /opt/homebrew/opt/asdf/libexec/asdf.fish
-    source /opt/homebrew/opt/asdf/libexec/asdf.fish
-end
-
 # pyenv
 if command -sq pyenv
     pyenv init - | source
@@ -80,6 +75,11 @@ end
 # rbenv
 if command -sq rbenv
     rbenv init - | source
+end
+
+# asdf
+if test -f /opt/homebrew/opt/asdf/libexec/asdf.fish
+    source /opt/homebrew/opt/asdf/libexec/asdf.fish
 end
 
 # go
