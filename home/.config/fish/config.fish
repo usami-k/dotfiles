@@ -67,11 +67,6 @@ if command -sq direnv
     direnv hook fish | source
 end
 
-# rbenv
-if command -sq rbenv
-    rbenv init - | source
-end
-
 # asdf
 if test -f /opt/homebrew/opt/asdf/libexec/asdf.fish
     source /opt/homebrew/opt/asdf/libexec/asdf.fish
