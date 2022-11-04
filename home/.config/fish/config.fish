@@ -76,10 +76,8 @@ end
 fish_add_path -m $HOME/.cargo/bin
 
 # android
-if test -d $HOME/Library/Android/sdk
-    set --export ANDROID_HOME $HOME/Library/Android/sdk
-    fish_add_path -m $ANDROID_HOME/tools $ANDROID_HOME/platform-tools
-end
+fish_add_path -m $HOME/Library/Android/sdk/tools
+fish_add_path -m $HOME/Library/Android/sdk/platform-tools
 
 # local
 fish_add_path -m $HOME/.local/bin
