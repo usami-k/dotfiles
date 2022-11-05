@@ -1,9 +1,5 @@
 #!/usr/bin/env fish
 
-# xenv : Rehash
-command --query rbenv ; and rbenv rehash
-command --query pyenv ; and pyenv rehash
-
 # Finder : Enable text selection on QuickLook
 defaults write com.apple.finder QLEnableTextSelection -bool YES
 
