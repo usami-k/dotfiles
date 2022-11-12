@@ -83,3 +83,6 @@ fish_add_path -m $HOME/Library/Android/sdk/platform-tools
 fish_add_path -m $HOME/.local/bin
 
 ########
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+
