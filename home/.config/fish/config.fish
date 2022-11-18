@@ -4,7 +4,6 @@ if test -x /opt/homebrew/bin/brew
 end
 
 # graystatus
-set GRAYSTATUS_COLOR_PROMPT brgreen
 set GRAYSTATUS_SHOW_RIGHT_PROMPT 0
 
 # fish git prompt
