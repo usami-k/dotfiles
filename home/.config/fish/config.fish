@@ -74,6 +74,9 @@ if test -f /opt/homebrew/opt/asdf/libexec/asdf.fish
     source /opt/homebrew/opt/asdf/libexec/asdf.fish
 end
 
+# haskell
+fish_add_path -m $HOME/.ghcup/bin
+
 # rust
 fish_add_path -m $HOME/.cargo/bin
 
