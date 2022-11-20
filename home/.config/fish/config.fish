@@ -85,8 +85,10 @@ fish_add_path -m $HOME/Library/Android/sdk/platform-tools
 fish_add_path -m $HOME/.local/bin
 
 # iterm2
-if test -e $HOME/.iterm2_shell_integration.fish
-    source $HOME/.iterm2_shell_integration.fish
+if test "$TERM_PROGRAM" = "iTerm.app"
+    if test -e $HOME/.iterm2_shell_integration.fish
+        source $HOME/.iterm2_shell_integration.fish
+    end
 end
 
 ########
