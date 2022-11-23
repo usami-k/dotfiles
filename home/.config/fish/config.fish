@@ -1,3 +1,6 @@
+# clean fish_user_paths
+set --erase fish_user_paths
+
 # homebrew
 if test -x /opt/homebrew/bin/brew
     eval (/opt/homebrew/bin/brew shellenv)
@@ -75,7 +78,6 @@ if test -f /opt/homebrew/opt/asdf/libexec/asdf.fish
 end
 
 # haskell
-fish_add_path -m /opt/homebrew/opt/llvm@12/bin
 fish_add_path -m $HOME/.ghcup/bin
 
 # rust
