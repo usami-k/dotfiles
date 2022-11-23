@@ -1,3 +1,4 @@
+system-ghc: true
 templates:
   params:
     author-name: USAMI Kosuke
