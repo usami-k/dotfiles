@@ -1,0 +1,9 @@
+color:
+  when: auto
+date: '+%Y-%m-%d %H:%M:%S'
+display: almost-all
+indicators: true
+sorting:
+  column: version
+  dir-grouping: none
+hyperlink: auto

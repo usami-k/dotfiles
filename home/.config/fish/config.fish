@@ -21,13 +21,6 @@ set __fish_git_prompt_char_untrackedfiles '?'
 # fzf : exact match, custom layout
 set --export FZF_DEFAULT_OPTS '--exact --inline-info --reverse --height=10'
 
-# ls : show all, colorize, sort by version number
-if command -sq gls
-    alias ls 'gls -A --sort=version'
-else
-    alias ls 'ls -A'
-end
-
 # cp : show files
 alias cp 'cp -v'
 
