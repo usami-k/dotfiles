@@ -21,6 +21,15 @@ set __fish_git_prompt_char_untrackedfiles '?'
 # fzf : exact match, custom layout
 set --export FZF_DEFAULT_OPTS '--exact --inline-info --reverse --height=10'
 
+# vivid : set ls colors
+if command -sq vivid
+    if test (defaults read -g AppleInterfaceStyle 2> /dev/null || echo 'Light') = 'Dark'
+        set --export LS_COLORS (vivid generate solarized-dark)
+    else
+        set --export LS_COLORS (vivid generate solarized-light)
+    end
+end
+
 # cp : show files
 alias cp 'cp -v'
 
