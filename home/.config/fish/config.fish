@@ -6,6 +6,13 @@ if test -x /opt/homebrew/bin/brew
     eval (/opt/homebrew/bin/brew shellenv)
 end
 
+# color theme
+if test (defaults read -g AppleInterfaceStyle 2> /dev/null || echo 'Light') = 'Dark'
+    fish_config theme choose 'Solarized Dark'
+else
+    fish_config theme choose 'Solarized Light'
+end
+
 # graystatus
 if test "$TERM_PROGRAM" = "iTerm.app"
     set GRAYSTATUS_COLOR_PROMPT brgreen
