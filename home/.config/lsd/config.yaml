@@ -1,3 +1,6 @@
+blocks:
+  - date
+  - name
 color:
   when: auto
 date: '+%Y-%m-%d %H:%M:%S'
