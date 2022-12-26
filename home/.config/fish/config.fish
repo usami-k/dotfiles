@@ -8,15 +8,12 @@ end
 
 # color theme
 if test (defaults read -g AppleInterfaceStyle 2> /dev/null || echo 'Light') = 'Dark'
-    fish_config theme choose 'Solarized Dark'
+    fish_config theme choose 'ayu Dark'
 else
-    fish_config theme choose 'Solarized Light'
+    fish_config theme choose 'ayu Light'
 end
 
 # graystatus
-if test "$TERM_PROGRAM" = "iTerm.app"
-    set GRAYSTATUS_COLOR_PROMPT brgreen
-end
 set GRAYSTATUS_SHOW_RIGHT_PROMPT 0
 
 # fish git prompt
@@ -31,9 +28,9 @@ set --export FZF_DEFAULT_OPTS '--exact --inline-info --reverse --height=10'
 # vivid : set ls colors
 if command -sq vivid
     if test (defaults read -g AppleInterfaceStyle 2> /dev/null || echo 'Light') = 'Dark'
-        set --export LS_COLORS (vivid generate solarized-dark)
+        set --export LS_COLORS (vivid generate one-dark)
     else
-        set --export LS_COLORS (vivid generate solarized-light)
+        set --export LS_COLORS (vivid generate one-light)
     end
 end
 
