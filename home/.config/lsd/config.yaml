@@ -1,5 +1,6 @@
 blocks:
   - date
+  - size
   - name
 color:
   when: auto
