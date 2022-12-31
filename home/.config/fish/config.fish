@@ -34,6 +34,9 @@ if command -sq vivid
     end
 end
 
+# ls : use lsd command
+alias ls 'lsd'
+
 # cp : show files
 alias cp 'cp -v'
 
