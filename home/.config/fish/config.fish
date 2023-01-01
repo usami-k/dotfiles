@@ -35,13 +35,13 @@ if command -sq vivid
 end
 
 # ls : use lsd command
-alias ls 'lsd'
+abbr --add ls lsd
 
 # cp : show files
-alias cp 'cp -v'
+abbr --add cp cp -v
 
 # mv : show files
-alias mv 'mv -v'
+abbr --add mv mv -v
 
 # rm : prompt once before removing, show files
 if command -sq grm
