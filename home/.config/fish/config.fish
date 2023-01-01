@@ -52,11 +52,6 @@ abbr --add diff diff --color -u
 # less : colorize, chop long lines, no clearing screen
 set --export LESS RSX
 
-# jq : colorize
-if command -sq jq
-    alias jq 'jq -C'
-end
-
 # EDITOR : CotEditor
 if command -sq cot
     set --export EDITOR 'cot --wait'
