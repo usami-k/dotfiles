@@ -44,11 +44,7 @@ abbr --add cp cp -v
 abbr --add mv mv -v
 
 # rm : prompt once before removing, show files
-if command -sq grm
-    alias rm 'grm -I -v'
-else
-    alias rm 'rm -i -v'
-end
+abbr --add rm rm -I -v
 
 # diff : unified format, colorize
 if command -sq colordiff
