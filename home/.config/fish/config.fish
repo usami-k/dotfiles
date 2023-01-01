@@ -47,11 +47,7 @@ abbr --add mv mv -v
 abbr --add rm rm -I -v
 
 # diff : unified format, colorize
-if command -sq colordiff
-    alias diff 'colordiff --unified'
-else
-    alias diff 'diff --unified'
-end
+abbr --add diff diff --color -u
 
 # less : colorize, chop long lines, no clearing screen
 set --export LESS RSX
