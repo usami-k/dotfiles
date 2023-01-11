@@ -44,7 +44,7 @@ abbr --add cp cp -v
 abbr --add mv mv -v
 
 # rm : prompt once before removing, show files
-abbr --add rm rm -I -v
+abbr --add rm rm -Iv
 
 # diff : unified format, colorize
 abbr --add diff diff --color -u
