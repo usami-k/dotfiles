@@ -9,3 +9,5 @@ if command --query brew
     brew bundle --global dump --force
     ~/.homesick/repos/homeshick/bin/homeshick --batch check
 end
+
+brew doctor
