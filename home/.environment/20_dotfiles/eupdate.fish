@@ -5,3 +5,5 @@
 
 fisher update
 fish_update_completions
+
+asdf plugin-update --all
