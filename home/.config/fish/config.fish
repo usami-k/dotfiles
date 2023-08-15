@@ -73,6 +73,11 @@ if test -f /opt/homebrew/opt/asdf/libexec/asdf.fish
     source /opt/homebrew/opt/asdf/libexec/asdf.fish
 end
 
+# rbenv
+if command -sq rbenv
+    status --is-interactive; and rbenv init - fish | source
+end
+
 # haskell
 fish_add_path -m $HOME/.ghcup/bin
 
