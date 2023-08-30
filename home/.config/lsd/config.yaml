@@ -4,7 +4,7 @@ blocks:
   - name
 color:
   when: auto
-  theme: term_color
+  theme: custom
 date: '+%Y-%m-%d %H:%M:%S'
 display: almost-all
 indicators: true
