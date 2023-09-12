@@ -70,6 +70,7 @@ end
 
 # asdf
 if test -f /opt/homebrew/opt/asdf/libexec/asdf.fish
+    alias realpath 'builtin realpath'
     source /opt/homebrew/opt/asdf/libexec/asdf.fish
 end
 
