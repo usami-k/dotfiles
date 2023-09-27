@@ -1,1 +1,20 @@
-/Users/usami/backup/Mackup/.config/alacritty/alacritty.yml
+import:
+    - ~/.config/alacritty/themes/themes/ayu_light.yaml
+shell:
+    program: /opt/homebrew/bin/fish
+    args:
+        - --login
+font:
+    normal:
+        family: JetBrainsMono Nerd Font
+    size: 14
+    offset:
+        y: 2
+window:
+    padding:
+        x: 4
+        y: 0
+cursor:
+    style:
+        shape: Beam
+        blinking: On
