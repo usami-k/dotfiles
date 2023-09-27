@@ -9,7 +9,7 @@ font:
         family: JetBrainsMono Nerd Font
     size: 14
     offset:
-        y: 2
+        y: 3
 window:
     padding:
         x: 4
