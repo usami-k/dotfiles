@@ -9,11 +9,11 @@ font:
         family: JetBrainsMono Nerd Font
     size: 14
     offset:
-        y: 3
+        y: 4
 window:
     padding:
         x: 4
-        y: 0
+        y: 4
 cursor:
     style:
         shape: Beam
