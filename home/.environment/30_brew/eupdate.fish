@@ -6,7 +6,7 @@ end
 
 # Update .Brewfile in dotfiles
 if command --query brew
-    brew bundle --global dump --force
+    brew bundle --global dump --tap --brew --cask --mas --force
     ~/.homesick/repos/homeshick/bin/homeshick --batch check
 end
 
