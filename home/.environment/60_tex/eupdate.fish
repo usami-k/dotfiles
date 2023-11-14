@@ -1,7 +1,7 @@
 #!/usr/bin/env fish
 
 if command --query tlmgr
-    tlmgr update --self --all --reinstall-forcibly-removed
+    tlmgr update --self --all
 end
 
 if command --query cjk-gs-integrate-macos
