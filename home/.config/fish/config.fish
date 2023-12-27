@@ -6,13 +6,6 @@ if test -x /opt/homebrew/bin/brew
     eval (/opt/homebrew/bin/brew shellenv)
 end
 
-# color theme
-if test (defaults read -g AppleInterfaceStyle 2> /dev/null || echo 'Light') = 'Dark'
-    fish_config theme choose 'ayu Dark'
-else
-    fish_config theme choose 'ayu Light'
-end
-
 # graystatus
 set GRAYSTATUS_SHOW_RIGHT_PROMPT 0
 
@@ -24,6 +17,13 @@ set __fish_git_prompt_char_untrackedfiles '?'
 
 # fzf : exact match, custom layout
 set --export FZF_DEFAULT_OPTS '--exact --inline-info --reverse --height=10'
+
+# color theme
+if test (defaults read -g AppleInterfaceStyle 2> /dev/null || echo 'Light') = 'Dark'
+    fish_config theme choose 'ayu Dark'
+else
+    fish_config theme choose 'ayu Light'
+end
 
 # vivid : set ls colors
 if command -sq vivid
