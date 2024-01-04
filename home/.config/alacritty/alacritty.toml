@@ -1,0 +1,22 @@
+import = ["~/.config/alacritty/themes/themes/ayu_light.toml"]
+
+[shell]
+program = "/opt/homebrew/bin/fish"
+args = ["--login"]
+
+[font]
+size = 14
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+
+[font.offset]
+y = 4
+
+[window.padding]
+x = 4
+y = 4
+
+[cursor.style]
+shape = "Beam"
+blinking = "On"
