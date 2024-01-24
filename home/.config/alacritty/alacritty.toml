@@ -11,7 +11,7 @@ size = 14
 family = "0xProto Nerd Font"
 
 [font.offset]
-y = 4
+y = 6
 
 [window.padding]
 x = 4
