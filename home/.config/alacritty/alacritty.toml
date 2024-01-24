@@ -8,7 +8,7 @@ args = ["--login"]
 size = 14
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+family = "0xProto Nerd Font"
 
 [font.offset]
 y = 4
