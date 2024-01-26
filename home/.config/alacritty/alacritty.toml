@@ -6,12 +6,7 @@ args = ["--login"]
 
 [font]
 size = 14
-
-[font.normal]
-family = "0xProto Nerd Font"
-
-[font.offset]
-y = 6
+normal.family = "0xProto Nerd Font"
 
 [window.padding]
 x = 4
