@@ -5,7 +5,7 @@ program = "/opt/homebrew/bin/fish"
 args = ["--login"]
 
 [font]
-size = 14
+size = 13
 normal.family = "0xProto Nerd Font"
 
 [window.padding]
