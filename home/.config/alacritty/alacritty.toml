@@ -4,13 +4,17 @@ import = ["~/.config/alacritty/themes/themes/ayu_light.toml"]
 program = "/opt/homebrew/bin/fish"
 args = ["--login"]
 
-[font]
-size = 14
-normal.family = "0xProto Nerd Font"
+[window]
+startup_mode = "Maximized"
+dynamic_padding = true
 
 [window.padding]
 x = 4
 y = 4
+
+[font]
+size = 14
+normal.family = "0xProto Nerd Font"
 
 [cursor.style]
 shape = "Beam"
