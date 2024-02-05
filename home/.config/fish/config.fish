@@ -43,9 +43,9 @@ abbr --add diff diff --color -u
 # less : colorize, chop long lines, no clearing screen
 set --export LESS RSX
 
-# EDITOR : Visual Studio Code
-if command -sq code
-    set --export EDITOR 'code --wait'
+# EDITOR : CotEditor
+if command -sq cot
+    set --export EDITOR 'cot --wait'
 end
 
 # homeshick
