@@ -67,7 +67,12 @@ end
 
 # rbenv
 if command -sq rbenv
-    status --is-interactive; and rbenv init - fish | source
+    rbenv init - fish | source
+end
+
+# pyenv
+if command -sq pyenv
+    pyenv init - fish | source
 end
 
 # haskell
