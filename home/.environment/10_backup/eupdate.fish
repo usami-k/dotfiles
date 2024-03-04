@@ -5,6 +5,7 @@ if command --query mackup
     mackup --force backup
     mackup --force uninstall
 end
+rsync --archive --delete-during ~/.backup/Mackup ~/backup/
 
 echo '--- keychains backup'
 rsync --archive --delete-during ~/Library/Keychains ~/backup/
