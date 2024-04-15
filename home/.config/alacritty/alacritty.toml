@@ -12,7 +12,7 @@ x = 4
 y = 4
 
 [font]
-size = 13
+size = 14
 normal.family = "0xProto Nerd Font"
 
 [cursor.style]
