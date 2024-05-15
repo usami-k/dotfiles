@@ -5,6 +5,7 @@ set --erase fish_user_paths
 if test -x /opt/homebrew/bin/brew
     eval (/opt/homebrew/bin/brew shellenv)
 end
+fish_add_path -m /opt/homebrew/bin
 
 # fzf : exact match, custom layout
 set --export FZF_DEFAULT_OPTS '--exact --inline-info --reverse --height=10'
