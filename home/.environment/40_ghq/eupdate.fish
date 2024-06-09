@@ -20,6 +20,7 @@ if command --query ghq
     for repo in (env_personal)
         pushd $HOME/repos/$repo
         git pull --quiet
+        aicommits hook install 2>/dev/null
         popd
     end
 end
