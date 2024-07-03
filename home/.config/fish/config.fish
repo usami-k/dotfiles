@@ -89,5 +89,10 @@ fish_add_path -m $HOME/Library/Android/sdk/platform-tools
 # local
 fish_add_path -m $HOME/.local/bin
 
+# starship
+if command -sq starship
+    starship init fish | source
+end
+
 ########
 
