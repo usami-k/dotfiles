@@ -67,9 +67,6 @@ symbol = " "
 [kotlin]
 symbol = " "
 
-[line_break]
-disabled = true
-
 [lua]
 symbol = " "
 
