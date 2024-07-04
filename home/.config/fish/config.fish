@@ -10,6 +10,9 @@ fish_add_path -m /opt/homebrew/bin
 # fzf : exact match, custom layout
 set --export FZF_DEFAULT_OPTS '--exact --inline-info --reverse --height=10'
 
+# fish-ghq : short command
+abbr --add g __ghq_repository_search
+
 # color theme
 if test (defaults read -g AppleInterfaceStyle 2> /dev/null || echo 'Light') = 'Dark'
     fish_config theme choose 'ayu Dark'
