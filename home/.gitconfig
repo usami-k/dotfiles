@@ -21,6 +21,8 @@
 	gpgsign = true
 [gpg]
 	program = /opt/homebrew/bin/gpg
+[rerere]
+	enabled = true
 [ghq]
 	root = ~/repos
 [alias]
