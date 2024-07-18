@@ -2,9 +2,7 @@
 set --erase fish_user_paths
 
 # homebrew
-if test -x /opt/homebrew/bin/brew
-    eval (/opt/homebrew/bin/brew shellenv)
-end
+_evalcache brew shellenv
 fish_add_path -m /opt/homebrew/bin
 
 # fzf : exact match, custom layout
@@ -56,9 +54,7 @@ if test -d $HOME/.homesick/repos/homeshick
 end
 
 # direnv
-if command -sq direnv
-    direnv hook fish | source
-end
+_evalcache direnv hook fish
 
 # asdf
 if test -f /opt/homebrew/opt/asdf/libexec/asdf.fish
@@ -67,14 +63,10 @@ if test -f /opt/homebrew/opt/asdf/libexec/asdf.fish
 end
 
 # rbenv
-if command -sq rbenv
-    rbenv init - fish | source
-end
+_evalcache rbenv init - fish
 
 # pyenv
-if command -sq pyenv
-    pyenv init - fish | source
-end
+_evalcache pyenv init - fish
 
 # haskell
 fish_add_path -m $HOME/.ghcup/bin
@@ -90,9 +82,7 @@ fish_add_path -m $HOME/Library/Android/sdk/platform-tools
 fish_add_path -m $HOME/.local/bin
 
 # starship
-if command -sq starship
-    starship init fish | source
-end
+_evalcache starship init fish --print-full-init
 
 ########
 
