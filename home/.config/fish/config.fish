@@ -16,12 +16,10 @@ else
 end
 
 # vivid : set ls colors
-if command -sq vivid
-    if test (defaults read -g AppleInterfaceStyle 2> /dev/null || echo 'Light') = 'Dark'
-        set --export LS_COLORS (vivid generate one-dark)
-    else
-        set --export LS_COLORS (vivid generate one-light)
-    end
+if test (defaults read -g AppleInterfaceStyle 2> /dev/null || echo 'Light') = 'Dark'
+    set --export LS_COLORS (vivid generate one-dark)
+else
+    set --export LS_COLORS (vivid generate one-light)
 end
 
 # ls : use lsd command
@@ -43,22 +41,16 @@ abbr --add diff diff --color -u
 set --export LESS RSX
 
 # EDITOR : CotEditor
-if command -sq cot
-    set --export EDITOR 'cot --wait'
-end
+set --export EDITOR 'cot --wait'
 
 # homeshick
-if test -d $HOME/.homesick/repos/homeshick
-    source $HOME/.homesick/repos/homeshick/homeshick.fish
-end
+source $HOME/.homesick/repos/homeshick/homeshick.fish
 
 # direnv
 _evalcache direnv hook fish
 
 # asdf
-if test -f /opt/homebrew/opt/asdf/libexec/asdf.fish
-    source /opt/homebrew/opt/asdf/libexec/asdf.fish
-end
+source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
 # rbenv
 _evalcache rbenv init - fish
