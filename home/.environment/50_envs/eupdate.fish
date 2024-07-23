@@ -3,6 +3,8 @@
 fisher update
 fish_update_completions
 
+yes | _evalcache_clear
+
 rustup update
 
 asdf plugin-update --all
