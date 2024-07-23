@@ -3,7 +3,7 @@
 fisher update
 fish_update_completions
 
-yes | _evalcache_clear
+yes | _evalcache_clear && fish -c exit
 
 rustup update
 
