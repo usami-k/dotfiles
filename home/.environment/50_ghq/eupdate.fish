@@ -2,11 +2,11 @@
 
 if command --query ghq
     function env_personal
-        ghq list usami-k/
+        ghq list --full-path usami-k/
     end
 
     for repo in (env_personal)
-        pushd $HOME/repos/$repo
+        pushd $repo
         git pull --quiet
         aicommits hook install 2>/dev/null
         popd
