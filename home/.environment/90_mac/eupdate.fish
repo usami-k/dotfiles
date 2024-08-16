@@ -13,7 +13,7 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -boolean true
 defaults write com.apple.screencapture disable-shadow -boolean true
 
 # Disable automatic launching Photos on connecting device
-defaults -currentHost write com.apple.ImageCapture disableHotPlug -boolean true
+defaults write com.apple.ImageCapture disableHotPlug -boolean true
 
 # LaunchPad : Reset app positions
 defaults write com.apple.dock ResetLaunchPad -boolean true
