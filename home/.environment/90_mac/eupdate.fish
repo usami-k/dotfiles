@@ -15,6 +15,9 @@ defaults write com.apple.screencapture disable-shadow -boolean true
 # Disable automatic launching Photos on connecting device
 defaults write com.apple.ImageCapture disableHotPlug -boolean true
 
+# Disable automatic reopening of last project
+defaults write com.apple.dt.Xcode ApplePersistenceIgnoreState -bool YES
+
 # LaunchPad : Reset app positions
 defaults write com.apple.dock ResetLaunchPad -boolean true
 killall Dock
