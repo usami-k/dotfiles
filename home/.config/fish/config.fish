@@ -3,7 +3,7 @@ set --erase fish_user_paths
 
 # homebrew
 _evalcache brew shellenv
-fish_add_path -m /opt/homebrew/bin
+fish_add_path -a /opt/homebrew/bin
 
 # fzf : exact match, custom layout
 set --export FZF_DEFAULT_OPTS '--exact --inline-info --height=10'
@@ -74,8 +74,8 @@ fish_add_path -m $HOME/.ghcup/bin
 fish_add_path -m $HOME/.cargo/bin
 
 # android
-fish_add_path -m $HOME/Library/Android/sdk/tools
-fish_add_path -m $HOME/Library/Android/sdk/platform-tools
+fish_add_path -a $HOME/Library/Android/sdk/tools
+fish_add_path -a $HOME/Library/Android/sdk/platform-tools
 
 # local
 fish_add_path -m $HOME/.local/bin
