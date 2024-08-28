@@ -57,12 +57,15 @@ _evalcache direnv hook fish
 
 # asdf
 source /opt/homebrew/opt/asdf/libexec/asdf.fish
+fish_add_path -m $HOME/.asdf/shims
 
 # rbenv
 _evalcache rbenv init - fish
+fish_add_path -m $HOME/.rbenv/shims
 
 # pyenv
 _evalcache pyenv init - fish
+fish_add_path -m $HOME/.pyenv/shims
 
 # haskell
 fish_add_path -m $HOME/.ghcup/bin
