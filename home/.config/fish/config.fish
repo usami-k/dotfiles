@@ -37,12 +37,6 @@ abbr --add rm rm -Iv
 # diff : unified format, colorize
 abbr --add diff diff --color -u
 
-# fd : search hidden files, symbolic links
-abbr --add fd fd --hidden --follow
-
-# rg : search hidden files, symbolic links
-abbr --add rg rg --hidden --follow
-
 # less : colorize, chop long lines, no clearing screen
 set --export LESS RSX
 
