@@ -26,16 +26,16 @@ end
 abbr --add ls lsd
 
 # cp : show files
-alias cp='cp -v'
+alias cp 'cp -v'
 
 # mv : show files
-alias mv='mv -v'
+alias mv 'mv -v'
 
 # rm : prompt once before removing, show files
-alias rm='rm -Iv'
+alias rm 'rm -Iv'
 
 # diff : unified format, colorize
-alias diff='diff --color -u'
+alias diff 'diff --color -u'
 
 # less : colorize, chop long lines, no clearing screen
 set --export LESS RSX
