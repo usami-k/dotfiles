@@ -3,6 +3,9 @@
 # Flatten Services menu
 defaults write NSGlobalDomain NSServicesMinimumItemCountForContextSubmenu -int 32
 
+# Show hidden files
+defaults write com.apple.finder AppleShowAllFiles -bool true
+
 # Enable text selection on QuickLook
 defaults write com.apple.finder QLEnableTextSelection -boolean true
 
