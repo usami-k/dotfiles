@@ -7,20 +7,20 @@ defaults write NSGlobalDomain NSServicesMinimumItemCountForContextSubmenu -int 3
 defaults write com.apple.finder AppleShowAllFiles -bool true
 
 # Enable text selection on QuickLook
-defaults write com.apple.finder QLEnableTextSelection -boolean true
+defaults write com.apple.finder QLEnableTextSelection -bool true
 
 # Disable .DS_Store on network drive
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -boolean true
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 # Disable shadow on screen capture
-defaults write com.apple.screencapture disable-shadow -boolean true
+defaults write com.apple.screencapture disable-shadow -bool true
 
 # Disable automatic launching Photos on connecting device
-defaults write com.apple.ImageCapture disableHotPlug -boolean true
+defaults write com.apple.ImageCapture disableHotPlug -bool true
 
 # Disable automatic reopening of last project
 defaults write com.apple.dt.Xcode ApplePersistenceIgnoreState -bool YES
 
 # LaunchPad : Reset app positions
-defaults write com.apple.dock ResetLaunchPad -boolean true
+defaults write com.apple.dock ResetLaunchPad -bool true
 killall Dock
