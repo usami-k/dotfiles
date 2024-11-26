@@ -18,6 +18,9 @@ defaults write com.apple.screencapture disable-shadow -bool YES
 # Disable automatic launching Photos on connecting device
 defaults write com.apple.imagecapture disableHotPlug -bool YES
 
+# Disable creation default devices
+defaults write com.apple.CoreSimulator EnableDefaultSetCreation -bool NO
+
 # Disable automatic reopening of last project
 defaults write com.apple.dt.Xcode ApplePersistenceIgnoreState -bool YES
 
