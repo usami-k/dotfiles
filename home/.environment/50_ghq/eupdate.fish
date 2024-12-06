@@ -8,7 +8,6 @@ if command --query ghq
     for repo in (env_personal)
         pushd $repo
         git pull --quiet
-        aicommits hook install 2>/dev/null
         popd
     end
 end
