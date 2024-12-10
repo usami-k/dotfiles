@@ -7,5 +7,7 @@ fish_update_completions
 
 rustup update
 
+gh extension upgrade --all
+
 asdf plugin-update --all
 asdf reshim
