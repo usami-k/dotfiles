@@ -44,7 +44,8 @@ set --export LESS RSX
 set --export EDITOR 'cot --wait'
 
 # homeshick
-source $HOME/.homesick/repos/homeshick/homeshick.fish
+set --export HOMESHICK_DIR /opt/homebrew/opt/homeshick
+source $HOMESHICK_DIR/homeshick.sh
 
 # direnv
 _evalcache direnv hook fish
