@@ -1,3 +1,4 @@
 #!/usr/bin/env fish
 
-homeshick --batch check
+~/.homesick/repos/homeshick/bin/homeshick --batch pull
+~/.homesick/repos/homeshick/bin/homeshick --batch --force link
