@@ -49,9 +49,9 @@ source $HOME/.homesick/repos/homeshick/homeshick.fish
 # direnv
 _evalcache direnv hook fish
 
-# asdf
-source /opt/homebrew/opt/asdf/libexec/asdf.fish
-fish_add_path -m $HOME/.asdf/shims
+# fnm
+_evalcache fnm env --use-on-cd --shell fish
+fish_add_path -m $FNM_MULTISHELL_PATH/bin
 
 # rbenv
 _evalcache rbenv init - fish
