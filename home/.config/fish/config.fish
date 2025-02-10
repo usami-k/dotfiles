@@ -42,10 +42,6 @@ set --global --export EDITOR 'cot --wait'
 # homeshick
 source $HOME/.homesick/repos/homeshick/homeshick.fish
 
-# android
-fish_add_path --path --move $HOME/Library/Android/sdk/tools
-fish_add_path --path --move $HOME/Library/Android/sdk/platform-tools
-
 # fnm
 _evalcache fnm env --use-on-cd --shell fish
 
