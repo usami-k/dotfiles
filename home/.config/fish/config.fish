@@ -1,5 +1,5 @@
 # homebrew
-_evalcache brew shellenv
+_evalcache brew shellenv fish
 
 # fzf : exact match, custom layout
 set --export FZF_DEFAULT_OPTS '--exact --inline-info --height=10'
