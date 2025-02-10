@@ -2,7 +2,7 @@
 _evalcache brew shellenv fish
 
 # fzf : exact match, custom layout
-set --export FZF_DEFAULT_OPTS '--exact --inline-info --height=10'
+set --global --export FZF_DEFAULT_OPTS '--exact --inline-info --height=10'
 
 # color theme
 if test (defaults read -g AppleInterfaceStyle 2> /dev/null || echo 'Light') = 'Dark'
@@ -13,9 +13,9 @@ end
 
 # vivid : set ls colors
 if test (defaults read -g AppleInterfaceStyle 2> /dev/null || echo 'Light') = 'Dark'
-    set --export LS_COLORS (vivid generate one-dark)
+    set --global --export LS_COLORS (vivid generate one-dark)
 else
-    set --export LS_COLORS (vivid generate one-light)
+    set --global --export LS_COLORS (vivid generate one-light)
 end
 
 # ls : use lsd command
@@ -34,10 +34,10 @@ alias rm 'rm -Iv'
 alias diff 'diff --color -u'
 
 # less : colorize, chop long lines, no clearing screen
-set --export LESS RSX
+set --global --export LESS RSX
 
 # EDITOR : CotEditor
-set --export EDITOR 'cot --wait'
+set --global --export EDITOR 'cot --wait'
 
 # homeshick
 source $HOME/.homesick/repos/homeshick/homeshick.fish
