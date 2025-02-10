@@ -43,8 +43,8 @@ set --global --export EDITOR 'cot --wait'
 source $HOME/.homesick/repos/homeshick/homeshick.fish
 
 # android
-fish_add_path --global --move --path $HOME/Library/Android/sdk/tools
-fish_add_path --global --move --path $HOME/Library/Android/sdk/platform-tools
+fish_add_path --path --move $HOME/Library/Android/sdk/tools
+fish_add_path --path --move $HOME/Library/Android/sdk/platform-tools
 
 # fnm
 _evalcache fnm env --use-on-cd --shell fish
@@ -56,13 +56,13 @@ _evalcache rbenv init - fish
 _evalcache pyenv init - fish
 
 # haskell
-fish_add_path --global --move --path $HOME/.ghcup/bin
+fish_add_path --path --move $HOME/.ghcup/bin
 
 # rust
-fish_add_path --global --move --path $HOME/.cargo/bin
+fish_add_path --path --move $HOME/.cargo/bin
 
 # local
-fish_add_path --global --move --path $HOME/.local/bin
+fish_add_path --path --move $HOME/.local/bin
 
 # direnv
 _evalcache direnv hook fish
