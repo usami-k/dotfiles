@@ -43,7 +43,7 @@ set --global --export EDITOR 'cot --wait'
 source $HOME/.homesick/repos/homeshick/homeshick.fish
 
 # fnm
-_evalcache fnm env --use-on-cd --shell fish
+_evalcache fnm env --use-on-cd --version-file-strategy=recursive --shell fish
 
 # rbenv
 _evalcache rbenv init - fish
