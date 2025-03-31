@@ -57,6 +57,10 @@ fish_add_path --path --move $HOME/.ghcup/bin
 # rust
 fish_add_path --path --move $HOME/.cargo/bin
 
+# swift
+source $HOME/.swiftly/env.fish
+fish_add_path --path --move $SWIFTLY_BIN_DIR
+
 # local
 fish_add_path --path --move $HOME/.local/bin
 
