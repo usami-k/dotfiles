@@ -1,13 +1,14 @@
 #!/usr/bin/env fish
 
+set --global original_dir (pwd)
 set --global current_dir (realpath (dirname (status filename)))
 
-pushd $current_dir
+cd $current_dir
 for script in **/eupdate.fish
     echo '###' $script
     eval $script
 end
-popd
+cd $original_dir
 
 echo '### Done'
 date
