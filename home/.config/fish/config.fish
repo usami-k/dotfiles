@@ -42,22 +42,22 @@ set --global --export EDITOR 'cot --wait'
 # homeshick
 source $HOME/.homesick/repos/homeshick/homeshick.fish
 
-# fnm
+# fnm (node.js)
 _evalcache fnm env --use-on-cd --version-file-strategy=recursive --shell fish
 
-# rbenv
+# rbenv (ruby)
 _evalcache rbenv init - fish
 
-# pyenv
+# pyenv (python)
 _evalcache pyenv init - fish
 
-# haskell
+# ghcup (haskell)
 fish_add_path --path --move $HOME/.ghcup/bin
 
-# rust
+# rustup / cargo (rust)
 fish_add_path --path --move $HOME/.cargo/bin
 
-# swift
+# swiftly (swift)
 source $HOME/.swiftly/env.fish
 fish_add_path --path --move $SWIFTLY_BIN_DIR
 
