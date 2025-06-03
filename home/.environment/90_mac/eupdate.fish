@@ -6,9 +6,6 @@ defaults write NSGlobalDomain NSServicesMinimumItemCountForContextSubmenu -int 3
 # Hide hidden files on Finder
 defaults write com.apple.finder AppleShowAllFiles -bool NO
 
-# Enable text selection on QuickLook
-defaults write com.apple.finder QLEnableTextSelection -bool YES
-
 # Disable .DS_Store on network drive
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool YES
 
