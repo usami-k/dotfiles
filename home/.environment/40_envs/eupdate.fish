@@ -10,6 +10,5 @@ ghcup --no-verbose install hls
 ghcup --no-verbose install stack
 
 fnm install --lts
-fnm default system
 
 gh extension upgrade --all
