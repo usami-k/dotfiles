@@ -2,7 +2,7 @@
 
 set --global script_dir (realpath (dirname (status filename)))
 
-if command --query mint
+if type --query mint
     mint bootstrap --mintfile $script_dir/Mintfile
 else
     echo 'Skip mint'

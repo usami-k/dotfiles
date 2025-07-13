@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 
-if command --query ghq
+if type --query ghq
     function env_personal
         ghq list --full-path usami-k/
     end

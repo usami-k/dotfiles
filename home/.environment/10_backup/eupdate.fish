@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 
-if command --query mackup
+if type --query mackup
     echo '--- mackup backup'
     mackup --force backup
     mackup --force uninstall

@@ -1,18 +1,18 @@
 #!/usr/bin/env fish
 
-if command --query swiftly
+if type --query swiftly
     swiftly update --assume-yes
 else
     echo 'Skip swiftly'
 end
 
-if command --query rustup
+if type --query rustup
     rustup update
 else
     echo 'Skip rustup'
 end
 
-if command --query ghcup
+if type --query ghcup
     ghcup --no-verbose install ghc
     ghcup --no-verbose install cabal
     ghcup --no-verbose install hls
@@ -21,13 +21,13 @@ else
     echo 'Skip ghcup'
 end
 
-if command --query fnm
+if type --query fnm
     fnm install --lts
 else
     echo 'Skip fnm'
 end
 
-if command --query gh
+if type --query gh
     gh extension upgrade --all
 else
     echo 'Skip gh'

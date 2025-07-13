@@ -1,12 +1,12 @@
 #!/usr/bin/env fish
 
-if command --query tlmgr
+if type --query tlmgr
     tlmgr update --self --all
 else
     echo 'Skip tlmgr'
 end
 
-if command --query cjk-gs-integrate
+if type --query cjk-gs-integrate
     if ! test -d /usr/local/texlive/texmf-local/fonts/opentype/Yu
         # 游フォントの設定
         mkdir -p /usr/local/texlive/texmf-local/fonts/opentype/Yu
