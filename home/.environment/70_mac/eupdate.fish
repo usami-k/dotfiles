@@ -20,7 +20,3 @@ defaults write com.apple.CoreSimulator EnableDefaultSetCreation -bool NO
 
 # Disable automatic reopening of last project
 defaults write com.apple.dt.Xcode ApplePersistenceIgnoreState -bool YES
-
-# LaunchPad : Reset app positions
-defaults write com.apple.dock ResetLaunchPad -bool YES
-killall Dock
