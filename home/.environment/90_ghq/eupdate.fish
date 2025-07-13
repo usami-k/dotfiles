@@ -10,4 +10,6 @@ if command --query ghq
         git pull --quiet
         popd
     end
+else
+    echo 'Skip ghq'
 end

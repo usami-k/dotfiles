@@ -1,14 +1,34 @@
 #!/usr/bin/env fish
 
-swiftly update --assume-yes
+if command --query swiftly
+    swiftly update --assume-yes
+else
+    echo 'Skip swiftly'
+end
 
-rustup update
+if command --query rustup
+    rustup update
+else
+    echo 'Skip rustup'
+end
 
-ghcup --no-verbose install ghc
-ghcup --no-verbose install cabal
-ghcup --no-verbose install hls
-ghcup --no-verbose install stack
+if command --query ghcup
+    ghcup --no-verbose install ghc
+    ghcup --no-verbose install cabal
+    ghcup --no-verbose install hls
+    ghcup --no-verbose install stack
+else
+    echo 'Skip ghcup'
+end
 
-fnm install --lts
+if command --query fnm
+    fnm install --lts
+else
+    echo 'Skip fnm'
+end
 
-gh extension upgrade --all
+if command --query gh
+    gh extension upgrade --all
+else
+    echo 'Skip gh'
+end

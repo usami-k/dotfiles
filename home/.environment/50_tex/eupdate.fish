@@ -2,6 +2,8 @@
 
 if command --query tlmgr
     tlmgr update --self --all
+else
+    echo 'Skip tlmgr'
 end
 
 if command --query cjk-gs-integrate
@@ -16,4 +18,6 @@ if command --query cjk-gs-integrate
         popd
     end
     cjk-gs-integrate --cleanup --link-texmf
+else
+    echo 'Skip cjk-gs-integrate'
 end

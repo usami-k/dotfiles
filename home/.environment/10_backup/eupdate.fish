@@ -5,6 +5,8 @@ if command --query mackup
     mackup --force backup
     mackup --force uninstall
     rsync --archive --delete-during ~/.backup/Mackup ~/backup/
+else
+    echo 'Skip mackup'
 end
 
 echo '--- keychains backup'
