@@ -1,6 +1,6 @@
 [user]
 	name = USAMI Kosuke
-	email = k_usami@yumemi.co.jp
+	email = usami.kosuke@gmail.com
 	signingkey = D18D1233EA19951E
 [init]
 	templatedir = ~/.git_templates
