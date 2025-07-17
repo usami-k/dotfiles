@@ -1,7 +1,5 @@
-[user]
-	name = USAMI Kosuke
-	email = usami.kosuke@gmail.com
-	signingkey = D18D1233EA19951E
+[include]
+	path = ~/.gitconfig_user
 [init]
 	templatedir = ~/.git_templates
 	defaultBranch = main
