@@ -33,8 +33,8 @@ alias rm 'rm -Iv'
 # diff : unified format, colorize
 alias diff 'diff --color -u'
 
-# less : colorize, chop long lines, no clearing screen
-set --global --export LESS RSX
+# less : quit if one screen, colorize, chop long lines, no clearing screen
+set --global --export LESS FRSX
 
 # EDITOR : CotEditor
 set --global --export EDITOR 'cot --wait'
