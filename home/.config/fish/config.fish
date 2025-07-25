@@ -6,16 +6,16 @@ set --global --export FZF_DEFAULT_OPTS '--exact --inline-info --height=10'
 
 # color theme
 if test (defaults read -g AppleInterfaceStyle 2> /dev/null || echo 'Light') = 'Dark'
-    fish_config theme choose 'ayu Dark'
+    theme_gruvbox dark hard
 else
-    fish_config theme choose 'ayu Light'
+    theme_gruvbox light hard
 end
 
 # vivid : set ls colors
 if test (defaults read -g AppleInterfaceStyle 2> /dev/null || echo 'Light') = 'Dark'
-    set --global --export LS_COLORS (vivid generate one-dark)
+    set --global --export LS_COLORS (vivid generate gruvbox-dark-hard)
 else
-    set --global --export LS_COLORS (vivid generate one-light)
+    set --global --export LS_COLORS (vivid generate gruvbox-light-hard)
 end
 
 # ls : use lsd command
