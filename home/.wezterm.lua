@@ -9,9 +9,9 @@ end
 
 function scheme_for_appearance(appearance)
   if appearance:find 'Dark' then
-    return 'Gruvbox dark, hard (base16)'
+    return 'OneHalfDark'
   else
-    return 'Gruvbox light, hard (base16)'
+    return 'OneHalfLight'
   end
 end
 
