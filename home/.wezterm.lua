@@ -17,10 +17,11 @@ end
 
 local config = wezterm.config_builder()
 config.color_scheme = scheme_for_appearance(get_appearance())
+config.font = wezterm.font_with_fallback {'0xProto Nerd Font', 'IBM Plex Sans JP'}
+config.font_size = 14
+config.default_cursor_style = 'BlinkingBlock'
 config.default_prog = {'/opt/homebrew/bin/fish'}
 config.skip_close_confirmation_for_processes_named = {'fish'}
-config.enable_tab_bar = false
-config.use_ime = true
-config.font = wezterm.font('0xProto Nerd Font')
-config.font_size = 14
+config.quit_when_all_windows_are_closed = false
+config.hide_tab_bar_if_only_one_tab = true
 return config
