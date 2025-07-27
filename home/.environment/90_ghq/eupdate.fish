@@ -1,13 +1,9 @@
 #!/usr/bin/env fish
 
 if type --query ghq
-    function env_personal
-        ghq list --full-path usami-k/
-    end
-
-    for repo in (env_personal)
+    for repo in (ghq list --full-path)
         pushd $repo
-        git pull --quiet
+        git fetch --all --prune
         popd
     end
 else
