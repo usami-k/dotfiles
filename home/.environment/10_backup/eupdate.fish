@@ -19,9 +19,9 @@ else
     echo 'Skip ghq'
 end
 
-if test -d ~/.repos
-    echo '--- .repos backup'
-    rsync --archive --delete-during ~/.repos ~/backup/
+if test -d /opt/git
+    echo '--- local git repos backup'
+    rsync --archive --delete-during /opt/git ~/backup/
 else
-    echo 'Skip .repos (directory not found)'
+    echo 'Skip local git repos (directory not found)'
 end
