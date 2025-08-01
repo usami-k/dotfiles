@@ -18,3 +18,10 @@ if type --query ghq
 else
     echo 'Skip ghq'
 end
+
+if test -d ~/.repos
+    echo '--- .repos backup'
+    rsync --archive --delete-during ~/.repos ~/backup/
+else
+    echo 'Skip .repos (directory not found)'
+end
