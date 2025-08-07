@@ -25,4 +25,11 @@ config.skip_close_confirmation_for_processes_named = { "fish" }
 config.hide_tab_bar_if_only_one_tab = true
 config.initial_cols = 88
 config.initial_rows = 40
+config.keys = {
+  {
+    key = "n",
+    mods = "CMD",
+    action = wezterm.action.SpawnCommandInNewWindow { cwd = wezterm.home_dir },
+  },
+}
 return config
