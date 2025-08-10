@@ -17,7 +17,7 @@ end
 
 local config = wezterm.config_builder()
 config.color_scheme = scheme_for_appearance(get_appearance())
-config.font = wezterm.font_with_fallback { "0xProto Nerd Font", "IBM Plex Sans JP" }
+config.font = wezterm.font_with_fallback { "0xProto Nerd Font", "BIZ UDGothic" }
 config.font_size = 14
 config.default_cursor_style = "BlinkingBlock"
 config.default_prog = { "/opt/homebrew/bin/fish", "-l" }
