@@ -1,6 +1,5 @@
 # homebrew
 _evalcache brew shellenv fish
-set --global --export HOMEBREW_BUNDLE_DUMP_NO_VSCODE 1
 
 # fzf : exact match, custom layout
 set --global --export FZF_DEFAULT_OPTS '--exact --inline-info --height=10'
