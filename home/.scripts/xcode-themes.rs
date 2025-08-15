@@ -115,7 +115,7 @@ fn process_normal_font_lines(lines: Vec<String>) -> Vec<String> {
             i += 1;
             if i < lines.len() {
                 line = lines[i].clone();
-                line = line.replace("SFMono-Regular - 12.0", "0xProto-Regular - 14.0");
+                line = line.replace("SFMono-Regular - 12.0", "0xProto-Regular - 12.0");
                 result.push(line);
             }
         } else if line.contains("xcode.syntax.comment") || line.contains("xcode.syntax.mark") || line.contains("xcode.syntax.string") {
