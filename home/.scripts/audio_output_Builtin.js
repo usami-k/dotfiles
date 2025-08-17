@@ -1,7 +1,7 @@
 function run(input, parameters) {
     const current = Application.currentApplication()
     current.includeStandardAdditions = true
-    current.doShellScript("/opt/homebrew/bin/SwitchAudioSource -t input -s 'KENWOOD KH-M700'")
-    current.setVolume(null, { inputVolume: 100 })
+    current.doShellScript("/opt/homebrew/bin/SwitchAudioSource -t output -u BuiltInSpeakerDevice")
+    current.setVolume(null, { outputVolume: 60 })
     return input;
 }
