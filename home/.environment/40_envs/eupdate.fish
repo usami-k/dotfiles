@@ -1,7 +1,7 @@
 #!/usr/bin/env fish
 
 if type --query swiftly
-    swiftly update --assume-yes
+    swiftly update latest --assume-yes
 else
     echo 'Skip swiftly'
 end
