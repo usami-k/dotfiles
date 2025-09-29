@@ -23,6 +23,7 @@ end
 
 if type --query fnm
     fnm install --lts
+    npm install --global @aikidosec/safe-chain
 else
     echo 'Skip fnm'
 end
