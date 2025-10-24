@@ -3,8 +3,6 @@
 if type --query mackup
     echo '--- mackup backup'
     mackup --force backup
-    mackup --force uninstall
-    rsync --archive --delete-delay ~/.backup/Mackup ~/backup/
 else
     echo 'Skip mackup'
 end
