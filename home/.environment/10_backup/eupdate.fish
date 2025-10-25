@@ -16,10 +16,3 @@ if type --query ghq
 else
     echo 'Skip ghq'
 end
-
-if test -d $HOME/git
-    echo '--- local git repos backup'
-    rsync --archive --delete-delay $HOME/git ~/backup/
-else
-    echo 'Skip local git repos (directory not found)'
-end
