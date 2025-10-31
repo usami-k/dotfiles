@@ -2,7 +2,9 @@
 
 if type --query mackup
     echo '--- mackup backup'
+    trash ~/.backup/Mackup
     mackup --force backup
+    rsync --archive --delete-delay ~/.backup/Mackup ~/backup/
 else
     echo 'Skip mackup'
 end
