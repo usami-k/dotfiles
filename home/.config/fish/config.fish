@@ -51,9 +51,6 @@ source $HOME/.safe-chain/scripts/init-fish.fish
 # rbenv (ruby)
 _evalcache rbenv init - fish
 
-# pyenv (python)
-_evalcache pyenv init - fish
-
 # ghcup (haskell)
 fish_add_path --path --move $HOME/.ghcup/bin
 
