@@ -23,8 +23,8 @@ config.default_cursor_style = "BlinkingBlock"
 config.default_prog = { "/opt/homebrew/bin/fish", "-l" }
 config.skip_close_confirmation_for_processes_named = { "fish" }
 config.hide_tab_bar_if_only_one_tab = true
-config.initial_cols = 98
-config.initial_rows = 60
+config.initial_cols = 80 -- default: 80
+config.initial_rows = 40 -- default: 24
 config.keys = {
   {
     key = "n",
