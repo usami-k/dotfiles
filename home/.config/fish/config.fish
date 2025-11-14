@@ -33,6 +33,9 @@ alias rm 'rm -Iv'
 # diff : unified format, colorize
 alias diff 'diff --color -u'
 
+# diff using vscode (extensition "moshfeu.compare-folders")
+alias vsdiff 'COMPARE_FOLDERS=DIFF code --diff'
+
 # less : quit if one screen, colorize, chop long lines, no clearing screen
 set --global --export LESS FRSX
 
