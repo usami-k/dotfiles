@@ -9,9 +9,9 @@ end
 
 local function scheme_for_appearance(appearance)
   if appearance:find "Dark" then
-    return "OneHalfDark"
+    return "One Half Black (Gogh)"
   else
-    return "OneHalfLight"
+    return "One Light (Gogh)"
   end
 end
 
