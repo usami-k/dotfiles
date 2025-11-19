@@ -27,6 +27,7 @@
 [alias]
 	ignored = status --ignored
 	ignore = "!gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi"
+	wtadd = "!f() { base=../$(basename $(pwd)); branch=$1; dirname=${base}_${branch//\\//_}; git worktree add $dirname $branch; }; f"
 [rebase]
 	autoStash = true
 [pull]
