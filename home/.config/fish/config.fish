@@ -67,6 +67,11 @@ fish_add_path --path --move $SWIFTLY_BIN_DIR
 # local
 fish_add_path --path --move $HOME/.local/bin
 
+# mise
+if type --query ~/.local/bin/mise
+    _evalcache ~/.local/bin/mise activate fish
+end
+
 # direnv
 _evalcache direnv hook fish
 
@@ -74,5 +79,3 @@ _evalcache direnv hook fish
 _evalcache starship init fish --print-full-init
 
 ########
-
-
