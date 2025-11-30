@@ -1,0 +1,2 @@
+#!/usr/bin/env fish
+$HOME/.scripts/xcode-clean.fish
