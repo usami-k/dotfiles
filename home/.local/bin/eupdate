@@ -1,2 +1,2 @@
 #!/usr/bin/env fish
-$HOME/.environment/eupdate
+$HOME/.environment/eupdate.fish
