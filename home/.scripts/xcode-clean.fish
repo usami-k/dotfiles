@@ -11,8 +11,7 @@ trash_if_exists ~/Library/Caches/org.swift.swiftpm
 trash_if_exists ~/Library/org.swift.swiftpm
 
 echo (pwd)
-printf "このディレクトリでビルドキャッシュを削除しますか? (y/N): "
-read -l answer
+read -l -P "このディレクトリでビルドキャッシュを削除しますか? (y/N): " answer
 
 if test "$answer" = y
     find . -name .swiftpm -print0 | xargs -0 trash -v
