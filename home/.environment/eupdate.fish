@@ -4,7 +4,7 @@ set --global original_dir (pwd)
 set --global current_dir (realpath (dirname (status filename)))
 
 cd $current_dir
-for script in **/eupdate.fish
+for script in ./*/eupdate.fish
     echo '###' $script
     eval $script
 end
