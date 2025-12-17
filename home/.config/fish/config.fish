@@ -46,7 +46,7 @@ set --global --export EDITOR 'cot --wait'
 _evalcache fnm env --use-on-cd --version-file-strategy=recursive --shell fish
 
 # Safe-chain
-source $HOME/.safe-chain/scripts/init-fish.fish
+source ~/.safe-chain/scripts/init-fish.fish
 
 # rbenv (ruby)
 _evalcache rbenv init - fish
