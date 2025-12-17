@@ -5,14 +5,14 @@ _evalcache /opt/homebrew/bin/brew shellenv fish
 set --global --export FZF_DEFAULT_OPTS '--exact --inline-info --height=10'
 
 # color theme
-if test (defaults read -g AppleInterfaceStyle 2> /dev/null || echo 'Light') = 'Dark'
+if test (defaults read -g AppleInterfaceStyle 2> /dev/null || echo 'Light') = Dark
     fish_config theme choose 'Tomorrow Night Bright'
 else
-    fish_config theme choose 'Tomorrow'
+    fish_config theme choose Tomorrow
 end
 
 # vivid : set ls colors
-if test (defaults read -g AppleInterfaceStyle 2> /dev/null || echo 'Light') = 'Dark'
+if test (defaults read -g AppleInterfaceStyle 2> /dev/null || echo 'Light') = Dark
     set --global --export LS_COLORS (vivid generate one-dark)
 else
     set --global --export LS_COLORS (vivid generate one-light)
