@@ -1,3 +1,8 @@
+# fish greeting
+function fish_greeting
+    LANG=ja_JP date
+end
+
 # homebrew
 _evalcache /opt/homebrew/bin/brew shellenv fish
 
