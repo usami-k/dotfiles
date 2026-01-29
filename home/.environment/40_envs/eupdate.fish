@@ -32,3 +32,10 @@ if type --query gh
 else
     echo 'Skip gh'
 end
+
+if type --query safe-chain
+    curl -fsSL https://github.com/AikidoSec/safe-chain/releases/latest/download/install-safe-chain.sh | sh
+    npm safe-chain-verify
+else
+    echo 'Skip safe-chain'
+end
