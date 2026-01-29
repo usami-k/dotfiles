@@ -50,9 +50,6 @@ set --global --export EDITOR 'cot --wait'
 # fnm (node.js)
 _evalcache fnm env --use-on-cd --version-file-strategy=recursive --shell fish
 
-# Safe-chain
-source ~/.safe-chain/scripts/init-fish.fish
-
 # rbenv (ruby)
 _evalcache rbenv init - fish
 
@@ -78,5 +75,8 @@ _evalcache direnv hook fish
 
 # starship
 _evalcache starship init fish --print-full-init
+
+# safe-chain
+source ~/.safe-chain/scripts/init-fish.fish # Safe-chain Fish initialization script
 
 ########
