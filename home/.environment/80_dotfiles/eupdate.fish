@@ -6,3 +6,5 @@ if type --query homeshick
 else
     echo 'Skip homeshick'
 end
+
+trash ~/.claude.json.backup.*
