@@ -7,4 +7,7 @@ else
     echo 'Skip homeshick'
 end
 
-trash ~/.claude.json.backup.*
+set -l backups ~/.claude.json.backup.*
+if test (count $backups) -gt 0
+    trash $backups
+end
