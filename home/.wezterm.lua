@@ -1,6 +1,6 @@
 local wezterm = require "wezterm"
 local config = wezterm.config_builder()
-config.color_scheme = "Omni (Gogh)"
+config.color_scheme = "Operator Mono Dark"
 config.font = wezterm.font_with_fallback { "0xProto Nerd Font", "BIZ UDGothic" }
 config.font_size = 14
 config.default_cursor_style = "BlinkingBlock"
