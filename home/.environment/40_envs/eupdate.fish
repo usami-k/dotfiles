@@ -12,6 +12,12 @@ else
     echo 'Skip rustup'
 end
 
+if type --query cargo-install-update
+    cargo install-update --all
+else
+    echo 'Skip cargo-install-update'
+end
+
 if type --query ghcup
     ghcup --no-verbose install ghc
     ghcup --no-verbose install cabal
