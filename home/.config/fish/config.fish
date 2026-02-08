@@ -47,11 +47,11 @@ set --global --export LESS FRSX
 # EDITOR : CotEditor
 set --global --export EDITOR 'cot --wait'
 
-# fnm (node.js)
-_evalcache fnm env --use-on-cd --version-file-strategy=recursive --shell fish
-
 # rbenv (ruby)
 _evalcache rbenv init - fish
+
+# fnm (node.js)
+_evalcache fnm env --use-on-cd --version-file-strategy=recursive --shell fish
 
 # ghcup (haskell)
 fish_add_path --path --move $HOME/.ghcup/bin
