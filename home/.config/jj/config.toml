@@ -1,0 +1,11 @@
+#:schema https://docs.jj-vcs.dev/latest/config-schema.json
+
+[signing]
+behavior = "drop"
+backend = "gpg"
+
+[signing.backends.gpg]
+program = "/opt/homebrew/bin/gpg"
+
+[git]
+sign-on-push = true
