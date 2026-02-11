@@ -19,6 +19,8 @@
 	gpgsign = true
 [gpg]
 	program = /opt/homebrew/bin/gpg
+[clean]
+	ignore = .jj/
 [rerere]
 	enabled = true
 [ghq]
