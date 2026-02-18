@@ -1,5 +1,11 @@
 #!/usr/bin/env fish
 
+if type --query gh
+    gh extension upgrade --all
+else
+    echo 'Skip gh'
+end
+
 if type --query swiftly
     swiftly update latest --assume-yes
 else
@@ -31,12 +37,6 @@ if type --query fnm
     fnm install --lts
 else
     echo 'Skip fnm'
-end
-
-if type --query gh
-    gh extension upgrade --all
-else
-    echo 'Skip gh'
 end
 
 if type --query safe-chain
