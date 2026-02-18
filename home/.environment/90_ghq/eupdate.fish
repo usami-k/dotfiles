@@ -3,7 +3,11 @@
 if type --query ghq
     for repo in (ghq list --full-path)
         pushd $repo
-        git fetch --all --prune
+        if test -d .jj
+            jj git fetch
+        else
+            git fetch --prune
+        end
         popd
     end
 else
