@@ -7,7 +7,7 @@ end
 _evalcache /opt/homebrew/bin/brew shellenv fish
 
 # fzf : exact match, custom layout
-set --global --export FZF_DEFAULT_OPTS '--exact --inline-info --height=10'
+set --global --export FZF_DEFAULT_OPTS '--exact --reverse --height=10'
 
 # color theme
 if test (defaults read -g AppleInterfaceStyle 2> /dev/null || echo 'Light') = Dark
