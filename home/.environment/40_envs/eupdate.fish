@@ -35,6 +35,7 @@ end
 
 if type --query fnm
     fnm install --lts
+    fnm default lts-latest
 else
     echo 'Skip fnm'
 end
