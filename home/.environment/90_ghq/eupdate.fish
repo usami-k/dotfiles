@@ -5,7 +5,7 @@ if type --query ghq
         echo "## " $repo
         pushd $repo
         if test -d .jj
-            jj git fetch
+            jj git fetch --no-pager
         else
             git fetch --prune
         end
