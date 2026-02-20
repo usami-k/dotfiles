@@ -2,6 +2,7 @@
 
 if type --query ghq
     for repo in (ghq list --full-path)
+        echo "## " $repo
         pushd $repo
         if test -d .jj
             jj git fetch
