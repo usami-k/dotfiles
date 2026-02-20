@@ -1,9 +1,9 @@
 #!/usr/bin/env fish
 
 if type --query ghq
-    for repo in (ghq list --full-path)
-        echo "## " $repo
-        pushd $repo
+    ghq list | while read repo
+        echo "===" $repo
+        pushd (ghq root)/$repo
         if test -d .jj
             jj git fetch --no-pager
         else
