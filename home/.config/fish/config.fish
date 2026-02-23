@@ -66,11 +66,7 @@ fish_add_path --path --move $SWIFTLY_BIN_DIR
 fish_add_path --path --move $HOME/.local/bin
 
 # mise
-if type --query ~/.local/bin/mise
-    _evalcache ~/.local/bin/mise activate fish
-else if type --query ~/.cargo/bin/mise
-    _evalcache ~/.cargo/bin/mise activate fish
-end
+_evalcache mise activate fish
 
 # direnv
 _evalcache direnv hook fish
