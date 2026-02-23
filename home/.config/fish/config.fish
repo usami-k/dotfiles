@@ -6,9 +6,6 @@ end
 # homebrew
 _evalcache /opt/homebrew/bin/brew shellenv fish
 
-# fzf : exact match, custom layout
-set --global --export FZF_DEFAULT_OPTS '--exact --reverse --height=10'
-
 # color theme
 if test (defaults read -g AppleInterfaceStyle 2> /dev/null || echo 'Light') = Dark
     fish_config theme choose 'Tomorrow Night Bright'
@@ -43,6 +40,9 @@ alias vsdiff 'COMPARE_FOLDERS=DIFF code --diff'
 
 # less : quit if one screen, colorize, chop long lines, no clearing screen
 set --global --export LESS FRSX
+
+# fzf : exact match, custom layout
+set --global --export FZF_DEFAULT_OPTS '--exact --reverse --height=10'
 
 # EDITOR : CotEditor
 set --global --export EDITOR 'cot --wait'
