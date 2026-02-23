@@ -33,6 +33,12 @@ else
     echo 'Skip ghcup'
 end
 
+if type --query mise
+    mise upgrade
+else
+    echo 'Skip mise'
+end
+
 if type --query safe-chain
     curl -fsSL https://github.com/AikidoSec/safe-chain/releases/latest/download/install-safe-chain.sh | sh
     npm safe-chain-verify
