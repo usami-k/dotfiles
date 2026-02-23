@@ -47,9 +47,6 @@ set --global --export LESS FRSX
 # EDITOR : CotEditor
 set --global --export EDITOR 'cot --wait'
 
-# rbenv (ruby)
-_evalcache rbenv init - fish
-
 # fnm (node.js)
 _evalcache fnm env --use-on-cd --version-file-strategy=recursive --shell fish
 
