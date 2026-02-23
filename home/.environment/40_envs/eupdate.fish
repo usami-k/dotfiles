@@ -33,13 +33,6 @@ else
     echo 'Skip ghcup'
 end
 
-if type --query fnm
-    fnm install --lts
-    fnm default lts-latest
-else
-    echo 'Skip fnm'
-end
-
 if type --query safe-chain
     curl -fsSL https://github.com/AikidoSec/safe-chain/releases/latest/download/install-safe-chain.sh | sh
     npm safe-chain-verify
