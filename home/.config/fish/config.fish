@@ -38,6 +38,14 @@ alias diff 'diff --color -u'
 # diff using vscode (extension "moshfeu.compare-folders")
 alias vsdiff 'COMPARE_FOLDERS=DIFF code --diff'
 
+# switch to jj workspace
+function gg
+    if test -d .jj
+        jj workspace list -T 'name ++ "\n"' | fzf | read name
+        cd (jj workspace root --name $name)
+    end
+end
+
 # less : quit if one screen, colorize, chop long lines, no clearing screen
 set --global --export LESS FRSX
 
