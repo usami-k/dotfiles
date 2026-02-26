@@ -7,18 +7,10 @@ end
 _evalcache /opt/homebrew/bin/brew shellenv fish
 
 # color theme
-if test (defaults read -g AppleInterfaceStyle 2> /dev/null || echo 'Light') = Dark
-    fish_config theme choose 'Tomorrow Night Bright'
-else
-    fish_config theme choose Tomorrow
-end
+fish_config theme choose 'Tomorrow Night Bright'
 
 # vivid : set ls colors
-if test (defaults read -g AppleInterfaceStyle 2> /dev/null || echo 'Light') = Dark
-    set --global --export LS_COLORS (vivid generate one-dark)
-else
-    set --global --export LS_COLORS (vivid generate one-light)
-end
+set --global --export LS_COLORS (vivid generate one-dark)
 
 # ls : use lsd command
 abbr --add ls lsd
