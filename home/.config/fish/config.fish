@@ -43,6 +43,8 @@ function gg
     if test -d .jj
         jj workspace list -T 'name ++ "\n"' | fzf | read name
         cd (jj workspace root --name $name)
+    else
+        echo "Not a jj repository"
     end
 end
 
