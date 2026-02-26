@@ -33,9 +33,10 @@ else
     echo 'Skip ghcup'
 end
 
-if type --query safe-chain
-    curl -fsSL https://github.com/AikidoSec/safe-chain/releases/latest/download/install-safe-chain.sh | sh
+curl -fsSL https://github.com/AikidoSec/safe-chain/releases/latest/download/install-safe-chain.sh | sh
+if type --query --no-function npm
     npm safe-chain-verify
-else
-    echo 'Skip safe-chain'
+end
+if type --query --no-function uv
+    uv safe-chain-verify
 end
