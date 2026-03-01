@@ -1,6 +1,6 @@
 # fish greeting
 function fish_greeting
-    LANG=ja_JP date
+    fish --version
 end
 
 # homebrew
