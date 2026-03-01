@@ -9,11 +9,8 @@ config.font_size = 14
 config.initial_cols = 92
 config.initial_rows = 46
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
-config.show_tabs_in_tab_bar = false
+config.show_tab_index_in_tab_bar = false
 config.show_new_tab_button_in_tab_bar = false
-wezterm.on("update-right-status", function(window, pane)
-  window:set_right_status(pane:get_title() .. "  ")
-end)
 config.keys = {
   {
     key = "n",
