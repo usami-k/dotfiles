@@ -29,3 +29,10 @@
 - `bash` では利便性より `safe-chain` を優先する。
 - シェル関連ファイルを変更するときは、`fish` は機能豊富、`zsh` は最小限、`bash` は最小限かつ安全性重視、という現在の意図を保つ。
 - これらの shell dotfiles は、このリポジトリから homeshick で全面的に管理する前提で扱う。
+
+## jj と homeshick の運用メモ
+
+- このリポジトリは `jj` で作業していても、`homeshick check` は基盤の Git のブランチ状態を見る。
+- `homeshick check` が `up to date` になるには、Git の `HEAD` が detached ではなく `master` を指しており、かつ `origin/master` と一致している必要がある。
+- `jj git push` の後は、Git 側の `HEAD` が detached に戻ることがある。その場合は `git switch master` を実行してから `homeshick check` を見る。
+- `jj` でコミットした内容を `homeshick check` に正しく反映させたい場合は、必要に応じて `jj bookmark set master -r @-` で `master` を進め、`jj git push --bookmark master --remote origin` で push する。
