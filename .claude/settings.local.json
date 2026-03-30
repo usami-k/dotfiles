@@ -8,7 +8,9 @@
       "Bash(git push:*)",
       "Bash(git remote:*)",
       "Bash(jj config:*)",
-      "Bash(jj new:*)"
+      "Bash(jj new:*)",
+      "Bash(homeshick check:*)",
+      "Bash(git rm:*)"
     ]
   }
 }
