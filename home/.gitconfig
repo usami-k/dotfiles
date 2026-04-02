@@ -22,6 +22,7 @@
 [rerere]
 	enabled = true
 [ghq]
+	root = ~/.homesick
 	root = ~/repos
 [alias]
 	ignored = status --ignored
