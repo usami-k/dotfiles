@@ -1,6 +1,0 @@
-# bash 用の共通初期化。
-# fish から BASH_ENV として渡し、非対話 bash でも safe-chain を有効にする。
-
-if [ -r "$HOME/.safe-chain/scripts/init-posix.sh" ]; then
-    . "$HOME/.safe-chain/scripts/init-posix.sh"
-fi
