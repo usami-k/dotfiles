@@ -21,8 +21,7 @@
 - `home/.zshenv` には、すべての `zsh` プロセスで安全に読める静的な環境変数と PATH だけを置く。
 - `home/.zprofile` には login 時だけ必要な `zsh` 初期化を置く。
 - `home/.zshrc` には interactive 時だけ必要な `zsh` 初期化を置く。
-- `home/.bash_env` は `bash` 用の共通初期化で、主に非対話 `bash` でも `safe-chain` を有効にするために使う。
-- `home/.bash_profile` と `home/.bashrc` は薄く保ち、`home/.bash_env` を読むだけにする。
+- `home/.bash_profile` と `home/.bashrc` は薄く保ち、`safe-chain` の初期化だけを置く。
 
 ## 安全性に関する注意
 
