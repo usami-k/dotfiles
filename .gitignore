@@ -27,5 +27,8 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# Claude Code local settings
+# local settings
 .claude/
+CLAUDE.md
+.codex/
+AGENTS.md
