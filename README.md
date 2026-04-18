@@ -25,3 +25,9 @@ When pushing to GitHub:
 1. `jj git push --bookmark main --remote origin`
 2. `git switch main`
 3. `homeshick check`
+
+## Fish
+
+`g` reads candidates from both `~/.config/fish/g_paths` and `ghq list --full-path`.
+
+Paths from `g_paths` are shown first, in file order.
