@@ -9,3 +9,6 @@ program = "/opt/homebrew/bin/gpg"
 
 [git]
 sign-on-push = true
+
+[revset-aliases]
+"immutable_heads()" = "builtin_immutable_heads() | remote_bookmarks()"
