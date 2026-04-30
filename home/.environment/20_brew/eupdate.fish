@@ -3,6 +3,7 @@
 if type --query brew
     brew bundle --global dump --force
     brew bundle --global
+    brew upgrade --cask --greedy-auto-updates
     brew doctor
 else
     echo 'Skip brew'
