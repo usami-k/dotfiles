@@ -8,7 +8,9 @@ end
 
 if type --query fisher
     fisher update
+    set -gx fish_update_completions_detach true
     fish_update_completions
+    set --erase fish_update_completions_detach
 else
     echo 'Skip fisher'
 end
