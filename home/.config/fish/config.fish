@@ -49,10 +49,10 @@ fish_add_path --path --move $SWIFTLY_BIN_DIR
 fish_add_path --path --move $HOME/.local/bin
 
 # direnv
-_evalcache direnv hook fish
+direnv hook fish | source
 
 # starship
-_evalcache starship init fish --print-full-init
+starship init fish | source
 
 # safe-chain
 source ~/.safe-chain/scripts/init-fish.fish # Safe-chain Fish initialization script
