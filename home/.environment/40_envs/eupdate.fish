@@ -23,6 +23,7 @@ if type --query ghcup
     ghcup --no-verbose install cabal
     ghcup --no-verbose install hls
     ghcup --no-verbose install stack
+    ghcup gc --unset --tmpdirs
 else
     echo 'Skip ghcup'
 end
