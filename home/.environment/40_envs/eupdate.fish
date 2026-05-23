@@ -19,10 +19,10 @@ else
 end
 
 if type --query ghcup
-    ghcup --no-verbose install ghc
-    ghcup --no-verbose install cabal
-    ghcup --no-verbose install hls
-    ghcup --no-verbose install stack
+    ghcup --no-verbose install ghc --set
+    ghcup --no-verbose install cabal --set
+    ghcup --no-verbose install hls --set
+    ghcup --no-verbose install stack --set
     ghcup gc --unset --tmpdirs
 else
     echo 'Skip ghcup'
