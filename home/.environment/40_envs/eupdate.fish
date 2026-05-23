@@ -12,12 +12,6 @@ else
     echo 'Skip swiftly'
 end
 
-if type --query rustup
-    rustup update
-else
-    echo 'Skip rustup'
-end
-
 if type --query cargo-install-update
     cargo install-update --all
 else
