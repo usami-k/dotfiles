@@ -5,7 +5,11 @@ if type --query brew
 
     brew bundle --global
     # brew bundle は auto_updates true の cask（Chrome/Slack/IDE 系等）の更新をスキップするため補完。
-    brew upgrade --cask --greedy-auto-updates
+    if test -d "/Library/Application Support/JAMF"
+        yes Yes | script -q /dev/null brew upgrade --cask --greedy-auto-updates
+    else
+        brew upgrade --cask --greedy-auto-updates
+    end
 
     brew doctor
     # brew doctor は SOVERSION ミスマッチ等の dylib 参照切れを検知しないため補完。
