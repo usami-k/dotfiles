@@ -1,6 +1,9 @@
 #!/usr/bin/env fish
 
 if type --query brew
+    echo "Homebrew, MAS, and cask updates may require sudo for app installers, launchctl services, and package uninstallers."
+    sudo -v
+
     brew bundle --global dump --force
 
     brew bundle --global
