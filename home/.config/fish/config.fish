@@ -48,9 +48,6 @@ fish_add_path --path --move $SWIFTLY_BIN_DIR
 # local
 fish_add_path --path --move $HOME/.local/bin
 
-# direnv
-direnv hook fish | source
-
 # starship
 starship init fish | source
 
