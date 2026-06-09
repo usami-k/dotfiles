@@ -39,7 +39,7 @@ set --global --export EDITOR 'cot --wait'
 # ghcup (haskell)
 fish_add_path --path --move $HOME/.ghcup/bin
 
-# rustup / cargo (rust)
+# cargo (rust)
 fish_add_path --path --move $HOME/.cargo/bin
 
 # swiftly (swift)
