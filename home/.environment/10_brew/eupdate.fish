@@ -13,7 +13,7 @@ if type --query brew
 
     brew bundle --global dump --force
 
-    brew bundle --global
+    brew bundle --global install
 
     brew doctor
 else
