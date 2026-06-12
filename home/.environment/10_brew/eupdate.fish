@@ -5,7 +5,7 @@ if type --query brew
     sudo -v
 
     # cask の更新を先に実施しておく。auto_updates true の cask の更新も行う。
-    brew upgrade --cask --greedy-auto-updates
+    brew upgrade --cask --greedy-auto-updates --no-ask
 
     brew bundle --global dump --force
 
