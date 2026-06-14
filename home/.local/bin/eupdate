@@ -1,6 +1,7 @@
 #!/usr/bin/env fish
-mkdir -p /tmp/eupdate-logs
-set -l log /tmp/eupdate-logs/(date +%Y%m%d_%H%M%S).log
-echo $log > /tmp/eupdate-logs/latest
+set -l log_dir $HOME/Documents/workplace/logs/eupdate
+mkdir -p $log_dir
+set -l log $log_dir/(date +%Y%m%d_%H%M%S).log
+echo $log > $log_dir/latest
 echo "log=$log"
 script -q $log fish -c '$HOME/.environment/eupdate.fish'
