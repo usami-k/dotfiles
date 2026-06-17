@@ -13,8 +13,3 @@ for repo_dir in ~/.homesick/repos/*/
 end
 
 homeshick --batch --force link
-
-set -l backups ~/.claude.json.backup.*
-if test (count $backups) -gt 0
-    trash $backups
-end
