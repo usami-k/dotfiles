@@ -7,6 +7,7 @@ if type --query ghq
         if test -d .jj
             jj git fetch --no-pager
         else
+            echo 'Git repository without jj'
             git fetch --prune
         end
         popd
