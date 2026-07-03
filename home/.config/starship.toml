@@ -1,7 +1,5 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-command_timeout = 1000
-
 [directory]
 fish_style_pwd_dir_length = 1
 
@@ -12,6 +10,9 @@ disabled = true
 disabled = true
 
 [git_status]
+disabled = true
+
+[swift]
 disabled = true
 
 [custom.jj]
