@@ -1,19 +1,3 @@
-function __g_prefer_home_repos_path -a candidate -d 'Prefer the ~/repos symlink path over its physical target'
-    set --local home_repos "$HOME/repos"
-
-    if test -d "$home_repos"; and command -sq realpath
-        set --local physical_home_repos (realpath "$home_repos")
-
-        if test "$candidate" = "$physical_home_repos"
-            set candidate "$home_repos"
-        else if string match -q "$physical_home_repos/*" "$candidate"
-            set candidate (string replace -- "$physical_home_repos/" "$home_repos/" "$candidate")
-        end
-    end
-
-    printf '%s\n' "$candidate"
-end
-
 function __g_collect_candidates -d 'Collect ghq repositories and configured extra paths'
     set --local candidates
 
@@ -26,9 +10,7 @@ function __g_collect_candidates -d 'Collect ghq repositories and configured extr
     end
 
     if command -sq ghq
-        for candidate in (ghq list --full-path)
-            set --append candidates (__g_prefer_home_repos_path "$candidate")
-        end
+        set --append candidates (ghq-repos)
     end
 
     printf '%s\n' $candidates
