@@ -15,3 +15,9 @@ sign-on-push = true
 
 [revsets]
 log = "ancestors(@)"
+
+[[--scope]]
+--when.commands = ["status"]
+
+[--scope.ui]
+paginate = "never"
