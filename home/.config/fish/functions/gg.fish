@@ -12,7 +12,7 @@ function gg -d 'Switch to a jj workspace'
     jj workspace list -T 'name ++ "\n"' | fzf | read --local name
 
     if test -n "$name"
-        cd (jj workspace root --name $name)
+        cd (__ghq_prefer_home_repos_path (jj workspace root --name $name))
     end
 
     if status is-interactive
