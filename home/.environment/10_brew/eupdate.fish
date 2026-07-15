@@ -2,7 +2,11 @@
 
 if type --query brew
     # cask の更新を先に実施しておく。auto_updates true の cask の更新も行う。
-    brew upgrade --cask --greedy-auto-updates --no-ask
+    if type --query jamf-sudo-autoyes
+        jamf-sudo-autoyes brew upgrade --cask --greedy-auto-updates --no-ask
+    else
+        brew upgrade --cask --greedy-auto-updates --no-ask
+    end
 
     set -l codex_plugins /Applications/Codex.app/Contents/Resources/plugins
     if test -d $codex_plugins
