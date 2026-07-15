@@ -13,3 +13,10 @@ for repo_dir in ~/.homesick/repos/*/
 end
 
 homeshick --batch --force link
+
+for repo_dir in ~/.homesick/repos/*/
+    set -l castle (basename $repo_dir)
+    pushd $repo_dir
+    homeshick --batch check $castle
+    popd
+end
