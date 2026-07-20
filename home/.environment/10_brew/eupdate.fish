@@ -8,17 +8,6 @@ if type --query brew
         brew upgrade --cask --greedy-auto-updates --no-ask
     end
 
-    set -l codex_plugins /Applications/ChatGPT.app/Contents/Resources/plugins
-    if test -d $codex_plugins
-        find $codex_plugins -type d -name 'Codex Computer Use.app' -prune 2>/dev/null | while read -l app
-            if not xattr -lr $app 2>/dev/null | string match -q '*com.apple.quarantine*'
-                continue
-            end
-            echo "Remove quarantine attributes from $app"
-            xattr -dr com.apple.quarantine $app
-        end
-    end
-
     brew bundle --global dump --force
 
     brew bundle --global install
