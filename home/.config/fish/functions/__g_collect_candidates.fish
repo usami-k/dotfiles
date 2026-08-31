@@ -10,12 +10,6 @@ function __g_collect_candidates -d 'Collect candidate paths: g_paths + ghq repos
     end
 
     if command -sq ghq
-        set --local home_repos "$HOME/repos"
-        set --local physical_home_repos
-        if test -d "$home_repos"; and command -sq realpath
-            set physical_home_repos (command realpath "$home_repos")
-        end
-
         set --local ghq_paths (command ghq list --full-path)
 
         set --local jj_repos
@@ -41,12 +35,7 @@ function __g_collect_candidates -d 'Collect candidate paths: g_paths + ghq repos
         end
 
         set --local all_paths $ghq_paths $ws_roots
-        if test -n "$physical_home_repos"; and test (count $all_paths) -gt 0
-            set all_paths (string replace -- "$physical_home_repos/" "$home_repos/" $all_paths)
-            for i in (seq (count $all_paths))
-                test $all_paths[$i] = $physical_home_repos; and set all_paths[$i] $home_repos
-            end
-        end
+        test (count $all_paths) -gt 0; and set all_paths (__prefer_home_symlink_path $all_paths)
         set --append candidates $all_paths
     end
 

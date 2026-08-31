@@ -4,9 +4,10 @@ function ghq-repos -d 'List ghq repositories as logical ~/repos full paths'
         return 1
     end
 
-    command ghq list --full-path $argv | while read --local candidate
-        __ghq_prefer_home_repos_path "$candidate"
-    end
+    set --local paths (command ghq list --full-path $argv)
+    set --local ghq_status $status
 
-    return $pipestatus[1]
+    test (count $paths) -gt 0; and __prefer_home_symlink_path $paths
+
+    return $ghq_status
 end
