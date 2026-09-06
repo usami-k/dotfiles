@@ -1,0 +1,9 @@
+confirm = true
+track_installs = true
+continue_on_failure = false
+targets = ["aarch64-apple-darwin", "universal-apple-darwin", "universal2-apple-darwin"]
+strategies = []
+
+[telemetry]
+enabled = false
+consent_asked = true
