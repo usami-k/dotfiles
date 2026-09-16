@@ -6,7 +6,7 @@ function __g_collect_candidates -d 'Collect candidate paths: g_paths + ghq repos
             if test -d "$candidate"
                 set --append candidates "$candidate"
             end
-        end < ~/.config/fish/g_paths
+        end <~/.config/fish/g_paths
     end
 
     set --local all_paths

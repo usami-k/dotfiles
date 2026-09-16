@@ -14,7 +14,7 @@ rsync --archive --delete-delay ~/Library/Keychains ~/backup/
 
 if type --query ghq
     echo '--- ghq backup'
-    ghq list > ~/backup/ghq_list.txt
+    ghq list >~/backup/ghq_list.txt
 else
     echo 'Skip ghq'
 end
