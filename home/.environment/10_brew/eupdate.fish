@@ -8,7 +8,7 @@ if type --query brew
         brew upgrade --cask --greedy-auto-updates --no-ask
     end
 
-    brew bundle --global dump --force
+    brew bundle --global dump --force --no-go
 
     brew bundle --global install
 
