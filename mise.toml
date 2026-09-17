@@ -1,0 +1,9 @@
+[tasks.fmt]
+description = "Format all fish files in place"
+dir = "{{config_root}}"
+run = "find . -name .git -prune -o -name '*.fish' -exec fish_indent -w {} +"
+
+[tasks."fmt:check"]
+description = "Report fish files that need formatting, without writing"
+dir = "{{config_root}}"
+run = "find . -name .git -prune -o -name '*.fish' -exec fish_indent --check {} +"
