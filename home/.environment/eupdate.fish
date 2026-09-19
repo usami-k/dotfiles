@@ -39,12 +39,12 @@ for step in $steps
     set -l step_elapsed_seconds (math (date +%s) - $step_started_seconds)
 
     if test $step_exit_code -eq 0
-        echo "### STEP END name=$step result=success exit_code=0 elapsed_seconds=$step_elapsed_seconds finished_at=$step_finished_at"
+        printf '\n### STEP END name=%s result=success exit_code=0 elapsed_seconds=%s finished_at=%s\n' $step $step_elapsed_seconds $step_finished_at
         continue
     end
 
     set --append failed_steps $step
-    echo "### STEP END name=$step result=failed exit_code=$step_exit_code elapsed_seconds=$step_elapsed_seconds finished_at=$step_finished_at"
+    printf '\n### STEP END name=%s result=failed exit_code=%s elapsed_seconds=%s finished_at=%s\n' $step $step_exit_code $step_elapsed_seconds $step_finished_at
 
     if test $step_exit_code -eq 130 -o $step_exit_code -eq 143
         set run_result interrupted
