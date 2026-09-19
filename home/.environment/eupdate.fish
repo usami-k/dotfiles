@@ -3,16 +3,42 @@
 set --global original_dir (pwd)
 set --global current_dir (realpath (dirname (status filename)))
 
-set -l steps \
-    homebrew \
-    backup \
-    development-tools \
-    ccpocket \
-    texlive \
-    shell \
-    macos-settings \
-    homeshick \
-    repositories
+if test (count $argv) -gt 1
+    echo 'Usage: eupdate [full|light]' >&2
+    exit 64
+end
+
+set -l mode full
+if test (count $argv) -eq 1
+    set mode $argv[1]
+end
+
+set -l steps
+switch $mode
+    case full
+        set steps \
+            homebrew \
+            backup \
+            development-tools \
+            ccpocket \
+            texlive \
+            shell \
+            macos-settings \
+            homeshick \
+            repositories
+    case light
+        set steps \
+            backup \
+            homeshick \
+            repositories
+    case -h --help
+        echo 'Usage: eupdate [full|light]'
+        exit 0
+    case '*'
+        printf 'eupdate: unknown mode: %s\n' $mode >&2
+        echo 'Usage: eupdate [full|light]' >&2
+        exit 64
+end
 
 set -l run_started_at (date '+%Y-%m-%dT%H:%M:%S%z')
 set -l run_started_seconds (date +%s)
@@ -20,7 +46,7 @@ set -l run_result success
 set -l run_exit_code 0
 set -l failed_steps
 
-echo "### RUN START started_at=$run_started_at"
+echo "### RUN START mode=$mode started_at=$run_started_at"
 
 cd $current_dir
 for step in $steps
@@ -60,7 +86,7 @@ cd $original_dir
 set -l run_finished_at (date '+%Y-%m-%dT%H:%M:%S%z')
 set -l run_elapsed_seconds (math (date +%s) - $run_started_seconds)
 set -l failed_step_names (string join , $failed_steps)
-echo "### RUN END result=$run_result exit_code=$run_exit_code elapsed_seconds=$run_elapsed_seconds finished_at=$run_finished_at failed_steps=$failed_step_names"
+echo "### RUN END mode=$mode result=$run_result exit_code=$run_exit_code elapsed_seconds=$run_elapsed_seconds finished_at=$run_finished_at failed_steps=$failed_step_names"
 
 switch $run_result
     case success

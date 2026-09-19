@@ -4,4 +4,4 @@ mkdir -p $log_dir
 set -l log $log_dir/(date +%Y%m%d_%H%M%S).log
 echo $log > $log_dir/latest
 echo "log=$log"
-script -q -F $log fish -c '$HOME/.environment/eupdate.fish'
+script -q -F $log $HOME/.environment/eupdate.fish $argv
