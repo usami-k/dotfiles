@@ -20,16 +20,17 @@ switch $mode
             homebrew \
             backup \
             development-tools \
-            ccpocket \
             texlive \
             shell \
             macos-settings \
             homeshick \
+            ccpocket \
             repositories
     case light
         set steps \
             backup \
             homeshick \
+            ccpocket \
             repositories
     case -h --help
         echo 'Usage: eupdate [full|light]'
