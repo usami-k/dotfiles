@@ -21,3 +21,7 @@ paginate = "never"
 
 [revsets]
 log = "builtin_log() | latest(tags(), 2)"
+
+[aliases]
+ws-status = ["util", "exec", "--", "jj-ws", "status"]
+ws-remove = ["util", "exec", "--", "jj-ws", "remove"]

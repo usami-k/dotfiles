@@ -1,0 +1,149 @@
+#!/bin/zsh -f
+# jj workspace の片付けを補助する。~/.config/jj/config.toml の alias から jj ws-status / jj ws-remove として呼ぶ。
+#
+# status: 登録済み workspace の状態と、~/workspaces/{owner}/{repo}/ にある未登録ディレクトリを並べる。判断はしない
+# remove: 消して失うものが無いと確かめられたときだけ、ディレクトリ削除と forget を続けて行う。
+#         確かめられなければ何もしない。条件を緩めるオプションは持たない
+#
+# usage: jj-ws status
+#        jj-ws remove [-n] <workspace-name>   # -n は確認だけして消さない
+
+set -u
+
+PRUNED_DIRS=(.jj .git .build .swiftpm node_modules DerivedData xcuserdata)
+
+die() { print -u2 "error: $*"; exit 1 }
+
+canonical_root() {
+  local ws_root=${JJ_WORKSPACE_ROOT:-$(jj workspace root 2>/dev/null)}
+  [[ -n $ws_root ]] || return 1
+  local repo=$ws_root/.jj/repo
+  if [[ -f $repo ]]; then
+    local target=$(<$repo)
+    [[ $target == /* ]] && repo=$target || repo=$ws_root/.jj/$target
+  fi
+  print -r -- ${${repo:A}:h:h}
+}
+
+jjc() { jj -R $CANON --no-pager --color=never "$@" }
+
+wc_rev() { print -r -- "\"$1\"@" }
+
+typeset -A WS_PATH
+load_workspaces() {
+  local name wpath
+  while IFS=$'\t' read -r name wpath; do
+    WS_PATH[$name]=${wpath:A}
+  done < <(jjc workspace list -T 'name ++ "\t" ++ self.root() ++ "\n"')
+}
+
+snapshot() { jj -R $1 --no-pager util snapshot >/dev/null 2>&1 }
+
+unpushed_commits() {
+  jjc log --no-graph -r "(::$(wc_rev $1) ~ ::(remote_bookmarks() | tags() | trunk())) ~ empty() ~ $(wc_rev $1)" \
+    -T 'commit_id.short(8) ++ " " ++ description.first_line() ++ "\n"'
+}
+
+untracked_not_in_canonical() {
+  local wpath=$1
+  local -a tracked found prune
+  local d
+  tracked=(${(f)"$(cd $wpath && jj --no-pager --ignore-working-copy file list -r @)"})
+  for d in $PRUNED_DIRS; prune+=(-o -name $d)
+  found=(${(f)"$(cd $wpath && find . \( ${prune[2,-1]} \) -prune -o \( -type f -o -type l \) ! -name .DS_Store -print | sed 's|^\./||')"})
+  local f
+  for f in ${found:|tracked}; do
+    cmp -s $wpath/$f $CANON/$f || print -r -- $f
+  done
+}
+
+cmd_status() {
+  local name wpath dir wc in_trunk unpushed parent
+  {
+    print "NAME\tDIR\tWC\tPARENT_IN_TRUNK\tUNPUSHED\tPARENT"
+    for name in ${(ko)WS_PATH}; do
+      wpath=${WS_PATH[$name]}
+      if [[ ! -d $wpath ]]; then
+        dir=missing
+      elif snapshot $wpath; then
+        dir=ok
+      else
+        dir=stale
+      fi
+      wc=$(jjc log --no-graph -r $(wc_rev $name) -T 'if(empty && description == "", "clean", "dirty")')
+      [[ -z $(jjc log --no-graph -r "parents($(wc_rev $name)) ~ ::trunk()" -T 'commit_id') ]] && in_trunk=yes || in_trunk=no
+      unpushed=$(unpushed_commits $name | grep -c .)
+      parent=$(jjc log --no-graph -r "parents($(wc_rev $name))" -T 'commit_id.short(8) ++ " " ++ bookmarks ++ " "')
+      printf '%s\t%s\t%s\t%s\t%s\t%s\n' $name $dir $wc $in_trunk $unpushed $parent
+    done
+  } | column -t -s $'\t'
+
+  local base=$WS_HOME/${CANON:h:t}/${CANON:t}
+  local -a registered=(${(v)WS_PATH}) orphans=()
+  local d
+  for d in $base/*(N/); do
+    (( ${registered[(Ie)${d:A}]} )) || orphans+=($d)
+  done
+  if (( $#orphans )); then
+    print "\n未登録のディレクトリ (forget 済みで残ったものなど。jj ws-remove の対象外なので中身を確かめて手で消す):"
+    print -rl -- "  "${^orphans}
+  fi
+}
+
+cmd_remove() {
+  local dry_run=0
+  [[ ${1-} == -n ]] && { dry_run=1; shift }
+  local name=${1-}
+  [[ -n $name ]] || die "usage: jj ws-remove [-n] <workspace-name>"
+  [[ $name != default ]] || die "default (canonical) は消さない"
+  (( ${+WS_PATH[$name]} )) || die "$name は登録されていない。未登録のディレクトリは中身を確かめて手で消す"
+  local wpath=${WS_PATH[$name]}
+
+  local -a problems
+  local has_dir=0
+  if [[ -n $wpath && -d $wpath ]]; then
+    has_dir=1
+    [[ $wpath == $WS_HOME/* ]] || die "$wpath は $WS_HOME の外にあるので消さない"
+    [[ ${PWD:A}/ == $wpath/* ]] && die "消す workspace の中にいる。canonical などへ移動してから実行する"
+    snapshot $wpath || die "$name の snapshot に失敗した (stale など)。workspace の中で jj status を確かめる"
+  else
+    print "note: $name のディレクトリが無いので commit だけ確かめる"
+  fi
+
+  [[ $(jjc log --no-graph -r $(wc_rev $name) -T 'if(empty && description == "", "clean", "dirty")') == clean ]] \
+    || problems+=("作業コピーに変更か説明がある")
+
+  local unpushed=$(unpushed_commits $name)
+  [[ -z $unpushed ]] || problems+=("remote の bookmark・tag・trunk から辿れない非 empty の commit がある (squash merge 済みでもここで止まる):"$'\n'"$unpushed")
+
+  if (( has_dir )); then
+    local local_only=$(untracked_not_in_canonical $wpath)
+    [[ -z $local_only ]] || problems+=("追跡されておらず canonical とも内容が違うファイルがある:"$'\n'"$local_only")
+  fi
+
+  if (( $#problems )); then
+    print -u2 "error: $name は消さない"
+    print -u2 -l -- "- "${^problems}
+    exit 1
+  fi
+
+  if (( dry_run )); then
+    print "ok: $name は消しても失うものが無い (-n なので消していない)"
+    return
+  fi
+  if (( has_dir )); then
+    rm -rf -- $wpath || die "$wpath の削除に失敗した。forget はしていない"
+  fi
+  jjc workspace forget $name || die "forget に失敗した。ディレクトリは消えている"
+  print "removed: $name${wpath:+ ($wpath)}"
+}
+
+CANON=$(canonical_root) || die "jj の workspace の中で実行する"
+WS_HOME=${${:-$HOME/workspaces}:A}
+load_workspaces
+
+case ${1-} in
+  status) cmd_status ;;
+  remove) shift; cmd_remove "$@" ;;
+  *) die "usage: jj-ws status | jj-ws remove [-n] <workspace-name>" ;;
+esac
