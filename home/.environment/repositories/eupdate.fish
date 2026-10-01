@@ -4,6 +4,7 @@ if type --query ghq-repos
     ghq-repos | while read repo
         echo "===" $repo
         pushd $repo
+        or exit
         if test -d .jj
             jj git fetch --no-pager
         else
