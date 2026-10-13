@@ -2,6 +2,12 @@
 
 set -l exit_code 0
 
+if type --query shortcuts-export
+    echo '--- shortcuts export'
+    shortcuts-export
+    or set exit_code 1
+end
+
 if type --query mackup
     echo '--- mackup backup'
     command rm -rf ~/.backup/Mackup
