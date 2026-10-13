@@ -1,0 +1,107 @@
+#!/bin/zsh -f
+# GPG 秘密鍵を ~/backup/GPG/ に書き出して、機体の外に置いておく。
+# 書き出しと検証は passphrase を手で打つので手で流す。eupdate の backup ステップは check だけを呼ぶ。
+#
+# usage: gpg-backup export   # ~/backup/GPG/ に書き出し、鍵の一覧を keys.txt に記録する
+#        gpg-backup verify   # Keychain を通さない一時 GNUPGHOME で passphrase を手で打ち、全鍵で署名する
+#        gpg-backup check    # 鍵の一覧が前回の export から変わっていれば 1 を返す。秘密鍵が無い機体では何もしない
+
+set -euo pipefail
+
+DEST=~/backup/GPG
+KEYS_FILE=$DEST/keys.txt
+
+key_listing() {
+  gpg --list-secret-keys --with-colons --fixed-list-mode | awk -F: '
+    $1 == "sec" || $1 == "ssb" { print $1, $2, $4, $5, $6, $7, $12 }
+    $1 == "fpr" { print $1, $10 }
+    $1 == "uid" { print $1, $2, $10 }'
+}
+
+primary_fingerprints() {
+  gpg --list-secret-keys --with-colons --fixed-list-mode | awk -F: '
+    $1 == "sec" { want = 1; next }
+    $1 == "fpr" && want { print $10; want = 0 }'
+}
+
+cmd_export() {
+  local keys=(${(f)"$(primary_fingerprints)"})
+  local stage
+  stage=$(mktemp -d "${DEST:h}/.GPG.XXXXXX")
+  trap "rm -rf ${(q)stage}" EXIT
+
+  gpg --armor --export-secret-keys $keys >$stage/secret-keys.asc
+  gpg --armor --export $keys >$stage/public-keys.asc
+  gpg --export-ownertrust >$stage/ownertrust.txt
+  cp ~/.gnupg/openpgp-revocs.d/*.rev(N) $stage/
+  key_listing >$stage/keys.txt
+  [[ -s $stage/secret-keys.asc ]] || { print -u2 "error: 秘密鍵を書き出せなかった"; return 1 }
+
+  mkdir -p $DEST
+  rm -f $DEST/*(N)
+  mv $stage/* $DEST/
+  chmod 700 $DEST
+  chmod 600 $DEST/*
+  print "exported: ${#keys} 鍵を $DEST に書き出した。続けて gpg-backup verify を流す"
+  ls -la $DEST
+}
+
+cmd_verify() {
+  [[ -r $DEST/secret-keys.asc ]] || { print -u2 "error: $DEST/secret-keys.asc が無い"; return 1 }
+
+  local home
+  home=$(mktemp -d)
+  trap "gpgconf --homedir ${(q)home} --kill all; rm -rf ${(q)home}" EXIT
+  chmod 700 $home
+  export GNUPGHOME=$home
+
+  gpg --batch --quiet --import $DEST/secret-keys.asc
+  gpg --batch --quiet --import-ownertrust <$DEST/ownertrust.txt
+  gpg --list-secret-keys --keyid-format=long
+
+  local probe=$home/probe.txt
+  print "probe-$(openssl rand -hex 8)" >$probe
+
+  local failed=()
+  local fpr
+  for fpr in ${(f)"$(primary_fingerprints)"}; do
+    print -r -- "--- $fpr の passphrase を入力する"
+    if gpg --yes --pinentry-mode loopback --local-user $fpr --output $home/sig.asc --clearsign $probe &&
+      gpg --verify $home/sig.asc; then
+      continue
+    fi
+    failed+=$fpr
+  done
+
+  if (( ${#failed} )); then
+    print -u2 "error: 署名できなかった鍵: ${failed[*]}"
+    return 1
+  fi
+  print "ok: 全鍵で署名と検証が通った"
+}
+
+cmd_check() {
+  if [[ ! -r $KEYS_FILE && -z "$(primary_fingerprints)" ]]; then
+    print "ok: GPG の秘密鍵が無い"
+    return 0
+  fi
+  if [[ ! -r $KEYS_FILE ]]; then
+    print -u2 "warning: GPG の書き出しが無い。gpg-backup export と verify を流す"
+    return 1
+  fi
+  if ! diff -u $KEYS_FILE <(key_listing); then
+    print -u2 "warning: GPG の鍵が前回の書き出しから変わった。gpg-backup export と verify を流す"
+    return 1
+  fi
+  print "ok: GPG の鍵は前回の書き出しから変わっていない"
+}
+
+case ${1:-} in
+  export) cmd_export ;;
+  verify) cmd_verify ;;
+  check) cmd_check ;;
+  *)
+    print -u2 "usage: gpg-backup export|verify|check"
+    exit 64
+    ;;
+esac

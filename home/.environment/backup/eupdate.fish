@@ -24,10 +24,12 @@ else
     echo 'Skip ghq'
 end
 
-if type --query gpg-backup
+if type --query gpg
     echo '--- gpg backup check'
     gpg-backup check
     or set exit_code 1
+else
+    echo 'Skip gpg'
 end
 
 exit $exit_code
