@@ -2,6 +2,24 @@
 
 set -l exit_code 0
 
+function backup_mackup
+    command rm -rf ~/.backup/Mackup; or return
+    mackup --force backup; or return
+
+    set -l codex_db $HOME/.codex/memories_1.sqlite
+    if test -f $codex_db
+        echo '--- Codex SQLite snapshot'
+        set -l snapshot_dir $HOME/.backup/Mackup/.codex
+        command mkdir -p $snapshot_dir; or return
+        command /usr/bin/sqlite3 -noinit -readonly -bail $codex_db \
+            '.timeout 5000' ".backup '$snapshot_dir/memories_1.sqlite'"; or return
+        command /usr/bin/sqlite3 -noinit -bail $snapshot_dir/memories_1.sqlite \
+            'PRAGMA journal_mode=DELETE;' >/dev/null; or return
+    end
+
+    rsync --archive --no-times --delete-delay --checksum ~/.backup/Mackup ~/backup/
+end
+
 if type --query shortcuts-export
     echo '--- shortcuts export'
     shortcuts-export
@@ -10,9 +28,7 @@ end
 
 if type --query mackup
     echo '--- mackup backup'
-    command rm -rf ~/.backup/Mackup
-    mackup --force backup
-    and rsync --archive --no-times --delete-delay --checksum ~/.backup/Mackup ~/backup/
+    backup_mackup
     or set exit_code 1
 else
     echo 'Skip mackup'
