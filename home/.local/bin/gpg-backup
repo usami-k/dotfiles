@@ -33,7 +33,10 @@ cmd_export() {
   gpg --armor --export-secret-keys $keys >$stage/secret-keys.asc
   gpg --armor --export $keys >$stage/public-keys.asc
   gpg --export-ownertrust >$stage/ownertrust.txt
-  cp ~/.gnupg/openpgp-revocs.d/*.rev(N) $stage/
+  local revocation_files=(~/.gnupg/openpgp-revocs.d/*.rev(N))
+  if (( ${#revocation_files} )); then
+    cp $revocation_files $stage/
+  fi
   key_listing >$stage/keys.txt
   [[ -s $stage/secret-keys.asc ]] || { print -u2 "error: 秘密鍵を書き出せなかった"; return 1 }
 
