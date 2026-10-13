@@ -4,9 +4,9 @@ set -l exit_code 0
 
 if type --query mackup
     echo '--- mackup backup'
-    rm -rf ~/.backup/Mackup
+    command rm -rf ~/.backup/Mackup
     mackup --force backup
-    and rsync --archive --delete-delay --checksum ~/.backup/Mackup ~/backup/
+    and rsync --archive --no-times --delete-delay --checksum ~/.backup/Mackup ~/backup/
     or set exit_code 1
 else
     echo 'Skip mackup'
