@@ -6,12 +6,6 @@ else
     echo 'Skip gh'
 end
 
-if type --query swiftly
-    swiftly update latest --assume-yes
-else
-    echo 'Skip swiftly'
-end
-
 if type --query cargo-install-update
     cargo install-update --all
 else
