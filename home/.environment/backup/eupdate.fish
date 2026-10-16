@@ -49,10 +49,6 @@ else
     echo 'Skip mackup'
 end
 
-echo '--- keychains backup'
-rsync --archive --delete-delay ~/Library/Keychains ~/backup/
-or set exit_code 1
-
 if type --query ghq
     echo '--- ghq backup'
     ghq list >~/backup/ghq_list.txt
