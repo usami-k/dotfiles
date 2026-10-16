@@ -2,7 +2,6 @@
 	path = ~/.config/git/identity.config
 	path = ~/.config/git/ghq.config
 [init]
-	templatedir = ~/.config/git/templates
 	defaultBranch = main
 [core]
 	quotepath = false
