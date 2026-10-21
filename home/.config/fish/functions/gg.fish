@@ -9,7 +9,7 @@ function gg -d 'Switch to a jj workspace'
         return 1
     end
 
-    jj workspace list -T 'name ++ "\n"' | fzf | read --local name
+    __gg_collect_candidates | fzf | string split -f1 ' ' | read --local name
 
     if test -n "$name"
         cd (__prefer_home_symlink_path (jj workspace root --name $name))
