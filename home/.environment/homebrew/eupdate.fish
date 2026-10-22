@@ -12,6 +12,8 @@ if type --query brew
 
     brew bundle --global install
 
+    brew upgrade --formula --no-ask
+
     brew doctor
 else
     echo 'Skip brew'
