@@ -31,7 +31,8 @@ switch $mode
             backup \
             homeshick \
             ccpocket \
-            repositories
+            repositories \
+            cask-outdated
     case -h --help
         echo 'Usage: eupdate [full|light]'
         exit 0
