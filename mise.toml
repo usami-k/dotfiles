@@ -7,3 +7,8 @@ run = "find . -name .git -prune -o -name '*.fish' -exec fish_indent -w {} +"
 description = "Report fish files that need formatting, without writing"
 dir = "{{config_root}}"
 run = "find . -name .git -prune -o -name '*.fish' -exec fish_indent --check {} +"
+
+[tasks."test:repositories"]
+description = "Test safe eupdate working-copy updates with temporary local repositories"
+dir = "{{config_root}}"
+run = "fish --no-config tests/eupdate-repositories.fish home/.environment/repositories/eupdate.fish"
