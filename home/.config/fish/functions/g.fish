@@ -1,4 +1,4 @@
-function g -d 'Change directory to select from ghq list, jj workspaces, and configured extra paths'
+function g -d 'Change directory to select from ghq list, jj workspaces, git worktrees, and configured extra paths'
     if not command -sq fzf
         echo 'Error: g needs fzf command.' >&2
         return 1
