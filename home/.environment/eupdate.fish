@@ -42,6 +42,14 @@ switch $mode
         exit 64
 end
 
+set -l preflight $current_dir/preflight/eupdate.fish
+if test -x $preflight
+    if not $preflight $mode
+        echo "### PREFLIGHT FAILED mode=$mode"
+        exit 1
+    end
+end
+
 set -l run_started_at (date '+%Y-%m-%dT%H:%M:%S%z')
 set -l run_started_seconds (date +%s)
 set -l run_result success
