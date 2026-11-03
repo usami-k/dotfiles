@@ -24,13 +24,11 @@ switch $mode
             shell \
             macos-settings \
             homeshick \
-            ccpocket \
             repositories
     case light
         set steps \
             backup \
             homeshick \
-            ccpocket \
             repositories \
             cask-outdated
     case -h --help
