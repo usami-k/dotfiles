@@ -32,19 +32,25 @@ function assert_equal --argument-names actual expected label
     end
 end
 
-function run_update --argument-names repo script
-    command env EUPDATE_TEST_REPO="$repo" fish --no-config --command '
+function run_update --argument-names repo script default_branch
+    set -q argv[3]; or set default_branch main
+    command env EUPDATE_TEST_REPO="$repo" EUPDATE_TEST_DEFAULT_BRANCH="$default_branch" fish --no-config --command '
         function ghq-repos
             printf "%s\n" "$EUPDATE_TEST_REPO"
+        end
+        function git-default-branch
+            test "$EUPDATE_TEST_DEFAULT_BRANCH" = unreachable; and return 128
+            printf "%s\n" "$EUPDATE_TEST_DEFAULT_BRANCH"
         end
         source "$argv[1]"
     ' "$script" >"$fixture/output" 2>&1
 end
 
-function expect_unchanged --argument-names name script
+function expect_unchanged --argument-names name script default_branch
+    set -q argv[3]; or set default_branch main
     set -l repo "$fixture/$name"
     set -l before (working_change "$repo"); or exit
-    run_update "$repo" "$script"
+    run_update "$repo" "$script" "$default_branch"
     or begin
         command cat "$fixture/output" >&2
         exit 1
@@ -134,13 +140,13 @@ command jj -R "$fixture/origin" new main @ -m conflicted >/dev/null; or exit
 command jj -R "$fixture/origin" bookmark set main -r @ >/dev/null; or exit
 expect_unchanged conflicted-main "$script"
 
-function new_origin --argument-names origin trunk
+function new_origin --argument-names origin branch
     command jj git init --colocate "$origin" >/dev/null; or exit
     command mkdir "$origin/generated"; or exit
     printf 'output\n' >"$origin/generated/.gitignore"
     printf 'old\n' >"$origin/content.txt"
     command jj -R "$origin" describe -m initial >/dev/null; or exit
-    command jj -R "$origin" bookmark set $trunk -r @ >/dev/null; or exit
+    command jj -R "$origin" bookmark set $branch -r @ >/dev/null; or exit
 end
 
 function clone_origin --argument-names origin name
@@ -156,7 +162,7 @@ command jj -R "$fixture/master" new master >/dev/null; or exit
 command jj -R "$fixture/master-origin" new -m updated >/dev/null; or exit
 printf 'new\n' >"$fixture/master-origin/content.txt"
 command jj -R "$fixture/master-origin" bookmark set master -r @ >/dev/null; or exit
-run_update "$fixture/master" "$script"
+run_update "$fixture/master" "$script" master
 or begin
     command cat "$fixture/output" >&2
     exit 1
@@ -184,7 +190,14 @@ command jj -R "$fixture/feature-origin" bookmark set main -r @ >/dev/null; or ex
 set -l merged (revision "$fixture/feature-origin" main); or exit
 
 expect_unchanged merged-feature "$script"
-expect_unchanged several "$script"
+
+run_update "$fixture/several" "$script"
+or begin
+    command cat "$fixture/output" >&2
+    exit 1
+end
+assert_equal (revision "$fixture/several" @-) "$merged" 'default branch decides between main and master'
+set -g passed (math $passed + 1)
 
 if run_update "$fixture/leftover" "$script"
     echo 'FAIL: picked up files must fail the repositories step' >&2
@@ -202,5 +215,40 @@ printf 'replacement\n' >"$fixture/rewritten-origin/content.txt"
 command jj -R "$fixture/rewritten-origin" bookmark set main --allow-backwards -r @ >/dev/null; or exit
 expect_unchanged force-pushed "$script"
 assert_equal (revision "$fixture/force-pushed" @-) (revision "$fixture/force-pushed" 'root()') 'force push leaves the working copy on the old parent'
+
+new_origin "$fixture/develop-origin" develop
+command jj -R "$fixture/develop-origin" bookmark set main -r develop >/dev/null; or exit
+clone_origin "$fixture/develop-origin" develop develop main
+command jj -R "$fixture/develop" new develop >/dev/null; or exit
+clone_origin "$fixture/develop-origin" develop-untracked main
+command jj -R "$fixture/develop-untracked" new main >/dev/null; or exit
+clone_origin "$fixture/develop-origin" no-default develop
+command jj -R "$fixture/no-default" new develop >/dev/null; or exit
+clone_origin "$fixture/develop-origin" unreachable develop
+command jj -R "$fixture/unreachable" new develop >/dev/null; or exit
+command jj -R "$fixture/develop-origin" new -m updated >/dev/null; or exit
+printf 'new\n' >"$fixture/develop-origin/content.txt"
+command jj -R "$fixture/develop-origin" bookmark set develop main -r @ >/dev/null; or exit
+
+run_update "$fixture/develop" "$script" develop
+or begin
+    command cat "$fixture/output" >&2
+    exit 1
+end
+assert_equal (revision "$fixture/develop" @-) (revision "$fixture/develop-origin" develop) 'develop working copy moves to latest develop'
+set -g passed (math $passed + 1)
+
+expect_unchanged develop-untracked "$script" develop
+assert_equal (command grep -c 'default branch develop is not tracked from origin' "$fixture/output") 1 'untracked default branch is reported'
+expect_unchanged no-default "$script" ''
+assert_equal (command grep -c 'origin does not report a default branch' "$fixture/output") 1 'missing default branch is reported'
+
+set -l unreachable_before (revision "$fixture/unreachable" @); or exit
+if run_update "$fixture/unreachable" "$script" unreachable
+    echo 'FAIL: default branch lookup failure must fail the repositories step' >&2
+    exit 1
+end
+assert_equal (revision "$fixture/unreachable" @) "$unreachable_before" 'lookup failure keeps its working copy'
+set -g passed (math $passed + 1)
 
 echo "PASS: $passed repository update scenarios"

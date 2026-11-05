@@ -1,11 +1,12 @@
 #!/usr/bin/env fish
 
-set -l function_file (path resolve $argv[1])
-if not test -f "$function_file"
-    echo 'Usage: fish tests/jj-colocate.fish <functions/jj-colocate.fish>' >&2
+set -l functions_dir (path resolve $argv[1])
+if not test -f "$functions_dir/jj-colocate.fish"
+    echo 'Usage: fish tests/jj-colocate.fish <fish functions directory>' >&2
     exit 64
 end
-source $function_file
+source $functions_dir/git-default-branch.fish
+source $functions_dir/jj-colocate.fish
 
 set -g fixture (mktemp -d); or exit
 function cleanup --on-event fish_exit
@@ -70,8 +71,8 @@ test -d "$fixture/plain/.jj"; and fail 'directory without git stays untouched'
 set passed (math $passed + 1)
 
 command git init --quiet -b main "$fixture/no-origin"; or exit
-jj-colocate "$fixture/no-origin" >"$fixture/output" 2>&1; and fail 'repository without origin/HEAD reports failure'
-test -d "$fixture/no-origin/.jj"; or fail 'repository without origin/HEAD is still colocated'
+jj-colocate "$fixture/no-origin" >"$fixture/output" 2>&1; and fail 'repository without origin reports failure'
+test -d "$fixture/no-origin/.jj"; or fail 'repository without origin is still colocated'
 set passed (math $passed + 1)
 
 echo "ok: $passed jj-colocate cases"

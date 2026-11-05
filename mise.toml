@@ -16,4 +16,4 @@ run = "fish --no-config tests/eupdate-repositories.fish home/.environment/reposi
 [tasks."test:jj-colocate"]
 description = "Test jj colocation of git clones with temporary local repositories"
 dir = "{{config_root}}"
-run = "fish --no-config tests/jj-colocate.fish home/.config/fish/functions/jj-colocate.fish"
+run = "fish --no-config tests/jj-colocate.fish home/.config/fish/functions"

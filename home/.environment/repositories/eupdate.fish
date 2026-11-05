@@ -1,19 +1,10 @@
 #!/usr/bin/env fish
 
-function tracked_trunk_names
-    for name in main master trunk
-        set -l commit (remote_trunk_commit $name); or return
-        if test (count $commit) -gt 0
-            echo $name
-        end
-    end
-end
-
-function remote_trunk_commit --argument-names name
+function remote_default_commit --argument-names name
     command jj log --no-pager --color=never --no-graph -r "tracked_remote_bookmarks(exact:'$name', exact:'origin')" -T 'commit_id ++ "\n"'
 end
 
-function local_trunk_commit --argument-names name
+function local_default_commit --argument-names name
     command jj bookmark list --no-pager --color=never "exact:$name" -T '
         if(!remote,
             if(!conflict && normal_target && !normal_target.conflict() && !normal_target.divergent(),
@@ -23,26 +14,25 @@ function local_trunk_commit --argument-names name
 end
 
 function update_jj_repository
-    set -l names (tracked_trunk_names); or return
+    set -l name (git-default-branch); or return
     set -l before
-    if test (count $names) -eq 1
-        set before (local_trunk_commit $names); or return
+    if test -n "$name"
+        set before (local_default_commit $name); or return
     end
 
     command jj git fetch --no-pager; or return
 
-    if test (count $names) -eq 0
-        echo 'repositories: skipped working copy update: no tracked main, master or trunk on origin'
+    if test -z "$name"
+        echo 'repositories: skipped working copy update: origin does not report a default branch'
         return 0
     end
-    if test (count $names) -gt 1
-        echo "repositories: skipped working copy update: several trunk bookmarks are tracked ($names)"
+    if test (count (remote_default_commit $name)) -eq 0
+        echo "repositories: skipped working copy update: default branch $name is not tracked from origin"
         return 0
     end
 
-    set -l name $names
-    set -l after (local_trunk_commit $name); or return
-    set -l remote (remote_trunk_commit $name); or return
+    set -l after (local_default_commit $name); or return
+    set -l remote (remote_default_commit $name); or return
     if test (count $after) -ne 1; or test (count $remote) -ne 1; or test "$after" != "$remote"
         echo "repositories: skipped working copy update: $name must match one tracked $name@origin without conflicts"
         return 0
@@ -90,7 +80,7 @@ function update_jj_repository
     end
 end
 
-if not type --query ghq-repos
+if not type --query ghq-repos; or not type --query git-default-branch
     echo 'Skip ghq'
     exit 0
 end
