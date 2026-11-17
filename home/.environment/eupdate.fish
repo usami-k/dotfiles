@@ -24,7 +24,8 @@ switch $mode
             shell \
             macos-settings \
             homeshick \
-            repositories
+            repositories \
+            mise-cleanup
     case light
         set steps \
             backup \

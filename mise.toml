@@ -17,3 +17,8 @@ run = "fish --no-config tests/eupdate-repositories.fish home/.environment/reposi
 description = "Test jj colocation of git clones with temporary local repositories"
 dir = "{{config_root}}"
 run = "fish --no-config tests/jj-colocate.fish home/.config/fish/functions"
+
+[tasks."test:mise-cleanup"]
+description = "Test eupdate tool pruning and disconnected-volume protection with mock tools"
+dir = "{{config_root}}"
+run = "fish --no-config tests/eupdate-mise-cleanup.fish home/.environment/mise-cleanup/eupdate.fish home/.environment/eupdate.fish"
