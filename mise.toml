@@ -22,3 +22,8 @@ run = "fish --no-config tests/jj-colocate.fish home/.config/fish/functions"
 description = "Test eupdate tool pruning and disconnected-volume protection with mock tools"
 dir = "{{config_root}}"
 run = "fish --no-config tests/eupdate-mise-cleanup.fish home/.environment/mise-cleanup/eupdate.fish home/.environment/eupdate.fish"
+
+[tasks."test:eupdate-failures"]
+description = "Test update failure reporting with isolated mock commands"
+dir = "{{config_root}}"
+run = "fish --no-config tests/eupdate-failures.fish home/.environment"

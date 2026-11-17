@@ -1,25 +1,29 @@
 #!/usr/bin/env fish
 
+source (dirname (status filename))/../functions.fish; or exit
+
 # Flatten Services menu
-defaults write NSGlobalDomain NSServicesMinimumItemCountForContextSubmenu -int 32
+eupdate_run defaults write NSGlobalDomain NSServicesMinimumItemCountForContextSubmenu -int 32
 
 # Hide hidden files on Finder
-defaults write com.apple.finder AppleShowAllFiles -bool NO
+eupdate_run defaults write com.apple.finder AppleShowAllFiles -bool NO
 
 # Disable .DS_Store on network drive
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool YES
+eupdate_run defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool YES
 
 # Disable shadow on screen capture
-defaults write com.apple.screencapture disable-shadow -bool YES
+eupdate_run defaults write com.apple.screencapture disable-shadow -bool YES
 
 # Disable automatic launching Photos on connecting device
-defaults write com.apple.imagecapture disableHotPlug -bool YES
+eupdate_run defaults write com.apple.imagecapture disableHotPlug -bool YES
 
 # Disable creation default devices
-defaults write com.apple.CoreSimulator EnableDefaultSetCreation -bool NO
+eupdate_run defaults write com.apple.CoreSimulator EnableDefaultSetCreation -bool NO
 
 # Disable automatic reopening of last project
-defaults write com.apple.dt.Xcode ApplePersistenceIgnoreState -bool YES
+eupdate_run defaults write com.apple.dt.Xcode ApplePersistenceIgnoreState -bool YES
 
 # Disable prebuilts binaries
-defaults write com.apple.dt.Xcode IDEPackageEnablePrebuilts -bool NO
+eupdate_run defaults write com.apple.dt.Xcode IDEPackageEnablePrebuilts -bool NO
+
+exit $eupdate_exit_code
