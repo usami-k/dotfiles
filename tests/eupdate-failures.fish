@@ -63,6 +63,19 @@ function forbid_call --argument-names call
     end
 end
 
+# The command prefix must bypass a function with the same name.
+"$fish_bin" --no-config -c '
+    source "$argv[1]"
+    function rm
+        echo "FAIL: shadowing rm function was called" >&2
+        return 99
+    end
+    eupdate_run command rm -f -- "$argv[2]"
+    exit $eupdate_exit_code
+' "$environment/functions.fish" "$fixture/nonexistent"
+or exit 1
+set -g passed (math $passed + 1)
+
 for step in homebrew backup development-tools shell homeshick macos-settings texlive
     run_case $step '' 0 0
 end

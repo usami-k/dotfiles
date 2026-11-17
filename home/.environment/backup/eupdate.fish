@@ -3,7 +3,7 @@
 source (dirname (status filename))/../functions.fish; or exit
 
 function backup_mackup
-    eupdate_run /bin/rm -rf ~/.backup/Mackup; or return
+    eupdate_run command rm -rf ~/.backup/Mackup; or return
     eupdate_run mackup --force backup; or return
 
     eupdate_run rsync --archive --no-times --delete-delay --checksum ~/.backup/Mackup ~/backup/

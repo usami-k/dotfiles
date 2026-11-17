@@ -2,7 +2,11 @@
 set -g eupdate_exit_code 0
 
 function eupdate_run
-    $argv
+    if test "$argv[1]" = command
+        command $argv[2..]
+    else
+        $argv
+    end
     set -l code $status
     if test $code -ne 0
         printf '\neupdate: command failed (exit=%s): %s\n' $code (string join ' ' -- $argv) >&2

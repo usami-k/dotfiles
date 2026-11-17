@@ -36,7 +36,7 @@ function cleanup_installer --on-event fish_exit
 end
 eupdate_run curl -fsSL -o "$installer" https://github.com/AikidoSec/safe-chain/releases/latest/download/install-safe-chain.sh
 and eupdate_run sh "$installer"
-eupdate_run /bin/rm -f -- "$installer"
+eupdate_run command rm -f -- "$installer"
 if type --query --no-function npm
     eupdate_run npm safe-chain-verify
 end
