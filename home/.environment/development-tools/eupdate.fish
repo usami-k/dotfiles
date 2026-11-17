@@ -15,11 +15,16 @@ else
 end
 
 if type --query ghcup
-    eupdate_run ghcup install ghc --set
-    and eupdate_run ghcup install cabal --set
-    and eupdate_run ghcup install hls --set
-    and eupdate_run ghcup install stack --set
-    and eupdate_run ghcup gc --unset --tmpdirs
+    set -l ghcup_failed 0
+    for tool in ghc cabal hls stack
+        eupdate_run ghcup install $tool --set
+        or set ghcup_failed 1
+    end
+    if test $ghcup_failed -eq 0
+        eupdate_run ghcup gc --unset --tmpdirs
+    else
+        echo 'Skip ghcup gc: an installation failed'
+    end
 else
     echo 'Skip ghcup'
 end

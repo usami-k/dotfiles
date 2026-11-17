@@ -121,13 +121,27 @@ run_case backup 'mackup --force backup' 130 130
 forbid_call 'ghq list'
 
 run_case development-tools 'gh extension upgrade --all' 1 1
+require_call 'ghcup gc --unset --tmpdirs'
 require_call 'uv safe-chain-verify'
 run_case development-tools 'cargo install-update --all' 1 1
 for tool in ghc cabal hls stack
     run_case development-tools "ghcup install $tool --set" 1 1
+    for attempted in ghc cabal hls stack
+        require_call "ghcup install $attempted --set"
+    end
     forbid_call 'ghcup gc --unset --tmpdirs'
+    require_call 'npm safe-chain-verify'
 end
-require_call 'npm safe-chain-verify'
+run_case development-tools '' 0 0
+require_call 'ghcup gc --unset --tmpdirs'
+run_case development-tools 'ghcup gc --unset --tmpdirs' 1 1
+require_call 'uv safe-chain-verify'
+for code in 130 143
+    run_case development-tools 'ghcup install ghc --set' $code $code
+    forbid_call 'ghcup install cabal --set'
+    forbid_call 'ghcup gc --unset --tmpdirs'
+    forbid_call 'npm safe-chain-verify'
+end
 run_case development-tools curl 22 1
 if string match --quiet 'sh *' (cat "$TEST_CALLS")
     echo 'FAIL: installer ran after failed download' >&2
