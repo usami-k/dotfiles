@@ -24,10 +24,31 @@ log = "builtin_log() | latest(tags(), 2)"
 ws-status = ["util", "exec", "--", "jj-ws", "status"]
 ws-remove = ["util", "exec", "--", "jj-ws", "remove"]
 
+[template-aliases]
+'agent_trailer(name, email)' = '''
+if(config("agent-trailers." ++ name) && !trailers.any(|t| t.value().contains(email)),
+  config("agent-trailers." ++ name).as_string() ++ "\n")'''
+
+[templates]
+commit_trailers = '''
+agent_trailer("claude", "noreply@anthropic.com")
+++ agent_trailer("codex", "noreply@openai.com")
+++ agent_trailer("cursor", "cursoragent@cursor.com")'''
+
 [[--scope]]
 --when.environments = ["CLAUDECODE=1"]
 
-[--scope.templates]
-commit_trailers = '''
-if(!trailers.any(|t| t.value().contains("noreply@anthropic.com")),
-  "Co-Authored-By: Claude <noreply@anthropic.com>")'''
+[--scope.agent-trailers]
+claude = "Co-Authored-By: Claude <noreply@anthropic.com>"
+
+[[--scope]]
+--when.environments = ["CODEX_THREAD_ID"]
+
+[--scope.agent-trailers]
+codex = "Co-authored-by: Codex <noreply@openai.com>"
+
+[[--scope]]
+--when.environments = ["CURSOR_AGENT=1"]
+
+[--scope.agent-trailers]
+cursor = "Co-authored-by: Cursor <cursoragent@cursor.com>"
