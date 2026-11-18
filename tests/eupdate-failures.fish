@@ -18,7 +18,7 @@ printf '%s\n' "#!$fish_bin --no-config" \
     'set -l call (string join " " -- $name $argv)' \
     'echo $call >>"$TEST_CALLS"' \
     'if test "$call" = "$TEST_FAIL"; or test "$name" = "$TEST_FAIL"; exit $TEST_CODE; end' \
-    'if test "$name" = git; echo old-tip; end' \
+    'if test "$name" = git; and not contains -- ls-files $argv; echo old-tip; end' \
     'if test "$name" = ghq; echo example; end' \
     'exit 0' >"$fixture/bin/mock"
 chmod +x "$fixture/bin/mock"

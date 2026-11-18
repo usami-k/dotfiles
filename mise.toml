@@ -27,3 +27,8 @@ run = "fish --no-config tests/eupdate-mise-cleanup.fish home/.environment/mise-c
 description = "Test update failure reporting with isolated mock commands"
 dir = "{{config_root}}"
 run = "fish --no-config tests/eupdate-failures.fish home/.environment"
+
+[tasks."test:homeshick"]
+description = "Test safe homeshick linking with isolated castles and directory symlinks"
+dir = "{{config_root}}"
+run = "fish --no-config tests/eupdate-homeshick.fish home/.environment/homeshick/eupdate.fish"
