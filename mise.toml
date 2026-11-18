@@ -32,3 +32,8 @@ run = "fish --no-config tests/eupdate-failures.fish home/.environment"
 description = "Test persistent content review and independent runtime checks with local Git fixtures"
 dir = "{{config_root}}"
 run = "uv run --offline --no-project --no-cache --python /usr/bin/python3 tests/castle-review.py"
+
+[tasks."test:homeshick-links"]
+description = "Reproduce homeshick directory aliases and verify per-file links in a disposable home"
+dir = "{{config_root}}"
+run = "fish --no-config tests/homeshick-links.fish home/.environment/homeshick/eupdate.fish"
