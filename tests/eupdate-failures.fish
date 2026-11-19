@@ -173,6 +173,7 @@ for call in 'homeshick --batch pull example' 'homeshick --batch --force link' 'h
     require_call 'homeshick --batch check example'
     require_call 'homeshick --batch check second'
 end
+run_case homeshick uv 1 1
 run_case macos-settings 'defaults write NSGlobalDomain NSServicesMinimumItemCountForContextSubmenu -int 32' 1 1
 require_call 'defaults write com.apple.dt.Xcode IDEPackageEnablePrebuilts -bool NO'
 run_case texlive 'tlmgr update --self --all' 1 1

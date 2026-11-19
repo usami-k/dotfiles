@@ -29,4 +29,8 @@ for repo_dir in ~/.homesick/repos/*/
     popd; or exit
 end
 
+# Display review obligations even when pull found no incoming commits.
+# Printing and successful synchronization never acknowledge a review.
+eupdate_run uv run --offline --no-project --no-cache --python /usr/bin/python3 (dirname (status filename))/review.py status
+
 exit $eupdate_exit_code

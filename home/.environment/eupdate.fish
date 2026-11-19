@@ -92,6 +92,18 @@ for step in $steps
 end
 cd $original_dir
 
+# Keep outstanding reviews visible after the other steps' output.
+set -l review_script $current_dir/homeshick/review.py
+if test -f $review_script; and type --query homeshick
+    if not uv run --offline --no-project --no-cache --python /usr/bin/python3 $review_script status --summary
+        set --append failed_steps castle-review
+        if test $run_exit_code -eq 0
+            set run_result partial
+            set run_exit_code 1
+        end
+    end
+end
+
 set -l run_finished_at (date '+%Y-%m-%dT%H:%M:%S%z')
 set -l run_elapsed_seconds (math (date +%s) - $run_started_seconds)
 set -l failed_step_names (string join , $failed_steps)

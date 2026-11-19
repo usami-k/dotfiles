@@ -1,0 +1,4 @@
+#!/usr/bin/env fish
+
+set -l script (path resolve (status filename))
+exec uv run --offline --no-project --no-cache --python /usr/bin/python3 (path dirname $script)/../../.environment/homeshick/review.py $argv
