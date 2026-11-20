@@ -4,7 +4,7 @@ set --global original_dir (pwd)
 set --global current_dir (realpath (dirname (status filename)))
 
 if test (count $argv) -gt 1
-    echo 'Usage: eupdate [full|light]' >&2
+    echo 'Usage: eupdate [full|light|ai]' >&2
     exit 64
 end
 
@@ -32,12 +32,14 @@ switch $mode
             homeshick \
             repositories \
             cask-outdated
+    case ai
+        set steps ai-tools
     case -h --help
-        echo 'Usage: eupdate [full|light]'
+        echo 'Usage: eupdate [full|light|ai]'
         exit 0
     case '*'
         printf 'eupdate: unknown mode: %s\n' $mode >&2
-        echo 'Usage: eupdate [full|light]' >&2
+        echo 'Usage: eupdate [full|light|ai]' >&2
         exit 64
 end
 
